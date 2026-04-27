@@ -26,8 +26,6 @@ payload = {
     #"format": "json",  # 強制以 JSON 格式輸出，方便解析
     "think": "low",
     "options": {
-        "temperature": 0.8,
-        "top_p": 0.9,
         "seed": 42   # 改變 seed 增加多樣性
     },
     "stream": False
@@ -59,7 +57,8 @@ elapsed_time = time.perf_counter() - start_time
 print(f"已收到 response，總運行時間 {elapsed_time:.2f} 秒")
     
 response_data = response.json()
+agents = json.loads(response_data["response"])
         
 with open("agents_samples.json", "w", encoding="utf-8") as f:
-    json.dump(response_data, f, ensure_ascii=False, indent=2)
+    json.dump({"agents":agents}, f, ensure_ascii=False, indent=2)
     print("已完成")

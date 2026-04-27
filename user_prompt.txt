@@ -1,0 +1,29 @@
+請幫我生成 20 個「台南市亞太棒球場球賽進出場尖峰人潮短期交通衝擊評估」交通模擬用的 agent。
+
+
+所有欄位的 value 都必須用自然語言形式儲存，不要只放代碼、數字或縮寫。
+
+每個 agent 必須完全符合以下結構，請直接輸出一個包含 10 個 agent 的 JSON Array (List)，不要輸出額外的文字：
+[
+  {
+    "identity": {
+      "name": "",
+      "age": "",
+      "occupation": "",
+      "wage": "",
+      "household_income": "",
+      "vehicle_ownership": "",
+      "residential_location": ""
+    },
+    "traits": {
+      "attitudes": [],
+      "habits": [],
+      "decision_making_tendencies": [],
+      "economic_preferences_and_tradeoffs": []
+    },
+    "memory": {
+      "short_term_memory": [],
+      "long_term_memory": []
+    }
+  }
+]
