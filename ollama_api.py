@@ -61,5 +61,5 @@ print(f"已收到 response，總運行時間 {elapsed_time:.2f} 秒")
 response_data = response.json()
         
 with open("agents_samples.json", "w", encoding="utf-8") as f:
-    json.dump({response_data}, f, ensure_ascii=False, indent=2)
+    json.dump(response_data, f, ensure_ascii=False, indent=2)
     print("已完成")
