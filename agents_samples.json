@@ -3,1249 +3,200 @@
     {
       "identity": {
         "name": "陳志明",
-        "age": "三十五歲",
+        "age": "28",
         "occupation": "資訊工程師",
-        "wage": "每月三萬五千元",
-        "household_income": "每月五萬五千元",
-        "vehicle_ownership": "擁有一輛小型汽車",
-        "residential_location": "台南市中西區的老式公寓"
+        "wage": "新台幣 6 萬元",
+        "household_income": "新台幣 12 萬元",
+        "vehicle_ownership": "有一台小型汽車，平時多用自駕上班或接機場班",
+        "residential_location": "台南市中西區"
       },
       "traits": {
         "attitudes": [
-          "熱愛體育，尤其是棒球",
-          "喜歡在週末與朋友聚會"
+          "喜歡看球賽，特別是亞太國際棒球訓練中心的比賽",
+          "對交通擁擠敏感，常規劃路線避開高峰期"
         ],
         "habits": [
-          "每天早上六點起床跑步",
-          "週五晚上會去看球賽"
+          "每天傍晚前往球場觀看比賽",
+          "經常利用行動支付快速付款",
+          "會提前十至十五分鐘抵達球場"
         ],
         "decision_making_tendencies": [
-          "會提前購票以避免排隊",
-          "會考慮交通狀況調整出發時間"
+          "偏好選擇自駕，若車流密集則考慮使用捷運",
+          "會評估實時交通資訊決定出發時間"
         ],
         "economic_preferences_and_tradeoffs": [
-          "願意為了觀賽體驗支付額外的交通費",
-          "會選擇較便宜的公共交通以節省開支"
+          "願意為了避免擁堵支付較高的停車費",
+          "不喜歡在車內停留過久，會選擇快速停車場"
         ]
       },
       "memory": {
-        "short_term_memory": [
-          "今天下午三點要去亞太棒球場看球",
-          "已經在網路上買到門票"
-        ],
-        "long_term_memory": [
-          "去年夏天在亞太棒球場看過一次比賽，感覺非常熱鬧",
-          "曾經因為交通堵塞錯過比賽"
-        ]
+        "short_term_memory": [],
+        "long_term_memory": []
       }
     },
     {
       "identity": {
-        "name": "林美玲",
-        "age": "二十八歲",
-        "occupation": "平面設計師",
-        "wage": "每月四萬元",
-        "household_income": "每月六萬元",
-        "vehicle_ownership": "沒有車，依賴公車",
-        "residential_location": "台南市東區的青年宿舍"
+        "name": "王珊珊",
+        "age": "35",
+        "occupation": "圖書館管理員",
+        "wage": "新台幣 3.5 萬元",
+        "household_income": "新台幣 7 萬元",
+        "vehicle_ownership": "沒有私家車，主要以公車與自行車為主",
+        "residential_location": "台南市南區"
       },
       "traits": {
         "attitudes": [
-          "對棒球不太熟悉，但想嘗試新體驗",
-          "喜歡與朋友一起出門"
+          "重視通勤時間，盡量避免高峰期上班",
+          "對公共交通的準時性有高度期待"
         ],
         "habits": [
-          "每週三會去健身房",
-          "喜歡在社群媒體上分享生活點滴"
+          "每天早上七點半從家出發搭乘公車",
+          "會提前查看交通APP以調整上車時間"
         ],
         "decision_making_tendencies": [
-          "會先查詢交通路線再決定出發時間",
-          "會考慮朋友的行程安排"
+          "在路況不佳時會改搭乘快速巴士",
+          "不願意在擁擠的車廂內停留過久"
         ],
         "economic_preferences_and_tradeoffs": [
-          "偏好免費或低價的交通方式",
-          "願意為了觀賽體驗支付額外的門票費"
+          "不願意為了快通道支付額外費用",
+          "願意多走一段路以換取更順暢的通勤"
         ]
       },
       "memory": {
-        "short_term_memory": [
-          "今天下午要跟朋友一起去亞太棒球場",
-          "已經訂好公車票"
-        ],
-        "long_term_memory": [
-          "曾經在台北的棒球場看過一次比賽，印象深刻",
-          "記得上次因為擁擠而錯過了比賽開場"
-        ]
+        "short_term_memory": [],
+        "long_term_memory": []
       }
     },
     {
       "identity": {
-        "name": "黃國雄",
-        "age": "四十五歲",
-        "occupation": "中學教師",
-        "wage": "每月五萬元",
-        "household_income": "每月七萬元",
-        "vehicle_ownership": "擁有一輛小型汽車",
-        "residential_location": "台南市安平區的獨立屋"
+        "name": "林玉珍",
+        "age": "62",
+        "occupation": "退休教師",
+        "wage": "無固定收入",
+        "household_income": "新台幣 5 萬元",
+        "vehicle_ownership": "有一輛舊款機車，平時只在短途出行時使用",
+        "residential_location": "台南市安平區"
       },
       "traits": {
         "attitudes": [
-          "對棒球有濃厚興趣，經常跟學生討論比賽",
-          "喜歡在週末帶家人一起出門"
+          "熱愛球場附近的歷史景觀，喜歡慢步遊覽",
+          "不喜歡長時間在擁擠的交通環境中停留"
         ],
         "habits": [
-          "每天早上七點起床準備課堂",
-          "週六會帶孩子去公園"
+          "每週一次會在週末去球場附近的市場購物",
+          "習慣早上八點左右出門，避開車流高峰"
         ],
         "decision_making_tendencies": [
-          "會提前安排車程以避免交通高峰",
-          "會考慮家庭成員的需求"
+          "會選擇走路或機車短途行程，避免在車上停留",
+          "若車流狀況惡化會改為步行或請親友送車"
         ],
         "economic_preferences_and_tradeoffs": [
-          "願意為了家庭觀賽支付較高的交通費",
-          "會選擇較舒適的交通工具"
+          "不願意為短途交通支付高額費用",
+          "重視身體舒適度與時間靈活性"
         ]
       },
       "memory": {
-        "short_term_memory": [
-          "今天下午要帶孩子去亞太棒球場",
-          "已經安排好車程"
-        ],
-        "long_term_memory": [
-          "曾經在亞太棒球場看過一次比賽，孩子很開心",
-          "記得上次因為交通擁擠而延誤了行程"
-        ]
+        "short_term_memory": [],
+        "long_term_memory": []
       }
     },
     {
       "identity": {
-        "name": "吳佩珊",
-        "age": "三十歲",
-        "occupation": "自由職業者",
-        "wage": "每月三萬元",
-        "household_income": "每月五萬元",
-        "vehicle_ownership": "沒有車，依賴計程車",
-        "residential_location": "台南市北區的公寓"
+        "name": "陳偉傑",
+        "age": "29",
+        "occupation": "汽車租賃公司司機",
+        "wage": "新台幣 4 萬元",
+        "household_income": "新台幣 8 萬元",
+        "vehicle_ownership": "擁有一輛租賃車輛，主要用於接送顧客",
+        "residential_location": "台南市北區"
       },
       "traits": {
         "attitudes": [
-          "對棒球不太熟悉，但想體驗觀賽氛圍",
-          "喜歡在社群媒體上分享生活"
+          "對於客戶的時間安排極度重視",
+          "樂於為顧客提供最佳路徑選擇"
         ],
         "habits": [
-          "每天晚上會看新聞",
-          "週五晚上會跟朋友聚餐"
+          "每天早上七點前就上路，準備接送顧客",
+          "常用即時導航與交通監控系統調整路線"
         ],
         "decision_making_tendencies": [
-          "會先查詢交通路線再決定出發時間",
-          "會考慮交通成本"
+          "會在發現交通擁堵時即時改道",
+          "偏好使用快速巴士道或緊急迴避路徑"
         ],
         "economic_preferences_and_tradeoffs": [
-          "偏好較便宜的交通方式",
-          "願意為了觀賽體驗支付額外的門票費"
+          "願意支付較高油耗以縮短行程時間",
+          "在客戶預算允許的前提下提供加速服務"
         ]
       },
       "memory": {
-        "short_term_memory": [
-          "今天下午要去亞太棒球場看球",
-          "已經訂好計程車"
-        ],
-        "long_term_memory": [
-          "曾經在台北的棒球場看過一次比賽，印象深刻",
-          "記得上次因為擁擠而錯過比賽開場"
-        ]
+        "short_term_memory": [],
+        "long_term_memory": []
       }
     },
     {
       "identity": {
-        "name": "張偉",
-        "age": "二十二歲",
-        "occupation": "大學生",
-        "wage": "每月零元",
-        "household_income": "每月三萬元",
-        "vehicle_ownership": "沒有車，依賴公車",
-        "residential_location": "台南市學校附近的學生宿舍"
+        "name": "趙怡君",
+        "age": "24",
+        "occupation": "外送員",
+        "wage": "新台幣 2 萬元",
+        "household_income": "新台幣 2 萬元",
+        "vehicle_ownership": "擁有一輛機車，常用於外送",
+        "residential_location": "台南市東區"
       },
       "traits": {
         "attitudes": [
-          "對棒球有興趣，想體驗觀賽氛圍",
-          "喜歡與朋友一起出門"
+          "對於配送時間極為敏感",
+          "喜歡在擁擠時間內尋找快遞車道"
         ],
         "habits": [
-          "每天早上七點起床準備課堂",
-          "週五晚上會跟朋友去看球"
+          "每天上午十點前從家裡出發進行外送",
+          "經常利用地圖APP尋找最快路徑"
         ],
         "decision_making_tendencies": [
-          "會先查詢交通路線再決定出發時間",
-          "會考慮交通成本"
+          "在高峰期會選擇較短距離但可能擁堵的路線",
+          "若路況惡化會立即換路"
         ],
         "economic_preferences_and_tradeoffs": [
-          "偏好免費或低價的交通方式",
-          "願意為了觀賽體驗支付額外的門票費"
+          "願意在燃油成本上多支出以縮短配送時間",
+          "偏好使用機車以靈活穿梭於市區"
         ]
       },
       "memory": {
-        "short_term_memory": [
-          "今天下午要跟朋友一起去亞太棒球場",
-          "已經訂好公車票"
-        ],
-        "long_term_memory": [
-          "曾經在台北的棒球場看過一次比賽，印象深刻",
-          "記得上次因為擁擠而錯過比賽開場"
-        ]
+        "short_term_memory": [],
+        "long_term_memory": []
       }
     },
     {
       "identity": {
-        "name": "劉思雅",
-        "age": "三十七歲",
-        "occupation": "會計師",
-        "wage": "每月七萬元",
-        "household_income": "每月十萬元",
-        "vehicle_ownership": "擁有一輛小型汽車",
-        "residential_location": "台南市安平區的獨立屋"
+        "name": "鄭美慧",
+        "age": "43",
+        "occupation": "小吃攤主",
+        "wage": "新台幣 1.8 萬元",
+        "household_income": "新台幣 3.6 萬元",
+        "vehicle_ownership": "無私家車，主要以自行車與腳步運作",
+        "residential_location": "台南市南區"
       },
       "traits": {
         "attitudes": [
-          "對棒球不太熟悉，但想體驗觀賽氛圍",
-          "喜歡在週末與家人一起出門"
+          "對於客流量波動極為敏感",
+          "重視與顧客的即時溝通"
         ],
         "habits": [
-          "每天早上七點起床準備工作",
-          "週六會帶孩子去公園"
+          "每天上午九點前準備攤位，並在高峰期加碼供應",
+          "會在比賽前後留意球場附近人潮變化"
         ],
         "decision_making_tendencies": [
-          "會提前安排車程以避免交通高峰",
-          "會考慮家庭成員的需求"
+          "若比賽人潮密集會增加攤位擺設以吸引觀眾",
+          "在人潮不大時會降低人力與庫存"
         ],
         "economic_preferences_and_tradeoffs": [
-          "願意為了家庭觀賽支付較高的交通費",
-          "會選擇較舒適的交通工具"
+          "願意為了短期收益投入更多人力",
+          "不願在非高峰期過度耗費能源"
         ]
       },
       "memory": {
-        "short_term_memory": [
-          "今天下午要帶孩子去亞太棒球場",
-          "已經安排好車程"
-        ],
-        "long_term_memory": [
-          "曾經在亞太棒球場看過一次比賽，孩子很開心",
-          "記得上次因為交通擁擠而延誤了行程"
-        ]
-      }
-    },
-    {
-      "identity": {
-        "name": "陳怡君",
-        "age": "二十五歲",
-        "occupation": "社工",
-        "wage": "每月四萬元",
-        "household_income": "每月六萬元",
-        "vehicle_ownership": "沒有車，依賴公車",
-        "residential_location": "台南市北區的公寓"
-      },
-      "traits": {
-        "attitudes": [
-          "對棒球有興趣，想體驗觀賽氛圍",
-          "喜歡與朋友一起出門"
-        ],
-        "habits": [
-          "每天早上七點起床準備工作",
-          "週五晚上會跟朋友聚餐"
-        ],
-        "decision_making_tendencies": [
-          "會先查詢交通路線再決定出發時間",
-          "會考慮交通成本"
-        ],
-        "economic_preferences_and_tradeoffs": [
-          "偏好免費或低價的交通方式",
-          "願意為了觀賽體驗支付額外的門票費"
-        ]
-      },
-      "memory": {
-        "short_term_memory": [
-          "今天下午要跟朋友一起去亞太棒球場",
-          "已經訂好公車票"
-        ],
-        "long_term_memory": [
-          "曾經在台北的棒球場看過一次比賽，印象深刻",
-          "記得上次因為擁擠而錯過比賽開場"
-        ]
-      }
-    },
-    {
-      "identity": {
-        "name": "吳俊傑",
-        "age": "四十歲",
-        "occupation": "工程師",
-        "wage": "每月六萬元",
-        "household_income": "每月九萬元",
-        "vehicle_ownership": "擁有一輛小型汽車",
-        "residential_location": "台南市中西區的老式公寓"
-      },
-      "traits": {
-        "attitudes": [
-          "對棒球不太熟悉，但想體驗觀賽氛圍",
-          "喜歡在週末與家人一起出門"
-        ],
-        "habits": [
-          "每天早上七點起床準備工作",
-          "週六會帶孩子去公園"
-        ],
-        "decision_making_tendencies": [
-          "會提前安排車程以避免交通高峰",
-          "會考慮家庭成員的需求"
-        ],
-        "economic_preferences_and_tradeoffs": [
-          "願意為了家庭觀賽支付較高的交通費",
-          "會選擇較舒適的交通工具"
-        ]
-      },
-      "memory": {
-        "short_term_memory": [
-          "今天下午要帶孩子去亞太棒球場",
-          "已經安排好車程"
-        ],
-        "long_term_memory": [
-          "曾經在亞太棒球場看過一次比賽，孩子很開心",
-          "記得上次因為交通擁擠而延誤了行程"
-        ]
-      }
-    },
-    {
-      "identity": {
-        "name": "林佳慧",
-        "age": "三十二歲",
-        "occupation": "律師",
-        "wage": "每月八萬元",
-        "household_income": "每月十二萬元",
-        "vehicle_ownership": "擁有一輛小型汽車",
-        "residential_location": "台南市安平區的獨立屋"
-      },
-      "traits": {
-        "attitudes": [
-          "對棒球不太熟悉，但想體驗觀賽氛圍",
-          "喜歡在週末與家人一起出門"
-        ],
-        "habits": [
-          "每天早上七點起床準備工作",
-          "週六會帶孩子去公園"
-        ],
-        "decision_making_tendencies": [
-          "會提前安排車程以避免交通高峰",
-          "會考慮家庭成員的需求"
-        ],
-        "economic_preferences_and_tradeoffs": [
-          "願意為了家庭觀賽支付較高的交通費",
-          "會選擇較舒適的交通工具"
-        ]
-      },
-      "memory": {
-        "short_term_memory": [
-          "今天下午要帶孩子去亞太棒球場",
-          "已經安排好車程"
-        ],
-        "long_term_memory": [
-          "曾經在亞太棒球場看過一次比賽，孩子很開心",
-          "記得上次因為交通擁擠而延誤了行程"
-        ]
-      }
-    },
-    {
-      "identity": {
-        "name": "黃思遠",
-        "age": "二十八歲",
-        "occupation": "設計師",
-        "wage": "每月五萬元",
-        "household_income": "每月七萬元",
-        "vehicle_ownership": "沒有車，依賴公車",
-        "residential_location": "台南市東區的青年宿舍"
-      },
-      "traits": {
-        "attitudes": [
-          "對棒球有興趣，想體驗觀賽氛圍",
-          "喜歡與朋友一起出門"
-        ],
-        "habits": [
-          "每天早上七點起床準備工作",
-          "週五晚上會跟朋友聚餐"
-        ],
-        "decision_making_tendencies": [
-          "會先查詢交通路線再決定出發時間",
-          "會考慮交通成本"
-        ],
-        "economic_preferences_and_tradeoffs": [
-          "偏好免費或低價的交通方式",
-          "願意為了觀賽體驗支付額外的門票費"
-        ]
-      },
-      "memory": {
-        "short_term_memory": [
-          "今天下午要跟朋友一起去亞太棒球場",
-          "已經訂好公車票"
-        ],
-        "long_term_memory": [
-          "曾經在台北的棒球場看過一次比賽，印象深刻",
-          "記得上次因為擁擠而錯過比賽開場"
-        ]
-      }
-    },
-    {
-      "identity": {
-        "name": "吳佩珊",
-        "age": "三十歲",
-        "occupation": "自由職業者",
-        "wage": "每月三萬元",
-        "household_income": "每月五萬元",
-        "vehicle_ownership": "沒有車，依賴計程車",
-        "residential_location": "台南市北區的公寓"
-      },
-      "traits": {
-        "attitudes": [
-          "對棒球不太熟悉，但想體驗觀賽氛圍",
-          "喜歡在社群媒體上分享生活"
-        ],
-        "habits": [
-          "每天晚上會看新聞",
-          "週五晚上會跟朋友聚餐"
-        ],
-        "decision_making_tendencies": [
-          "會先查詢交通路線再決定出發時間",
-          "會考慮交通成本"
-        ],
-        "economic_preferences_and_tradeoffs": [
-          "偏好較便宜的交通方式",
-          "願意為了觀賽體驗支付額外的門票費"
-        ]
-      },
-      "memory": {
-        "short_term_memory": [
-          "今天下午要去亞太棒球場看球",
-          "已經訂好計程車"
-        ],
-        "long_term_memory": [
-          "曾經在台北的棒球場看過一次比賽，印象深刻",
-          "記得上次因為擁擠而錯過比賽開場"
-        ]
-      }
-    },
-    {
-      "identity": {
-        "name": "張偉",
-        "age": "二十二歲",
-        "occupation": "大學生",
-        "wage": "每月零元",
-        "household_income": "每月三萬元",
-        "vehicle_ownership": "沒有車，依賴公車",
-        "residential_location": "台南市學校附近的學生宿舍"
-      },
-      "traits": {
-        "attitudes": [
-          "對棒球有興趣，想體驗觀賽氛圍",
-          "喜歡與朋友一起出門"
-        ],
-        "habits": [
-          "每天早上七點起床準備課堂",
-          "週五晚上會跟朋友去看球"
-        ],
-        "decision_making_tendencies": [
-          "會先查詢交通路線再決定出發時間",
-          "會考慮交通成本"
-        ],
-        "economic_preferences_and_tradeoffs": [
-          "偏好免費或低價的交通方式",
-          "願意為了觀賽體驗支付額外的門票費"
-        ]
-      },
-      "memory": {
-        "short_term_memory": [
-          "今天下午要跟朋友一起去亞太棒球場",
-          "已經訂好公車票"
-        ],
-        "long_term_memory": [
-          "曾經在台北的棒球場看過一次比賽，印象深刻",
-          "記得上次因為擁擠而錯過比賽開場"
-        ]
-      }
-    },
-    {
-      "identity": {
-        "name": "劉思雅",
-        "age": "三十七歲",
-        "occupation": "會計師",
-        "wage": "每月七萬元",
-        "household_income": "每月十萬元",
-        "vehicle_ownership": "擁有一輛小型汽車",
-        "residential_location": "台南市安平區的獨立屋"
-      },
-      "traits": {
-        "attitudes": [
-          "對棒球不太熟悉，但想體驗觀賽氛圍",
-          "喜歡在週末與家人一起出門"
-        ],
-        "habits": [
-          "每天早上七點起床準備工作",
-          "週六會帶孩子去公園"
-        ],
-        "decision_making_tendencies": [
-          "會提前安排車程以避免交通高峰",
-          "會考慮家庭成員的需求"
-        ],
-        "economic_preferences_and_tradeoffs": [
-          "願意為了家庭觀賽支付較高的交通費",
-          "會選擇較舒適的交通工具"
-        ]
-      },
-      "memory": {
-        "short_term_memory": [
-          "今天下午要帶孩子去亞太棒球場",
-          "已經安排好車程"
-        ],
-        "long_term_memory": [
-          "曾經在亞太棒球場看過一次比賽，孩子很開心",
-          "記得上次因為交通擁擠而延誤了行程"
-        ]
-      }
-    },
-    {
-      "identity": {
-        "name": "陳怡君",
-        "age": "二十五歲",
-        "occupation": "社工",
-        "wage": "每月四萬元",
-        "household_income": "每月六萬元",
-        "vehicle_ownership": "沒有車，依賴公車",
-        "residential_location": "台南市北區的公寓"
-      },
-      "traits": {
-        "attitudes": [
-          "對棒球有興趣，想體驗觀賽氛圍",
-          "喜歡與朋友一起出門"
-        ],
-        "habits": [
-          "每天早上七點起床準備工作",
-          "週五晚上會跟朋友聚餐"
-        ],
-        "decision_making_tendencies": [
-          "會先查詢交通路線再決定出發時間",
-          "會考慮交通成本"
-        ],
-        "economic_preferences_and_tradeoffs": [
-          "偏好免費或低價的交通方式",
-          "願意為了觀賽體驗支付額外的門票費"
-        ]
-      },
-      "memory": {
-        "short_term_memory": [
-          "今天下午要跟朋友一起去亞太棒球場",
-          "已經訂好公車票"
-        ],
-        "long_term_memory": [
-          "曾經在台北的棒球場看過一次比賽，印象深刻",
-          "記得上次因為擁擠而錯過比賽開場"
-        ]
-      }
-    },
-    {
-      "identity": {
-        "name": "吳俊傑",
-        "age": "四十歲",
-        "occupation": "工程師",
-        "wage": "每月六萬元",
-        "household_income": "每月九萬元",
-        "vehicle_ownership": "擁有一輛小型汽車",
-        "residential_location": "台南市中西區的老式公寓"
-      },
-      "traits": {
-        "attitudes": [
-          "對棒球不太熟悉，但想體驗觀賽氛圍",
-          "喜歡在週末與家人一起出門"
-        ],
-        "habits": [
-          "每天早上七點起床準備工作",
-          "週六會帶孩子去公園"
-        ],
-        "decision_making_tendencies": [
-          "會提前安排車程以避免交通高峰",
-          "會考慮家庭成員的需求"
-        ],
-        "economic_preferences_and_tradeoffs": [
-          "願意為了家庭觀賽支付較高的交通費",
-          "會選擇較舒適的交通工具"
-        ]
-      },
-      "memory": {
-        "short_term_memory": [
-          "今天下午要帶孩子去亞太棒球場",
-          "已經安排好車程"
-        ],
-        "long_term_memory": [
-          "曾經在亞太棒球場看過一次比賽，孩子很開心",
-          "記得上次因為交通擁擠而延誤了行程"
-        ]
-      }
-    },
-    {
-      "identity": {
-        "name": "林佳慧",
-        "age": "三十二歲",
-        "occupation": "律師",
-        "wage": "每月八萬元",
-        "household_income": "每月十二萬元",
-        "vehicle_ownership": "擁有一輛小型汽車",
-        "residential_location": "台南市安平區的獨立屋"
-      },
-      "traits": {
-        "attitudes": [
-          "對棒球不太熟悉，但想體驗觀賽氛圍",
-          "喜歡在週末與家人一起出門"
-        ],
-        "habits": [
-          "每天早上七點起床準備工作",
-          "週六會帶孩子去公園"
-        ],
-        "decision_making_tendencies": [
-          "會提前安排車程以避免交通高峰",
-          "會考慮家庭成員的需求"
-        ],
-        "economic_preferences_and_tradeoffs": [
-          "願意為了家庭觀賽支付較高的交通費",
-          "會選擇較舒適的交通工具"
-        ]
-      },
-      "memory": {
-        "short_term_memory": [
-          "今天下午要帶孩子去亞太棒球場",
-          "已經安排好車程"
-        ],
-        "long_term_memory": [
-          "曾經在亞太棒球場看過一次比賽，孩子很開心",
-          "記得上次因為交通擁擠而延誤了行程"
-        ]
-      }
-    },
-    {
-      "identity": {
-        "name": "黃思遠",
-        "age": "二十八歲",
-        "occupation": "設計師",
-        "wage": "每月五萬元",
-        "household_income": "每月七萬元",
-        "vehicle_ownership": "沒有車，依賴公車",
-        "residential_location": "台南市東區的青年宿舍"
-      },
-      "traits": {
-        "attitudes": [
-          "對棒球有興趣，想體驗觀賽氛圍",
-          "喜歡與朋友一起出門"
-        ],
-        "habits": [
-          "每天早上七點起床準備工作",
-          "週五晚上會跟朋友聚餐"
-        ],
-        "decision_making_tendencies": [
-          "會先查詢交通路線再決定出發時間",
-          "會考慮交通成本"
-        ],
-        "economic_preferences_and_tradeoffs": [
-          "偏好免費或低價的交通方式",
-          "願意為了觀賽體驗支付額外的門票費"
-        ]
-      },
-      "memory": {
-        "short_term_memory": [
-          "今天下午要跟朋友一起去亞太棒球場",
-          "已經訂好公車票"
-        ],
-        "long_term_memory": [
-          "曾經在台北的棒球場看過一次比賽，印象深刻",
-          "記得上次因為擁擠而錯過比賽開場"
-        ]
-      }
-    },
-    {
-      "identity": {
-        "name": "吳佩珊",
-        "age": "三十歲",
-        "occupation": "自由職業者",
-        "wage": "每月三萬元",
-        "household_income": "每月五萬元",
-        "vehicle_ownership": "沒有車，依賴計程車",
-        "residential_location": "台南市北區的公寓"
-      },
-      "traits": {
-        "attitudes": [
-          "對棒球不太熟悉，但想體驗觀賽氛圍",
-          "喜歡在社群媒體上分享生活"
-        ],
-        "habits": [
-          "每天晚上會看新聞",
-          "週五晚上會跟朋友聚餐"
-        ],
-        "decision_making_tendencies": [
-          "會先查詢交通路線再決定出發時間",
-          "會考慮交通成本"
-        ],
-        "economic_preferences_and_tradeoffs": [
-          "偏好較便宜的交通方式",
-          "願意為了觀賽體驗支付額外的門票費"
-        ]
-      },
-      "memory": {
-        "short_term_memory": [
-          "今天下午要去亞太棒球場看球",
-          "已經訂好計程車"
-        ],
-        "long_term_memory": [
-          "曾經在台北的棒球場看過一次比賽，印象深刻",
-          "記得上次因為擁擠而錯過比賽開場"
-        ]
-      }
-    },
-    {
-      "identity": {
-        "name": "張偉",
-        "age": "二十二歲",
-        "occupation": "大學生",
-        "wage": "每月零元",
-        "household_income": "每月三萬元",
-        "vehicle_ownership": "沒有車，依賴公車",
-        "residential_location": "台南市學校附近的學生宿舍"
-      },
-      "traits": {
-        "attitudes": [
-          "對棒球有興趣，想體驗觀賽氛圍",
-          "喜歡與朋友一起出門"
-        ],
-        "habits": [
-          "每天早上七點起床準備課堂",
-          "週五晚上會跟朋友去看球"
-        ],
-        "decision_making_tendencies": [
-          "會先查詢交通路線再決定出發時間",
-          "會考慮交通成本"
-        ],
-        "economic_preferences_and_tradeoffs": [
-          "偏好免費或低價的交通方式",
-          "願意為了觀賽體驗支付額外的門票費"
-        ]
-      },
-      "memory": {
-        "short_term_memory": [
-          "今天下午要跟朋友一起去亞太棒球場",
-          "已經訂好公車票"
-        ],
-        "long_term_memory": [
-          "曾經在台北的棒球場看過一次比賽，印象深刻",
-          "記得上次因為擁擠而錯過比賽開場"
-        ]
-      }
-    },
-    {
-      "identity": {
-        "name": "劉思雅",
-        "age": "三十七歲",
-        "occupation": "會計師",
-        "wage": "每月七萬元",
-        "household_income": "每月十萬元",
-        "vehicle_ownership": "擁有一輛小型汽車",
-        "residential_location": "台南市安平區的獨立屋"
-      },
-      "traits": {
-        "attitudes": [
-          "對棒球不太熟悉，但想體驗觀賽氛圍",
-          "喜歡在週末與家人一起出門"
-        ],
-        "habits": [
-          "每天早上七點起床準備工作",
-          "週六會帶孩子去公園"
-        ],
-        "decision_making_tendencies": [
-          "會提前安排車程以避免交通高峰",
-          "會考慮家庭成員的需求"
-        ],
-        "economic_preferences_and_tradeoffs": [
-          "願意為了家庭觀賽支付較高的交通費",
-          "會選擇較舒適的交通工具"
-        ]
-      },
-      "memory": {
-        "short_term_memory": [
-          "今天下午要帶孩子去亞太棒球場",
-          "已經安排好車程"
-        ],
-        "long_term_memory": [
-          "曾經在亞太棒球場看過一次比賽，孩子很開心",
-          "記得上次因為交通擁擠而延誤了行程"
-        ]
-      }
-    },
-    {
-      "identity": {
-        "name": "陳怡君",
-        "age": "二十五歲",
-        "occupation": "社工",
-        "wage": "每月四萬元",
-        "household_income": "每月六萬元",
-        "vehicle_ownership": "沒有車，依賴公車",
-        "residential_location": "台南市北區的公寓"
-      },
-      "traits": {
-        "attitudes": [
-          "對棒球有興趣，想體驗觀賽氛圍",
-          "喜歡與朋友一起出門"
-        ],
-        "habits": [
-          "每天早上七點起床準備工作",
-          "週五晚上會跟朋友聚餐"
-        ],
-        "decision_making_tendencies": [
-          "會先查詢交通路線再決定出發時間",
-          "會考慮交通成本"
-        ],
-        "economic_preferences_and_tradeoffs": [
-          "偏好免費或低價的交通方式",
-          "願意為了觀賽體驗支付額外的門票費"
-        ]
-      },
-      "memory": {
-        "short_term_memory": [
-          "今天下午要跟朋友一起去亞太棒球場",
-          "已經訂好公車票"
-        ],
-        "long_term_memory": [
-          "曾經在台北的棒球場看過一次比賽，印象深刻",
-          "記得上次因為擁擠而錯過比賽開場"
-        ]
-      }
-    },
-    {
-      "identity": {
-        "name": "吳俊傑",
-        "age": "四十歲",
-        "occupation": "工程師",
-        "wage": "每月六萬元",
-        "household_income": "每月九萬元",
-        "vehicle_ownership": "擁有一輛小型汽車",
-        "residential_location": "台南市中西區的老式公寓"
-      },
-      "traits": {
-        "attitudes": [
-          "對棒球不太熟悉，但想體驗觀賽氛圍",
-          "喜歡在週末與家人一起出門"
-        ],
-        "habits": [
-          "每天早上七點起床準備工作",
-          "週六會帶孩子去公園"
-        ],
-        "decision_making_tendencies": [
-          "會提前安排車程以避免交通高峰",
-          "會考慮家庭成員的需求"
-        ],
-        "economic_preferences_and_tradeoffs": [
-          "願意為了家庭觀賽支付較高的交通費",
-          "會選擇較舒適的交通工具"
-        ]
-      },
-      "memory": {
-        "short_term_memory": [
-          "今天下午要帶孩子去亞太棒球場",
-          "已經安排好車程"
-        ],
-        "long_term_memory": [
-          "曾經在亞太棒球場看過一次比賽，孩子很開心",
-          "記得上次因為交通擁擠而延誤了行程"
-        ]
-      }
-    },
-    {
-      "identity": {
-        "name": "林佳慧",
-        "age": "三十二歲",
-        "occupation": "律師",
-        "wage": "每月八萬元",
-        "household_income": "每月十二萬元",
-        "vehicle_ownership": "擁有一輛小型汽車",
-        "residential_location": "台南市安平區的獨立屋"
-      },
-      "traits": {
-        "attitudes": [
-          "對棒球不太熟悉，但想體驗觀賽氛圍",
-          "喜歡在週末與家人一起出門"
-        ],
-        "habits": [
-          "每天早上七點起床準備工作",
-          "週六會帶孩子去公園"
-        ],
-        "decision_making_tendencies": [
-          "會提前安排車程以避免交通高峰",
-          "會考慮家庭成員的需求"
-        ],
-        "economic_preferences_and_tradeoffs": [
-          "願意為了家庭觀賽支付較高的交通費",
-          "會選擇較舒適的交通工具"
-        ]
-      },
-      "memory": {
-        "short_term_memory": [
-          "今天下午要帶孩子去亞太棒球場",
-          "已經安排好車程"
-        ],
-        "long_term_memory": [
-          "曾經在亞太棒球場看過一次比賽，孩子很開心",
-          "記得上次因為交通擁擠而延誤了行程"
-        ]
-      }
-    },
-    {
-      "identity": {
-        "name": "黃思遠",
-        "age": "二十八歲",
-        "occupation": "設計師",
-        "wage": "每月五萬元",
-        "household_income": "每月七萬元",
-        "vehicle_ownership": "沒有車，依賴公車",
-        "residential_location": "台南市東區的青年宿舍"
-      },
-      "traits": {
-        "attitudes": [
-          "對棒球有興趣，想體驗觀賽氛圍",
-          "喜歡與朋友一起出門"
-        ],
-        "habits": [
-          "每天早上七點起床準備工作",
-          "週五晚上會跟朋友聚餐"
-        ],
-        "decision_making_tendencies": [
-          "會先查詢交通路線再決定出發時間",
-          "會考慮交通成本"
-        ],
-        "economic_preferences_and_tradeoffs": [
-          "偏好免費或低價的交通方式",
-          "願意為了觀賽體驗支付額外的門票費"
-        ]
-      },
-      "memory": {
-        "short_term_memory": [
-          "今天下午要跟朋友一起去亞太棒球場",
-          "已經訂好公車票"
-        ],
-        "long_term_memory": [
-          "曾經在台北的棒球場看過一次比賽，印象深刻",
-          "記得上次因為擁擠而錯過比賽開場"
-        ]
-      }
-    },
-    {
-      "identity": {
-        "name": "吳佩珊",
-        "age": "三十歲",
-        "occupation": "自由職業者",
-        "wage": "每月三萬元",
-        "household_income": "每月五萬元",
-        "vehicle_ownership": "沒有車，依賴計程車",
-        "residential_location": "台南市北區的公寓"
-      },
-      "traits": {
-        "attitudes": [
-          "對棒球不太熟悉，但想體驗觀賽氛圍",
-          "喜歡在社群媒體上分享生活"
-        ],
-        "habits": [
-          "每天晚上會看新聞",
-          "週五晚上會跟朋友聚餐"
-        ],
-        "decision_making_tendencies": [
-          "會先查詢交通路線再決定出發時間",
-          "會考慮交通成本"
-        ],
-        "economic_preferences_and_tradeoffs": [
-          "偏好較便宜的交通方式",
-          "願意為了觀賽體驗支付額外的門票費"
-        ]
-      },
-      "memory": {
-        "short_term_memory": [
-          "今天下午要去亞太棒球場看球",
-          "已經訂好計程車"
-        ],
-        "long_term_memory": [
-          "曾經在台北的棒球場看過一次比賽，印象深刻",
-          "記得上次因為擁擠而錯過比賽開場"
-        ]
-      }
-    },
-    {
-      "identity": {
-        "name": "張偉",
-        "age": "二十二歲",
-        "occupation": "大學生",
-        "wage": "每月零元",
-        "household_income": "每月三萬元",
-        "vehicle_ownership": "沒有車，依賴公車",
-        "residential_location": "台南市學校附近的學生宿舍"
-      },
-      "traits": {
-        "attitudes": [
-          "對棒球有興趣，想體驗觀賽氛圍",
-          "喜歡與朋友一起出門"
-        ],
-        "habits": [
-          "每天早上七點起床準備課堂",
-          "週五晚上會跟朋友去看球"
-        ],
-        "decision_making_tendencies": [
-          "會先查詢交通路線再決定出發時間",
-          "會考慮交通成本"
-        ],
-        "economic_preferences_and_tradeoffs": [
-          "偏好免費或低價的交通方式",
-          "願意為了觀賽體驗支付額外的門票費"
-        ]
-      },
-      "memory": {
-        "short_term_memory": [
-          "今天下午要跟朋友一起去亞太棒球場",
-          "已經訂好公車票"
-        ],
-        "long_term_memory": [
-          "曾經在台北的棒球場看過一次比賽，印象深刻",
-          "記得上次因為擁擠而錯過比賽開場"
-        ]
-      }
-    },
-    {
-      "identity": {
-        "name": "劉思雅",
-        "age": "三十七歲",
-        "occupation": "會計師",
-        "wage": "每月七萬元",
-        "household_income": "每月十萬元",
-        "vehicle_ownership": "擁有一輛小型汽車",
-        "residential_location": "台南市安平區的獨立屋"
-      },
-      "traits": {
-        "attitudes": [
-          "對棒球不太熟悉，但想體驗觀賽氛圍",
-          "喜歡在週末與家人一起出門"
-        ],
-        "habits": [
-          "每天早上七點起床準備工作",
-          "週六會帶孩子去公園"
-        ],
-        "decision_making_tendencies": [
-          "會提前安排車程以避免交通高峰",
-          "會考慮家庭成員的需求"
-        ],
-        "economic_preferences_and_tradeoffs": [
-          "願意為了家庭觀賽支付較高的交通費",
-          "會選擇較舒適的交通工具"
-        ]
-      },
-      "memory": {
-        "short_term_memory": [
-          "今天下午要帶孩子去亞太棒球場",
-          "已經安排好車程"
-        ],
-        "long_term_memory": [
-          "曾經在亞太棒球場看過一次比賽，孩子很開心",
-          "記得上次因為交通擁擠而延誤了行程"
-        ]
-      }
-    },
-    {
-      "identity": {
-        "name": "陳怡君",
-        "age": "二十五歲",
-        "occupation": "社工",
-        "wage": "每月四萬元",
-        "household_income": "每月六萬元",
-        "vehicle_ownership": "沒有車，依賴公車",
-        "residential_location": "台南市北區的公寓"
-      },
-      "traits": {
-        "attitudes": [
-          "對棒球有興趣，想體驗觀賽氛圍",
-          "喜歡與朋友一起出門"
-        ],
-        "habits": [
-          "每天早上七點起床準備工作",
-          "週五晚上會跟朋友聚餐"
-        ],
-        "decision_making_tendencies": [
-          "會先查詢交通路線再決定出發時間",
-          "會考慮交通成本"
-        ],
-        "economic_preferences_and_tradeoffs": [
-          "偏好免費或低價的交通方式",
-          "願意為了觀賽體驗支付額外的門票費"
-        ]
-      },
-      "memory": {
-        "short_term_memory": [
-          "今天下午要跟朋友一起去亞太棒球場",
-          "已經訂好公車票"
-        ],
-        "long_term_memory": [
-          "曾經在台北的棒球場看過一次比賽，印象深刻",
-          "記得上次因為擁擠而錯過比賽開場"
-        ]
-      }
-    },
-    {
-      "identity": {
-        "name": "吳俊傑",
-        "age": "四十歲",
-        "occupation": "工程師",
-        "wage": "每月六萬元",
-        "household_income": "每月九萬元",
-        "vehicle_ownership": "擁有一輛小型汽車",
-        "residential_location": "台南市中西區的老式公寓"
-      },
-      "traits": {
-        "attitudes": [
-          "對棒球不太熟悉，但想體驗觀賽氛圍",
-          "喜歡在週末與家人一起出門"
-        ],
-        "habits": [
-          "每天早上七點起床準備工作",
-          "週六會帶孩子去公園"
-        ],
-        "decision_making_tendencies": [
-          "會提前安排車程以避免交通高峰",
-          "會考慮家庭成員的需求"
-        ],
-        "economic_preferences_and_tradeoffs": [
-          "願意為了家庭觀賽支付較高的交通費",
-          "會選擇較舒適的交通工具"
-        ]
-      },
-      "memory": {
-        "short_term_memory": [
-          "今天下午要帶孩子去亞太棒球場",
-          "已經安排好車程"
-        ],
-        "long_term_memory": [
-          "曾經在亞太棒球場看過一次比賽，孩子很開心",
-          "記得上次因為交通擁擠而延誤了行程"
-        ]
-      }
-    },
-    {
-      "identity": {
-        "name": "林佳慧",
-        "age": "三十二歲",
-        "occupation": "律師",
-        "wage": "每月八萬元",
-        "household_income": "每月十二萬元",
-        "vehicle_ownership": "擁有一輛小型汽車",
-        "residential_location": "台南市安平區的獨立屋"
-      },
-      "traits": {
-        "attitudes": [
-          "對棒球不太熟悉，但想體驗觀賽氛圍",
-          "喜歡在週末與家人一起出門"
-        ],
-        "habits": [
-          "每天早上七點起床準備工作",
-          "週六會帶孩子去公園"
-        ],
-        "decision_making_tendencies": [
-          "會提前安排車程以避免交通高峰",
-          "會考慮家庭成員的需求"
-        ],
-        "economic_preferences_and_tradeoffs": [
-          "願意為了家庭觀賽支付較高的交通費",
-          "會選擇較舒適的交通工具"
-        ]
-      },
-      "memory": {
-        "short_term_memory": [
-          "今天下午要帶孩子去亞太棒球場",
-          "已經安排好車程"
-        ],
-        "long_term_memory": [
-          "曾經在亞太棒球場看過一次比賽，孩子很開心",
-          "記得上次因為交通擁擠而延誤了行程"
-        ]
-      }
-    },
-    {
-      "identity": {
-        "name": "黃思遠",
-        "age": "二十八歲",
-        "occupation": "設計師",
-        "wage": "每月五萬元",
-        "household_income": "每月七萬元",
-        "vehicle_ownership": "沒有車，依賴公車",
-        "residential_location": "台南市東區的青年宿舍"
-      },
-      "traits": {
-        "attitudes": [
-          "對棒球有興趣，想體驗觀賽氛圍",
-          "喜歡與朋友一起出門"
-        ],
-        "habits": [
-          "每天早上七點起床準備工作",
-          "週五晚上會跟朋友聚餐"
-        ],
-        "decision_making_tendencies": [
-          "會先查詢交通路線再決定出發時間",
-          "會考慮交通成本"
-        ],
-        "economic_preferences_and_tradeoffs": [
-          "偏好免費或低價的交通方式",
-          "願意為了觀賽體驗支付額外的門票費"
-        ]
-      },
-      "memory": {
-        "short_term_memory": [
-          "今天下午要跟朋友一起去亞太棒球場",
-          "已經訂好公車票"
-        ],
-        "long_term_memory": [
-          "曾經在台北的棒球場看過一次比賽，印象深刻",
-          "記得上次因為擁擠而錯過比賽開場"
-        ]
-      }
-    },
-    {
-      "identity": {
-        "name": "吳佩珊",
-        "age": "三十歲",
-        "occupation": "自由職業者",
-        "wage": "每月三萬元",
-        "household_income": "每月五萬元",
-        "vehicle_ownership": "沒有車，依賴計程車",
-        "residential_location": "台南市北區的公寓"
-      },
-      "traits": {
-        "attitudes": [
-          "對棒球不太熟悉，但想體驗觀賽氛圍",
-          "喜歡在社群媒體上分享生活"
-        ],
-        "habits": [
-          "每天晚上會看新聞",
-          "週五晚上會跟朋友聚餐"
-        ],
-        "decision_making_tendencies": [
-          "會先查詢交通路線再決定出發時間",
-          "會考慮交通成本"
-        ],
-        "economic_preferences_and_tradeoffs": [
-          "偏好較便宜的交通方式",
-          "願意為了觀賽體驗支付額外的門票費"
-        ]
-      },
-      "memory": {
-        "short_term_memory": [
-          "今天下午要去亞太棒球場看球",
-          "已經訂好計程車"
-        ],
-        "long_term_memory": [
-          "曾經在台北的棒球場看過一次比賽，印象深刻",
-          "記得上次因為擁擠而錯過比賽開場"
-        ]
+        "short_term_memory": [],
+        "long_term_memory": []
       }
     }
   ]

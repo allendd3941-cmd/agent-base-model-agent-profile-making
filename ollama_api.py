@@ -20,7 +20,7 @@ MODE = "generate"
 url = f"http://localhost:11434/api/{MODE}"
 
 payload = {
-    "model": "gemma4:e2b",
+    "model": "gpt-oss:20b",
     "prompt": USER_PROMPT,
     "system": SYSTEM_PROMPT,
     #"format": "json",  # 強制以 JSON 格式輸出，方便解析
@@ -57,7 +57,16 @@ elapsed_time = time.perf_counter() - start_time
 print(f"已收到 response，總運行時間 {elapsed_time:.2f} 秒")
     
 response_data = response.json()
-agents = json.loads(response_data["response"])
+print(response_data)
+raw_text = response_data.get("response", "").strip()
+
+print("Ollama 原始 response 前 500 字：")
+print(repr(raw_text[:500]))
+
+if not raw_text:
+    raise ValueError("Ollama response 是空的，無法解析 JSON")
+
+agents = json.loads(raw_text)
         
 with open("agents_samples.json", "w", encoding="utf-8") as f:
     json.dump({"agents":agents}, f, ensure_ascii=False, indent=2)
