@@ -20,7 +20,7 @@ MODE = "generate"
 url = f"http://localhost:11434/api/{MODE}"
 
 payload = {
-    "model": "school_intern",
+    "model": "gemma4:e2b",
     "prompt": USER_PROMPT,
     "system": SYSTEM_PROMPT,
     #"format": "json",  # 強制以 JSON 格式輸出，方便解析
