@@ -3,63 +3,31 @@
     {
       "identity": {
         "name": "陳志明",
-        "age": "28",
+        "age": "18",
         "occupation": "資訊工程師",
-        "wage": "新台幣 6 萬元",
-        "household_income": "新台幣 12 萬元",
-        "vehicle_ownership": "有一台小型汽車，平時多用自駕上班或接機場班",
-        "residential_location": "台南市中西區"
-      },
-      "traits": {
-        "attitudes": [
-          "喜歡看球賽，特別是亞太國際棒球訓練中心的比賽",
-          "對交通擁擠敏感，常規劃路線避開高峰期"
-        ],
-        "habits": [
-          "每天傍晚前往球場觀看比賽",
-          "經常利用行動支付快速付款",
-          "會提前十至十五分鐘抵達球場"
-        ],
-        "decision_making_tendencies": [
-          "偏好選擇自駕，若車流密集則考慮使用捷運",
-          "會評估實時交通資訊決定出發時間"
-        ],
-        "economic_preferences_and_tradeoffs": [
-          "願意為了避免擁堵支付較高的停車費",
-          "不喜歡在車內停留過久，會選擇快速停車場"
-        ]
-      },
-      "memory": {
-        "short_term_memory": [],
-        "long_term_memory": []
-      }
-    },
-    {
-      "identity": {
-        "name": "王珊珊",
-        "age": "35",
-        "occupation": "圖書館管理員",
-        "wage": "新台幣 3.5 萬元",
-        "household_income": "新台幣 7 萬元",
-        "vehicle_ownership": "沒有私家車，主要以公車與自行車為主",
+        "wage": "新台幣 2.8 萬元",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "有一台機車，平時以機車短程移動為主",
         "residential_location": "台南市南區"
       },
       "traits": {
         "attitudes": [
-          "重視通勤時間，盡量避免高峰期上班",
-          "對公共交通的準時性有高度期待"
+          "喜歡現場看棒球，會把比賽氣氛視為重要休閒活動",
+          "對球賽進場前的車流與停車壓力敏感，願意提前規劃"
         ],
         "habits": [
-          "每天早上七點半從家出發搭乘公車",
-          "會提前查看交通APP以調整上車時間"
+          "球賽日通常會在開賽前30分鐘抵達球場附近",
+          "會先查看導航與停車資訊，再決定是否自駕或改搭接駁",
+          "散場時常會觀察人潮再決定是否立刻離開"
         ],
         "decision_making_tendencies": [
-          "在路況不佳時會改搭乘快速巴士",
-          "不願意在擁擠的車廂內停留過久"
+          "若停車場接近滿位，會改停較遠處再步行進場",
+          "若同行者有長輩或小孩，會優先選擇步行距離較短的路線",
+          "會在準時進場與避免塞車之間權衡"
         ],
         "economic_preferences_and_tradeoffs": [
-          "不願意為了快通道支付額外費用",
-          "願意多走一段路以換取更順暢的通勤"
+          "願意為了縮短步行距離支付中等停車費",
+          "若停車費過高，會接受多走一段路或搭接駁車"
         ]
       },
       "memory": {
@@ -69,30 +37,207 @@
     },
     {
       "identity": {
-        "name": "林玉珍",
-        "age": "62",
+        "name": "林雅婷",
+        "age": "25",
+        "occupation": "公司職員",
+        "wage": "新台幣 4.2 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "有汽車也有機車，會依距離與停車狀況選擇",
+        "residential_location": "台南市善化區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視上下班通勤穩定性，不希望球賽人潮影響日常行程",
+          "對突發壅塞與臨時交通管制較不耐煩"
+        ],
+        "habits": [
+          "平日傍晚固定經過球場周邊道路返家",
+          "會用導航確認主要道路是否壅塞",
+          "若知道有球賽，會提前或延後下班出發"
+        ],
+        "decision_making_tendencies": [
+          "偏好維持熟悉路線，但遇到明顯塞車會改道",
+          "若公車誤點嚴重，會改用機車、計程車或步行轉乘",
+          "通常不會為了省幾分鐘支付太高額外成本"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "重視時間可預期性勝過最短距離",
+          "願意多繞路以換取較穩定的行車速度"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "黃冠宇",
+        "age": "32",
         "occupation": "退休教師",
+        "wage": "新台幣 6.5 萬元",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "有一台電動機車，偏好短程快速移動",
+        "residential_location": "台南市歸仁區"
+      },
+      "traits": {
+        "attitudes": [
+          "熟悉球場周邊巷道，對外來車流進入社區感到困擾",
+          "希望比賽活動能兼顧居民安寧與交通秩序"
+        ],
+        "habits": [
+          "傍晚常在住家附近採買、散步或接送家人",
+          "球賽日會避免把車停在容易被堵住的巷口",
+          "會觀察人潮變化再決定是否外出"
+        ],
+        "decision_making_tendencies": [
+          "若主幹道壅塞，會使用熟悉的小路或延後出門",
+          "對外地車輛亂停較敏感，會避開停車熱點",
+          "傾向選擇低風險、低衝突的路線"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "不願意為短程移動支付高額交通成本",
+          "願意犧牲一點時間以維持生活舒適與安全"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "張美玲",
+        "age": "39",
+        "occupation": "計程車司機",
+        "wage": "新台幣 2.4 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "有一台小型汽車，平時多用自駕通勤",
+        "residential_location": "台南市麻豆區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視準時接送家人或朋友，對臨停空間與上下車動線敏感",
+          "希望停等時間短，避免影響其他車流"
+        ],
+        "habits": [
+          "會事先約定接送地點，並用手機確認對方位置",
+          "在散場尖峰會選擇離球場稍遠處會合",
+          "常以即時導航判斷是否需要繞路"
+        ],
+        "decision_making_tendencies": [
+          "若球場門口太擁擠，會改到次要路口或超商前接人",
+          "會在安全上下車與縮短等待時間之間取捨",
+          "若接送對象是小孩或長輩，會降低步行距離的容忍度"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意多花油錢繞路以避免長時間怠速等待",
+          "不喜歡支付停車費，只要能短暫臨停就傾向不進停車場"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "李俊傑",
+        "age": "46",
+        "occupation": "球場售票人員",
+        "wage": "新台幣 3.8 萬元",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "沒有自有車輛，主要搭乘公車與步行",
+        "residential_location": "台南市安南區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視準時到班與活動流程順暢，對交通管制資訊高度敏感",
+          "能接受比賽日周邊人潮增加，但希望動線清楚"
+        ],
+        "habits": [
+          "球賽日會比一般觀眾更早抵達場館",
+          "常攜帶工作證與簡單物資，需考慮步行距離",
+          "散場後通常比觀眾更晚離開"
+        ],
+        "decision_making_tendencies": [
+          "會優先選擇可靠且不易遲到的交通方式",
+          "若臨時收到調度訊息，會快速改變到達入口或集合點",
+          "較能接受提早出發以降低不確定性"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意用時間換取準時到班與降低壓力",
+          "若交通補助有限，會避免高額停車或計程車費"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "王怡君",
+        "age": "53",
+        "occupation": "外送員",
+        "wage": "新台幣 5.5 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "家中共用一台汽車，尖峰時段不一定能使用",
+        "residential_location": "台南市永康區"
+      },
+      "traits": {
+        "attitudes": [
+          "對球賽帶來的人潮與訂單變化敏感，會把交通狀況視為收入因素",
+          "希望能在尖峰時段維持服務效率，同時避免被壅塞拖慢"
+        ],
+        "habits": [
+          "會在比賽前後查看人潮熱點與道路狀況",
+          "常在球場周邊道路、商店與停車區之間移動",
+          "會根據客流或訂單量調整工作位置"
+        ],
+        "decision_making_tendencies": [
+          "若主要道路壅塞，會改走巷道或避開球場正門",
+          "會在收益機會與交通延誤風險之間取捨",
+          "對臨時停車、上下貨或載客空間很敏感"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意承擔較高移動成本以掌握尖峰商機",
+          "若壅塞造成效率下降，會轉往較外圍的需求點"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "吳建宏",
+        "age": "60",
+        "occupation": "大學生",
         "wage": "無固定收入",
-        "household_income": "新台幣 5 萬元",
-        "vehicle_ownership": "有一輛舊款機車，平時只在短途出行時使用",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "沒有私家車，偶爾使用計程車或共享機車",
         "residential_location": "台南市安平區"
       },
       "traits": {
         "attitudes": [
-          "熱愛球場附近的歷史景觀，喜歡慢步遊覽",
-          "不喜歡長時間在擁擠的交通環境中停留"
+          "喜歡現場看棒球，會把比賽氣氛視為重要休閒活動",
+          "對球賽進場前的車流與停車壓力敏感，願意提前規劃"
         ],
         "habits": [
-          "每週一次會在週末去球場附近的市場購物",
-          "習慣早上八點左右出門，避開車流高峰"
+          "球賽日通常會在開賽前60分鐘抵達球場附近",
+          "會先查看導航與停車資訊，再決定是否自駕或改搭接駁",
+          "散場時常會觀察人潮再決定是否立刻離開"
         ],
         "decision_making_tendencies": [
-          "會選擇走路或機車短途行程，避免在車上停留",
-          "若車流狀況惡化會改為步行或請親友送車"
+          "若停車場接近滿位，會改停較遠處再步行進場",
+          "若同行者有長輩或小孩，會優先選擇步行距離較短的路線",
+          "會在準時進場與避免塞車之間權衡"
         ],
         "economic_preferences_and_tradeoffs": [
-          "不願意為短途交通支付高額費用",
-          "重視身體舒適度與時間靈活性"
+          "願意為了縮短步行距離支付中等停車費",
+          "若停車費過高，會接受多走一段路或搭接駁車"
         ]
       },
       "memory": {
@@ -102,30 +247,32 @@
     },
     {
       "identity": {
-        "name": "陳偉傑",
-        "age": "29",
-        "occupation": "汽車租賃公司司機",
-        "wage": "新台幣 4 萬元",
-        "household_income": "新台幣 8 萬元",
-        "vehicle_ownership": "擁有一輛租賃車輛，主要用於接送顧客",
-        "residential_location": "台南市北區"
+        "name": "劉佳穎",
+        "age": "67",
+        "occupation": "工廠作業員",
+        "wage": "新台幣 3.2 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "有一台機車，平時以機車短程移動為主",
+        "residential_location": "台南市歸仁區"
       },
       "traits": {
         "attitudes": [
-          "對於客戶的時間安排極度重視",
-          "樂於為顧客提供最佳路徑選擇"
+          "重視上下班通勤穩定性，不希望球賽人潮影響日常行程",
+          "對突發壅塞與臨時交通管制較不耐煩"
         ],
         "habits": [
-          "每天早上七點前就上路，準備接送顧客",
-          "常用即時導航與交通監控系統調整路線"
+          "平日傍晚固定經過球場周邊道路返家",
+          "會用導航確認主要道路是否壅塞",
+          "若知道有球賽，會提前或延後下班出發"
         ],
         "decision_making_tendencies": [
-          "會在發現交通擁堵時即時改道",
-          "偏好使用快速巴士道或緊急迴避路徑"
+          "偏好維持熟悉路線，但遇到明顯塞車會改道",
+          "若公車誤點嚴重，會改用機車、計程車或步行轉乘",
+          "通常不會為了省幾分鐘支付太高額外成本"
         ],
         "economic_preferences_and_tradeoffs": [
-          "願意支付較高油耗以縮短行程時間",
-          "在客戶預算允許的前提下提供加速服務"
+          "重視時間可預期性勝過最短距離",
+          "願意多繞路以換取較穩定的行車速度"
         ]
       },
       "memory": {
@@ -135,30 +282,32 @@
     },
     {
       "identity": {
-        "name": "趙怡君",
-        "age": "24",
-        "occupation": "外送員",
-        "wage": "新台幣 2 萬元",
-        "household_income": "新台幣 2 萬元",
-        "vehicle_ownership": "擁有一輛機車，常用於外送",
-        "residential_location": "台南市東區"
+        "name": "蔡柏翰",
+        "age": "19",
+        "occupation": "家庭主婦",
+        "wage": "新台幣 4.8 萬元",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "有汽車也有機車，會依距離與停車狀況選擇",
+        "residential_location": "台南市麻豆區"
       },
       "traits": {
         "attitudes": [
-          "對於配送時間極為敏感",
-          "喜歡在擁擠時間內尋找快遞車道"
+          "熟悉球場周邊巷道，對外來車流進入社區感到困擾",
+          "希望比賽活動能兼顧居民安寧與交通秩序"
         ],
         "habits": [
-          "每天上午十點前從家裡出發進行外送",
-          "經常利用地圖APP尋找最快路徑"
+          "傍晚常在住家附近採買、散步或接送家人",
+          "球賽日會避免把車停在容易被堵住的巷口",
+          "會觀察人潮變化再決定是否外出"
         ],
         "decision_making_tendencies": [
-          "在高峰期會選擇較短距離但可能擁堵的路線",
-          "若路況惡化會立即換路"
+          "若主幹道壅塞，會使用熟悉的小路或延後出門",
+          "對外地車輛亂停較敏感，會避開停車熱點",
+          "傾向選擇低風險、低衝突的路線"
         ],
         "economic_preferences_and_tradeoffs": [
-          "願意在燃油成本上多支出以縮短配送時間",
-          "偏好使用機車以靈活穿梭於市區"
+          "不願意為短程移動支付高額交通成本",
+          "願意犧牲一點時間以維持生活舒適與安全"
         ]
       },
       "memory": {
@@ -168,30 +317,3182 @@
     },
     {
       "identity": {
-        "name": "鄭美慧",
-        "age": "43",
+        "name": "楊淑芬",
+        "age": "26",
+        "occupation": "家庭主婦",
+        "wage": "新台幣 7.5 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "有一台電動機車，偏好短程快速移動",
+        "residential_location": "台南市關廟區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視準時接送家人或朋友，對臨停空間與上下車動線敏感",
+          "希望停等時間短，避免影響其他車流"
+        ],
+        "habits": [
+          "會事先約定接送地點，並用手機確認對方位置",
+          "在散場尖峰會選擇離球場稍遠處會合",
+          "常以即時導航判斷是否需要繞路"
+        ],
+        "decision_making_tendencies": [
+          "若球場門口太擁擠，會改到次要路口或超商前接人",
+          "會在安全上下車與縮短等待時間之間取捨",
+          "若接送對象是小孩或長輩，會降低步行距離的容忍度"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意多花油錢繞路以避免長時間怠速等待",
+          "不喜歡支付停車費，只要能短暫臨停就傾向不進停車場"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "許宗翰",
+        "age": "33",
+        "occupation": "活動工讀生",
+        "wage": "新台幣 2.8 萬元",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "有一台小型汽車，平時多用自駕通勤",
+        "residential_location": "台南市中西區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視準時到班與活動流程順暢，對交通管制資訊高度敏感",
+          "能接受比賽日周邊人潮增加，但希望動線清楚"
+        ],
+        "habits": [
+          "球賽日會比一般觀眾更早抵達場館",
+          "常攜帶工作證與簡單物資，需考慮步行距離",
+          "散場後通常比觀眾更晚離開"
+        ],
+        "decision_making_tendencies": [
+          "會優先選擇可靠且不易遲到的交通方式",
+          "若臨時收到調度訊息，會快速改變到達入口或集合點",
+          "較能接受提早出發以降低不確定性"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意用時間換取準時到班與降低壓力",
+          "若交通補助有限，會避免高額停車或計程車費"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "鄭佩珊",
+        "age": "40",
         "occupation": "小吃攤主",
-        "wage": "新台幣 1.8 萬元",
-        "household_income": "新台幣 3.6 萬元",
-        "vehicle_ownership": "無私家車，主要以自行車與腳步運作",
+        "wage": "新台幣 4.2 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "沒有自有車輛，主要搭乘公車與步行",
+        "residential_location": "台南市新市區"
+      },
+      "traits": {
+        "attitudes": [
+          "對球賽帶來的人潮與訂單變化敏感，會把交通狀況視為收入因素",
+          "希望能在尖峰時段維持服務效率，同時避免被壅塞拖慢"
+        ],
+        "habits": [
+          "會在比賽前後查看人潮熱點與道路狀況",
+          "常在球場周邊道路、商店與停車區之間移動",
+          "會根據客流或訂單量調整工作位置"
+        ],
+        "decision_making_tendencies": [
+          "若主要道路壅塞，會改走巷道或避開球場正門",
+          "會在收益機會與交通延誤風險之間取捨",
+          "對臨時停車、上下貨或載客空間很敏感"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意承擔較高移動成本以掌握尖峰商機",
+          "若壅塞造成效率下降，會轉往較外圍的需求點"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "謝明哲",
+        "age": "47",
+        "occupation": "銀行行員",
+        "wage": "新台幣 6.5 萬元",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "家中共用一台汽車，尖峰時段不一定能使用",
+        "residential_location": "台南市善化區"
+      },
+      "traits": {
+        "attitudes": [
+          "喜歡現場看棒球，會把比賽氣氛視為重要休閒活動",
+          "對球賽進場前的車流與停車壓力敏感，願意提前規劃"
+        ],
+        "habits": [
+          "球賽日通常會在開賽前30分鐘抵達球場附近",
+          "會先查看導航與停車資訊，再決定是否自駕或改搭接駁",
+          "散場時常會觀察人潮再決定是否立刻離開"
+        ],
+        "decision_making_tendencies": [
+          "若停車場接近滿位，會改停較遠處再步行進場",
+          "若同行者有長輩或小孩，會優先選擇步行距離較短的路線",
+          "會在準時進場與避免塞車之間權衡"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意為了縮短步行距離支付中等停車費",
+          "若停車費過高，會接受多走一段路或搭接駁車"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "郭婉如",
+        "age": "54",
+        "occupation": "圖書館管理員",
+        "wage": "新台幣 2.4 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "沒有私家車，偶爾使用計程車或共享機車",
+        "residential_location": "台南市麻豆區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視上下班通勤穩定性，不希望球賽人潮影響日常行程",
+          "對突發壅塞與臨時交通管制較不耐煩"
+        ],
+        "habits": [
+          "平日傍晚固定經過球場周邊道路返家",
+          "會用導航確認主要道路是否壅塞",
+          "若知道有球賽，會提前或延後下班出發"
+        ],
+        "decision_making_tendencies": [
+          "偏好維持熟悉路線，但遇到明顯塞車會改道",
+          "若公車誤點嚴重，會改用機車、計程車或步行轉乘",
+          "通常不會為了省幾分鐘支付太高額外成本"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "重視時間可預期性勝過最短距離",
+          "願意多繞路以換取較穩定的行車速度"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "洪家豪",
+        "age": "61",
+        "occupation": "自營商",
+        "wage": "新台幣 3.8 萬元",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "有一台機車，平時以機車短程移動為主",
+        "residential_location": "台南市關廟區"
+      },
+      "traits": {
+        "attitudes": [
+          "熟悉球場周邊巷道，對外來車流進入社區感到困擾",
+          "希望比賽活動能兼顧居民安寧與交通秩序"
+        ],
+        "habits": [
+          "傍晚常在住家附近採買、散步或接送家人",
+          "球賽日會避免把車停在容易被堵住的巷口",
+          "會觀察人潮變化再決定是否外出"
+        ],
+        "decision_making_tendencies": [
+          "若主幹道壅塞，會使用熟悉的小路或延後出門",
+          "對外地車輛亂停較敏感，會避開停車熱點",
+          "傾向選擇低風險、低衝突的路線"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "不願意為短程移動支付高額交通成本",
+          "願意犧牲一點時間以維持生活舒適與安全"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "曾詩涵",
+        "age": "68",
+        "occupation": "上班族父親",
+        "wage": "新台幣 5.5 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "有汽車也有機車，會依距離與停車狀況選擇",
+        "residential_location": "台南市安南區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視準時接送家人或朋友，對臨停空間與上下車動線敏感",
+          "希望停等時間短，避免影響其他車流"
+        ],
+        "habits": [
+          "會事先約定接送地點，並用手機確認對方位置",
+          "在散場尖峰會選擇離球場稍遠處會合",
+          "常以即時導航判斷是否需要繞路"
+        ],
+        "decision_making_tendencies": [
+          "若球場門口太擁擠，會改到次要路口或超商前接人",
+          "會在安全上下車與縮短等待時間之間取捨",
+          "若接送對象是小孩或長輩，會降低步行距離的容忍度"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意多花油錢繞路以避免長時間怠速等待",
+          "不喜歡支付停車費，只要能短暫臨停就傾向不進停車場"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "邱文彬",
+        "age": "20",
+        "occupation": "場館保全",
+        "wage": "無固定收入",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "有一台電動機車，偏好短程快速移動",
         "residential_location": "台南市南區"
       },
       "traits": {
         "attitudes": [
-          "對於客流量波動極為敏感",
-          "重視與顧客的即時溝通"
+          "重視準時到班與活動流程順暢，對交通管制資訊高度敏感",
+          "能接受比賽日周邊人潮增加，但希望動線清楚"
         ],
         "habits": [
-          "每天上午九點前準備攤位，並在高峰期加碼供應",
-          "會在比賽前後留意球場附近人潮變化"
+          "球賽日會比一般觀眾更早抵達場館",
+          "常攜帶工作證與簡單物資，需考慮步行距離",
+          "散場後通常比觀眾更晚離開"
         ],
         "decision_making_tendencies": [
-          "若比賽人潮密集會增加攤位擺設以吸引觀眾",
-          "在人潮不大時會降低人力與庫存"
+          "會優先選擇可靠且不易遲到的交通方式",
+          "若臨時收到調度訊息，會快速改變到達入口或集合點",
+          "較能接受提早出發以降低不確定性"
         ],
         "economic_preferences_and_tradeoffs": [
-          "願意為了短期收益投入更多人力",
-          "不願在非高峰期過度耗費能源"
+          "願意用時間換取準時到班與降低壓力",
+          "若交通補助有限，會避免高額停車或計程車費"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "廖惠如",
+        "age": "27",
+        "occupation": "計程車司機",
+        "wage": "新台幣 3.2 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "有一台小型汽車，平時多用自駕通勤",
+        "residential_location": "台南市仁德區"
+      },
+      "traits": {
+        "attitudes": [
+          "對球賽帶來的人潮與訂單變化敏感，會把交通狀況視為收入因素",
+          "希望能在尖峰時段維持服務效率，同時避免被壅塞拖慢"
+        ],
+        "habits": [
+          "會在比賽前後查看人潮熱點與道路狀況",
+          "常在球場周邊道路、商店與停車區之間移動",
+          "會根據客流或訂單量調整工作位置"
+        ],
+        "decision_making_tendencies": [
+          "若主要道路壅塞，會改走巷道或避開球場正門",
+          "會在收益機會與交通延誤風險之間取捨",
+          "對臨時停車、上下貨或載客空間很敏感"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意承擔較高移動成本以掌握尖峰商機",
+          "若壅塞造成效率下降，會轉往較外圍的需求點"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "賴承恩",
+        "age": "34",
+        "occupation": "高中教師",
+        "wage": "新台幣 4.8 萬元",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "沒有自有車輛，主要搭乘公車與步行",
+        "residential_location": "台南市歸仁區"
+      },
+      "traits": {
+        "attitudes": [
+          "喜歡現場看棒球，會把比賽氣氛視為重要休閒活動",
+          "對球賽進場前的車流與停車壓力敏感，願意提前規劃"
+        ],
+        "habits": [
+          "球賽日通常會在開賽前60分鐘抵達球場附近",
+          "會先查看導航與停車資訊，再決定是否自駕或改搭接駁",
+          "散場時常會觀察人潮再決定是否立刻離開"
+        ],
+        "decision_making_tendencies": [
+          "若停車場接近滿位，會改停較遠處再步行進場",
+          "若同行者有長輩或小孩，會優先選擇步行距離較短的路線",
+          "會在準時進場與避免塞車之間權衡"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意為了縮短步行距離支付中等停車費",
+          "若停車費過高，會接受多走一段路或搭接駁車"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "徐郁婷",
+        "age": "41",
+        "occupation": "公務員",
+        "wage": "新台幣 7.5 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "家中共用一台汽車，尖峰時段不一定能使用",
+        "residential_location": "台南市關廟區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視上下班通勤穩定性，不希望球賽人潮影響日常行程",
+          "對突發壅塞與臨時交通管制較不耐煩"
+        ],
+        "habits": [
+          "平日傍晚固定經過球場周邊道路返家",
+          "會用導航確認主要道路是否壅塞",
+          "若知道有球賽，會提前或延後下班出發"
+        ],
+        "decision_making_tendencies": [
+          "偏好維持熟悉路線，但遇到明顯塞車會改道",
+          "若公車誤點嚴重，會改用機車、計程車或步行轉乘",
+          "通常不會為了省幾分鐘支付太高額外成本"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "重視時間可預期性勝過最短距離",
+          "願意多繞路以換取較穩定的行車速度"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "周信宏",
+        "age": "48",
+        "occupation": "便利商店店員",
+        "wage": "新台幣 2.8 萬元",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "沒有私家車，偶爾使用計程車或共享機車",
+        "residential_location": "台南市安南區"
+      },
+      "traits": {
+        "attitudes": [
+          "熟悉球場周邊巷道，對外來車流進入社區感到困擾",
+          "希望比賽活動能兼顧居民安寧與交通秩序"
+        ],
+        "habits": [
+          "傍晚常在住家附近採買、散步或接送家人",
+          "球賽日會避免把車停在容易被堵住的巷口",
+          "會觀察人潮變化再決定是否外出"
+        ],
+        "decision_making_tendencies": [
+          "若主幹道壅塞，會使用熟悉的小路或延後出門",
+          "對外地車輛亂停較敏感，會避開停車熱點",
+          "傾向選擇低風險、低衝突的路線"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "不願意為短程移動支付高額交通成本",
+          "願意犧牲一點時間以維持生活舒適與安全"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "葉欣怡",
+        "age": "55",
+        "occupation": "大學生哥哥",
+        "wage": "新台幣 4.2 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "有一台機車，平時以機車短程移動為主",
+        "residential_location": "台南市中西區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視準時接送家人或朋友，對臨停空間與上下車動線敏感",
+          "希望停等時間短，避免影響其他車流"
+        ],
+        "habits": [
+          "會事先約定接送地點，並用手機確認對方位置",
+          "在散場尖峰會選擇離球場稍遠處會合",
+          "常以即時導航判斷是否需要繞路"
+        ],
+        "decision_making_tendencies": [
+          "若球場門口太擁擠，會改到次要路口或超商前接人",
+          "會在安全上下車與縮短等待時間之間取捨",
+          "若接送對象是小孩或長輩，會降低步行距離的容忍度"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意多花油錢繞路以避免長時間怠速等待",
+          "不喜歡支付停車費，只要能短暫臨停就傾向不進停車場"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "蘇哲維",
+        "age": "62",
+        "occupation": "清潔人員",
+        "wage": "新台幣 6.5 萬元",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "有汽車也有機車，會依距離與停車狀況選擇",
+        "residential_location": "台南市安平區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視準時到班與活動流程順暢，對交通管制資訊高度敏感",
+          "能接受比賽日周邊人潮增加，但希望動線清楚"
+        ],
+        "habits": [
+          "球賽日會比一般觀眾更早抵達場館",
+          "常攜帶工作證與簡單物資，需考慮步行距離",
+          "散場後通常比觀眾更晚離開"
+        ],
+        "decision_making_tendencies": [
+          "會優先選擇可靠且不易遲到的交通方式",
+          "若臨時收到調度訊息，會快速改變到達入口或集合點",
+          "較能接受提早出發以降低不確定性"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意用時間換取準時到班與降低壓力",
+          "若交通補助有限，會避免高額停車或計程車費"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "莊秀琴",
+        "age": "69",
+        "occupation": "飲料店店員",
+        "wage": "新台幣 2.4 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "有一台電動機車，偏好短程快速移動",
+        "residential_location": "台南市佳里區"
+      },
+      "traits": {
+        "attitudes": [
+          "對球賽帶來的人潮與訂單變化敏感，會把交通狀況視為收入因素",
+          "希望能在尖峰時段維持服務效率，同時避免被壅塞拖慢"
+        ],
+        "habits": [
+          "會在比賽前後查看人潮熱點與道路狀況",
+          "常在球場周邊道路、商店與停車區之間移動",
+          "會根據客流或訂單量調整工作位置"
+        ],
+        "decision_making_tendencies": [
+          "若主要道路壅塞，會改走巷道或避開球場正門",
+          "會在收益機會與交通延誤風險之間取捨",
+          "對臨時停車、上下貨或載客空間很敏感"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意承擔較高移動成本以掌握尖峰商機",
+          "若壅塞造成效率下降，會轉往較外圍的需求點"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "江政勳",
+        "age": "21",
+        "occupation": "設計師",
+        "wage": "新台幣 3.8 萬元",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "有一台小型汽車，平時多用自駕通勤",
+        "residential_location": "台南市麻豆區"
+      },
+      "traits": {
+        "attitudes": [
+          "喜歡現場看棒球，會把比賽氣氛視為重要休閒活動",
+          "對球賽進場前的車流與停車壓力敏感，願意提前規劃"
+        ],
+        "habits": [
+          "球賽日通常會在開賽前30分鐘抵達球場附近",
+          "會先查看導航與停車資訊，再決定是否自駕或改搭接駁",
+          "散場時常會觀察人潮再決定是否立刻離開"
+        ],
+        "decision_making_tendencies": [
+          "若停車場接近滿位，會改停較遠處再步行進場",
+          "若同行者有長輩或小孩，會優先選擇步行距離較短的路線",
+          "會在準時進場與避免塞車之間權衡"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意為了縮短步行距離支付中等停車費",
+          "若停車費過高，會接受多走一段路或搭接駁車"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "陳品妤",
+        "age": "28",
+        "occupation": "補習班老師",
+        "wage": "新台幣 5.5 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "沒有自有車輛，主要搭乘公車與步行",
+        "residential_location": "台南市安南區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視上下班通勤穩定性，不希望球賽人潮影響日常行程",
+          "對突發壅塞與臨時交通管制較不耐煩"
+        ],
+        "habits": [
+          "平日傍晚固定經過球場周邊道路返家",
+          "會用導航確認主要道路是否壅塞",
+          "若知道有球賽，會提前或延後下班出發"
+        ],
+        "decision_making_tendencies": [
+          "偏好維持熟悉路線，但遇到明顯塞車會改道",
+          "若公車誤點嚴重，會改用機車、計程車或步行轉乘",
+          "通常不會為了省幾分鐘支付太高額外成本"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "重視時間可預期性勝過最短距離",
+          "願意多繞路以換取較穩定的行車速度"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "林國華",
+        "age": "35",
+        "occupation": "社區管理員",
+        "wage": "無固定收入",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "家中共用一台汽車，尖峰時段不一定能使用",
+        "residential_location": "台南市中西區"
+      },
+      "traits": {
+        "attitudes": [
+          "熟悉球場周邊巷道，對外來車流進入社區感到困擾",
+          "希望比賽活動能兼顧居民安寧與交通秩序"
+        ],
+        "habits": [
+          "傍晚常在住家附近採買、散步或接送家人",
+          "球賽日會避免把車停在容易被堵住的巷口",
+          "會觀察人潮變化再決定是否外出"
+        ],
+        "decision_making_tendencies": [
+          "若主幹道壅塞，會使用熟悉的小路或延後出門",
+          "對外地車輛亂停較敏感，會避開停車熱點",
+          "傾向選擇低風險、低衝突的路線"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "不願意為短程移動支付高額交通成本",
+          "願意犧牲一點時間以維持生活舒適與安全"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "黃曉萍",
+        "age": "42",
+        "occupation": "補習班老師",
+        "wage": "新台幣 3.2 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "沒有私家車，偶爾使用計程車或共享機車",
+        "residential_location": "台南市南區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視準時接送家人或朋友，對臨停空間與上下車動線敏感",
+          "希望停等時間短，避免影響其他車流"
+        ],
+        "habits": [
+          "會事先約定接送地點，並用手機確認對方位置",
+          "在散場尖峰會選擇離球場稍遠處會合",
+          "常以即時導航判斷是否需要繞路"
+        ],
+        "decision_making_tendencies": [
+          "若球場門口太擁擠，會改到次要路口或超商前接人",
+          "會在安全上下車與縮短等待時間之間取捨",
+          "若接送對象是小孩或長輩，會降低步行距離的容忍度"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意多花油錢繞路以避免長時間怠速等待",
+          "不喜歡支付停車費，只要能短暫臨停就傾向不進停車場"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "張育誠",
+        "age": "49",
+        "occupation": "交通引導志工",
+        "wage": "新台幣 4.8 萬元",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "有一台機車，平時以機車短程移動為主",
+        "residential_location": "台南市善化區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視準時到班與活動流程順暢，對交通管制資訊高度敏感",
+          "能接受比賽日周邊人潮增加，但希望動線清楚"
+        ],
+        "habits": [
+          "球賽日會比一般觀眾更早抵達場館",
+          "常攜帶工作證與簡單物資，需考慮步行距離",
+          "散場後通常比觀眾更晚離開"
+        ],
+        "decision_making_tendencies": [
+          "會優先選擇可靠且不易遲到的交通方式",
+          "若臨時收到調度訊息，會快速改變到達入口或集合點",
+          "較能接受提早出發以降低不確定性"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意用時間換取準時到班與降低壓力",
+          "若交通補助有限，會避免高額停車或計程車費"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "李孟潔",
+        "age": "56",
+        "occupation": "便利商店店長",
+        "wage": "新台幣 7.5 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "有汽車也有機車，會依距離與停車狀況選擇",
+        "residential_location": "台南市新營區"
+      },
+      "traits": {
+        "attitudes": [
+          "對球賽帶來的人潮與訂單變化敏感，會把交通狀況視為收入因素",
+          "希望能在尖峰時段維持服務效率，同時避免被壅塞拖慢"
+        ],
+        "habits": [
+          "會在比賽前後查看人潮熱點與道路狀況",
+          "常在球場周邊道路、商店與停車區之間移動",
+          "會根據客流或訂單量調整工作位置"
+        ],
+        "decision_making_tendencies": [
+          "若主要道路壅塞，會改走巷道或避開球場正門",
+          "會在收益機會與交通延誤風險之間取捨",
+          "對臨時停車、上下貨或載客空間很敏感"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意承擔較高移動成本以掌握尖峰商機",
+          "若壅塞造成效率下降，會轉往較外圍的需求點"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "王偉倫",
+        "age": "63",
+        "occupation": "業務專員",
+        "wage": "新台幣 2.8 萬元",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "有一台電動機車，偏好短程快速移動",
+        "residential_location": "台南市關廟區"
+      },
+      "traits": {
+        "attitudes": [
+          "喜歡現場看棒球，會把比賽氣氛視為重要休閒活動",
+          "對球賽進場前的車流與停車壓力敏感，願意提前規劃"
+        ],
+        "habits": [
+          "球賽日通常會在開賽前60分鐘抵達球場附近",
+          "會先查看導航與停車資訊，再決定是否自駕或改搭接駁",
+          "散場時常會觀察人潮再決定是否立刻離開"
+        ],
+        "decision_making_tendencies": [
+          "若停車場接近滿位，會改停較遠處再步行進場",
+          "若同行者有長輩或小孩，會優先選擇步行距離較短的路線",
+          "會在準時進場與避免塞車之間權衡"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意為了縮短步行距離支付中等停車費",
+          "若停車費過高，會接受多走一段路或搭接駁車"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "吳宜庭",
+        "age": "70",
+        "occupation": "物流倉管",
+        "wage": "新台幣 4.2 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "有一台小型汽車，平時多用自駕通勤",
+        "residential_location": "台南市中西區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視上下班通勤穩定性，不希望球賽人潮影響日常行程",
+          "對突發壅塞與臨時交通管制較不耐煩"
+        ],
+        "habits": [
+          "平日傍晚固定經過球場周邊道路返家",
+          "會用導航確認主要道路是否壅塞",
+          "若知道有球賽，會提前或延後下班出發"
+        ],
+        "decision_making_tendencies": [
+          "偏好維持熟悉路線，但遇到明顯塞車會改道",
+          "若公車誤點嚴重，會改用機車、計程車或步行轉乘",
+          "通常不會為了省幾分鐘支付太高額外成本"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "重視時間可預期性勝過最短距離",
+          "願意多繞路以換取較穩定的行車速度"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "劉子豪",
+        "age": "22",
+        "occupation": "退休公務員",
+        "wage": "新台幣 6.5 萬元",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "沒有自有車輛，主要搭乘公車與步行",
+        "residential_location": "台南市南區"
+      },
+      "traits": {
+        "attitudes": [
+          "熟悉球場周邊巷道，對外來車流進入社區感到困擾",
+          "希望比賽活動能兼顧居民安寧與交通秩序"
+        ],
+        "habits": [
+          "傍晚常在住家附近採買、散步或接送家人",
+          "球賽日會避免把車停在容易被堵住的巷口",
+          "會觀察人潮變化再決定是否外出"
+        ],
+        "decision_making_tendencies": [
+          "若主幹道壅塞，會使用熟悉的小路或延後出門",
+          "對外地車輛亂停較敏感，會避開停車熱點",
+          "傾向選擇低風險、低衝突的路線"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "不願意為短程移動支付高額交通成本",
+          "願意犧牲一點時間以維持生活舒適與安全"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "蔡淑娟",
+        "age": "29",
+        "occupation": "照顧者",
+        "wage": "新台幣 2.4 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "家中共用一台汽車，尖峰時段不一定能使用",
+        "residential_location": "台南市安平區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視準時接送家人或朋友，對臨停空間與上下車動線敏感",
+          "希望停等時間短，避免影響其他車流"
+        ],
+        "habits": [
+          "會事先約定接送地點，並用手機確認對方位置",
+          "在散場尖峰會選擇離球場稍遠處會合",
+          "常以即時導航判斷是否需要繞路"
+        ],
+        "decision_making_tendencies": [
+          "若球場門口太擁擠，會改到次要路口或超商前接人",
+          "會在安全上下車與縮短等待時間之間取捨",
+          "若接送對象是小孩或長輩，會降低步行距離的容忍度"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意多花油錢繞路以避免長時間怠速等待",
+          "不喜歡支付停車費，只要能短暫臨停就傾向不進停車場"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "楊宏仁",
+        "age": "36",
+        "occupation": "攤位協調人員",
+        "wage": "新台幣 3.8 萬元",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "沒有私家車，偶爾使用計程車或共享機車",
+        "residential_location": "台南市歸仁區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視準時到班與活動流程順暢，對交通管制資訊高度敏感",
+          "能接受比賽日周邊人潮增加，但希望動線清楚"
+        ],
+        "habits": [
+          "球賽日會比一般觀眾更早抵達場館",
+          "常攜帶工作證與簡單物資，需考慮步行距離",
+          "散場後通常比觀眾更晚離開"
+        ],
+        "decision_making_tendencies": [
+          "會優先選擇可靠且不易遲到的交通方式",
+          "若臨時收到調度訊息，會快速改變到達入口或集合點",
+          "較能接受提早出發以降低不確定性"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意用時間換取準時到班與降低壓力",
+          "若交通補助有限，會避免高額停車或計程車費"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "許思穎",
+        "age": "43",
+        "occupation": "停車場業者",
+        "wage": "新台幣 5.5 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "有一台機車，平時以機車短程移動為主",
+        "residential_location": "台南市安定區"
+      },
+      "traits": {
+        "attitudes": [
+          "對球賽帶來的人潮與訂單變化敏感，會把交通狀況視為收入因素",
+          "希望能在尖峰時段維持服務效率，同時避免被壅塞拖慢"
+        ],
+        "habits": [
+          "會在比賽前後查看人潮熱點與道路狀況",
+          "常在球場周邊道路、商店與停車區之間移動",
+          "會根據客流或訂單量調整工作位置"
+        ],
+        "decision_making_tendencies": [
+          "若主要道路壅塞，會改走巷道或避開球場正門",
+          "會在收益機會與交通延誤風險之間取捨",
+          "對臨時停車、上下貨或載客空間很敏感"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意承擔較高移動成本以掌握尖峰商機",
+          "若壅塞造成效率下降，會轉往較外圍的需求點"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "鄭廷宇",
+        "age": "50",
+        "occupation": "研究助理",
+        "wage": "無固定收入",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "有汽車也有機車，會依距離與停車狀況選擇",
+        "residential_location": "台南市安南區"
+      },
+      "traits": {
+        "attitudes": [
+          "喜歡現場看棒球，會把比賽氣氛視為重要休閒活動",
+          "對球賽進場前的車流與停車壓力敏感，願意提前規劃"
+        ],
+        "habits": [
+          "球賽日通常會在開賽前30分鐘抵達球場附近",
+          "會先查看導航與停車資訊，再決定是否自駕或改搭接駁",
+          "散場時常會觀察人潮再決定是否立刻離開"
+        ],
+        "decision_making_tendencies": [
+          "若停車場接近滿位，會改停較遠處再步行進場",
+          "若同行者有長輩或小孩，會優先選擇步行距離較短的路線",
+          "會在準時進場與避免塞車之間權衡"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意為了縮短步行距離支付中等停車費",
+          "若停車費過高，會接受多走一段路或搭接駁車"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "謝麗華",
+        "age": "57",
+        "occupation": "醫院行政",
+        "wage": "新台幣 3.2 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "有一台電動機車，偏好短程快速移動",
+        "residential_location": "台南市南區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視上下班通勤穩定性，不希望球賽人潮影響日常行程",
+          "對突發壅塞與臨時交通管制較不耐煩"
+        ],
+        "habits": [
+          "平日傍晚固定經過球場周邊道路返家",
+          "會用導航確認主要道路是否壅塞",
+          "若知道有球賽，會提前或延後下班出發"
+        ],
+        "decision_making_tendencies": [
+          "偏好維持熟悉路線，但遇到明顯塞車會改道",
+          "若公車誤點嚴重，會改用機車、計程車或步行轉乘",
+          "通常不會為了省幾分鐘支付太高額外成本"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "重視時間可預期性勝過最短距離",
+          "願意多繞路以換取較穩定的行車速度"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "郭士豪",
+        "age": "64",
+        "occupation": "早餐店老闆",
+        "wage": "新台幣 4.8 萬元",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "有一台小型汽車，平時多用自駕通勤",
+        "residential_location": "台南市安平區"
+      },
+      "traits": {
+        "attitudes": [
+          "熟悉球場周邊巷道，對外來車流進入社區感到困擾",
+          "希望比賽活動能兼顧居民安寧與交通秩序"
+        ],
+        "habits": [
+          "傍晚常在住家附近採買、散步或接送家人",
+          "球賽日會避免把車停在容易被堵住的巷口",
+          "會觀察人潮變化再決定是否外出"
+        ],
+        "decision_making_tendencies": [
+          "若主幹道壅塞，會使用熟悉的小路或延後出門",
+          "對外地車輛亂停較敏感，會避開停車熱點",
+          "傾向選擇低風險、低衝突的路線"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "不願意為短程移動支付高額交通成本",
+          "願意犧牲一點時間以維持生活舒適與安全"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "洪筱雯",
+        "age": "71",
+        "occupation": "私人接送司機",
+        "wage": "新台幣 7.5 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "沒有自有車輛，主要搭乘公車與步行",
+        "residential_location": "台南市善化區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視準時接送家人或朋友，對臨停空間與上下車動線敏感",
+          "希望停等時間短，避免影響其他車流"
+        ],
+        "habits": [
+          "會事先約定接送地點，並用手機確認對方位置",
+          "在散場尖峰會選擇離球場稍遠處會合",
+          "常以即時導航判斷是否需要繞路"
+        ],
+        "decision_making_tendencies": [
+          "若球場門口太擁擠，會改到次要路口或超商前接人",
+          "會在安全上下車與縮短等待時間之間取捨",
+          "若接送對象是小孩或長輩，會降低步行距離的容忍度"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意多花油錢繞路以避免長時間怠速等待",
+          "不喜歡支付停車費，只要能短暫臨停就傾向不進停車場"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "曾宇軒",
+        "age": "23",
+        "occupation": "救護站護理人員",
+        "wage": "新台幣 2.8 萬元",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "家中共用一台汽車，尖峰時段不一定能使用",
+        "residential_location": "台南市麻豆區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視準時到班與活動流程順暢，對交通管制資訊高度敏感",
+          "能接受比賽日周邊人潮增加，但希望動線清楚"
+        ],
+        "habits": [
+          "球賽日會比一般觀眾更早抵達場館",
+          "常攜帶工作證與簡單物資，需考慮步行距離",
+          "散場後通常比觀眾更晚離開"
+        ],
+        "decision_making_tendencies": [
+          "會優先選擇可靠且不易遲到的交通方式",
+          "若臨時收到調度訊息，會快速改變到達入口或集合點",
+          "較能接受提早出發以降低不確定性"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意用時間換取準時到班與降低壓力",
+          "若交通補助有限，會避免高額停車或計程車費"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "邱美慧",
+        "age": "30",
+        "occupation": "夜市攤販",
+        "wage": "新台幣 4.2 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "沒有私家車，偶爾使用計程車或共享機車",
+        "residential_location": "台南市北區"
+      },
+      "traits": {
+        "attitudes": [
+          "對球賽帶來的人潮與訂單變化敏感，會把交通狀況視為收入因素",
+          "希望能在尖峰時段維持服務效率，同時避免被壅塞拖慢"
+        ],
+        "habits": [
+          "會在比賽前後查看人潮熱點與道路狀況",
+          "常在球場周邊道路、商店與停車區之間移動",
+          "會根據客流或訂單量調整工作位置"
+        ],
+        "decision_making_tendencies": [
+          "若主要道路壅塞，會改走巷道或避開球場正門",
+          "會在收益機會與交通延誤風險之間取捨",
+          "對臨時停車、上下貨或載客空間很敏感"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意承擔較高移動成本以掌握尖峰商機",
+          "若壅塞造成效率下降，會轉往較外圍的需求點"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "廖嘉宏",
+        "age": "37",
+        "occupation": "護理師",
+        "wage": "新台幣 6.5 萬元",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "有一台機車，平時以機車短程移動為主",
+        "residential_location": "台南市中西區"
+      },
+      "traits": {
+        "attitudes": [
+          "喜歡現場看棒球，會把比賽氣氛視為重要休閒活動",
+          "對球賽進場前的車流與停車壓力敏感，願意提前規劃"
+        ],
+        "habits": [
+          "球賽日通常會在開賽前60分鐘抵達球場附近",
+          "會先查看導航與停車資訊，再決定是否自駕或改搭接駁",
+          "散場時常會觀察人潮再決定是否立刻離開"
+        ],
+        "decision_making_tendencies": [
+          "若停車場接近滿位，會改停較遠處再步行進場",
+          "若同行者有長輩或小孩，會優先選擇步行距離較短的路線",
+          "會在準時進場與避免塞車之間權衡"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意為了縮短步行距離支付中等停車費",
+          "若停車費過高，會接受多走一段路或搭接駁車"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "賴怡臻",
+        "age": "44",
+        "occupation": "科技園區工程師",
+        "wage": "新台幣 2.4 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "有汽車也有機車，會依距離與停車狀況選擇",
+        "residential_location": "台南市安平區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視上下班通勤穩定性，不希望球賽人潮影響日常行程",
+          "對突發壅塞與臨時交通管制較不耐煩"
+        ],
+        "habits": [
+          "平日傍晚固定經過球場周邊道路返家",
+          "會用導航確認主要道路是否壅塞",
+          "若知道有球賽，會提前或延後下班出發"
+        ],
+        "decision_making_tendencies": [
+          "偏好維持熟悉路線，但遇到明顯塞車會改道",
+          "若公車誤點嚴重，會改用機車、計程車或步行轉乘",
+          "通常不會為了省幾分鐘支付太高額外成本"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "重視時間可預期性勝過最短距離",
+          "願意多繞路以換取較穩定的行車速度"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "徐俊宏",
+        "age": "51",
+        "occupation": "水電師傅",
+        "wage": "新台幣 3.8 萬元",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "有一台電動機車，偏好短程快速移動",
+        "residential_location": "台南市善化區"
+      },
+      "traits": {
+        "attitudes": [
+          "熟悉球場周邊巷道，對外來車流進入社區感到困擾",
+          "希望比賽活動能兼顧居民安寧與交通秩序"
+        ],
+        "habits": [
+          "傍晚常在住家附近採買、散步或接送家人",
+          "球賽日會避免把車停在容易被堵住的巷口",
+          "會觀察人潮變化再決定是否外出"
+        ],
+        "decision_making_tendencies": [
+          "若主幹道壅塞，會使用熟悉的小路或延後出門",
+          "對外地車輛亂停較敏感，會避開停車熱點",
+          "傾向選擇低風險、低衝突的路線"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "不願意為短程移動支付高額交通成本",
+          "願意犧牲一點時間以維持生活舒適與安全"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "周佳蓉",
+        "age": "58",
+        "occupation": "母親",
+        "wage": "新台幣 5.5 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "有一台小型汽車，平時多用自駕通勤",
+        "residential_location": "台南市歸仁區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視準時接送家人或朋友，對臨停空間與上下車動線敏感",
+          "希望停等時間短，避免影響其他車流"
+        ],
+        "habits": [
+          "會事先約定接送地點，並用手機確認對方位置",
+          "在散場尖峰會選擇離球場稍遠處會合",
+          "常以即時導航判斷是否需要繞路"
+        ],
+        "decision_making_tendencies": [
+          "若球場門口太擁擠，會改到次要路口或超商前接人",
+          "會在安全上下車與縮短等待時間之間取捨",
+          "若接送對象是小孩或長輩，會降低步行距離的容忍度"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意多花油錢繞路以避免長時間怠速等待",
+          "不喜歡支付停車費，只要能短暫臨停就傾向不進停車場"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "葉明賢",
+        "age": "65",
+        "occupation": "活動企劃助理",
+        "wage": "無固定收入",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "沒有自有車輛，主要搭乘公車與步行",
+        "residential_location": "台南市關廟區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視準時到班與活動流程順暢，對交通管制資訊高度敏感",
+          "能接受比賽日周邊人潮增加，但希望動線清楚"
+        ],
+        "habits": [
+          "球賽日會比一般觀眾更早抵達場館",
+          "常攜帶工作證與簡單物資，需考慮步行距離",
+          "散場後通常比觀眾更晚離開"
+        ],
+        "decision_making_tendencies": [
+          "會優先選擇可靠且不易遲到的交通方式",
+          "若臨時收到調度訊息，會快速改變到達入口或集合點",
+          "較能接受提早出發以降低不確定性"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意用時間換取準時到班與降低壓力",
+          "若交通補助有限，會避免高額停車或計程車費"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "蘇雅雯",
+        "age": "72",
+        "occupation": "共享機車維運員",
+        "wage": "新台幣 3.2 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "家中共用一台汽車，尖峰時段不一定能使用",
+        "residential_location": "台南市東區"
+      },
+      "traits": {
+        "attitudes": [
+          "對球賽帶來的人潮與訂單變化敏感，會把交通狀況視為收入因素",
+          "希望能在尖峰時段維持服務效率，同時避免被壅塞拖慢"
+        ],
+        "habits": [
+          "會在比賽前後查看人潮熱點與道路狀況",
+          "常在球場周邊道路、商店與停車區之間移動",
+          "會根據客流或訂單量調整工作位置"
+        ],
+        "decision_making_tendencies": [
+          "若主要道路壅塞，會改走巷道或避開球場正門",
+          "會在收益機會與交通延誤風險之間取捨",
+          "對臨時停車、上下貨或載客空間很敏感"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意承擔較高移動成本以掌握尖峰商機",
+          "若壅塞造成效率下降，會轉往較外圍的需求點"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "莊柏宇",
+        "age": "24",
+        "occupation": "行政助理",
+        "wage": "新台幣 4.8 萬元",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "沒有私家車，偶爾使用計程車或共享機車",
+        "residential_location": "台南市南區"
+      },
+      "traits": {
+        "attitudes": [
+          "喜歡現場看棒球，會把比賽氣氛視為重要休閒活動",
+          "對球賽進場前的車流與停車壓力敏感，願意提前規劃"
+        ],
+        "habits": [
+          "球賽日通常會在開賽前30分鐘抵達球場附近",
+          "會先查看導航與停車資訊，再決定是否自駕或改搭接駁",
+          "散場時常會觀察人潮再決定是否立刻離開"
+        ],
+        "decision_making_tendencies": [
+          "若停車場接近滿位，會改停較遠處再步行進場",
+          "若同行者有長輩或小孩，會優先選擇步行距離較短的路線",
+          "會在準時進場與避免塞車之間權衡"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意為了縮短步行距離支付中等停車費",
+          "若停車費過高，會接受多走一段路或搭接駁車"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "江秀珍",
+        "age": "31",
+        "occupation": "百貨櫃員",
+        "wage": "新台幣 7.5 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "有一台機車，平時以機車短程移動為主",
+        "residential_location": "台南市善化區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視上下班通勤穩定性，不希望球賽人潮影響日常行程",
+          "對突發壅塞與臨時交通管制較不耐煩"
+        ],
+        "habits": [
+          "平日傍晚固定經過球場周邊道路返家",
+          "會用導航確認主要道路是否壅塞",
+          "若知道有球賽，會提前或延後下班出發"
+        ],
+        "decision_making_tendencies": [
+          "偏好維持熟悉路線，但遇到明顯塞車會改道",
+          "若公車誤點嚴重，會改用機車、計程車或步行轉乘",
+          "通常不會為了省幾分鐘支付太高額外成本"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "重視時間可預期性勝過最短距離",
+          "願意多繞路以換取較穩定的行車速度"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "陳哲豪",
+        "age": "38",
+        "occupation": "照服員",
+        "wage": "新台幣 2.8 萬元",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "有汽車也有機車，會依距離與停車狀況選擇",
+        "residential_location": "台南市歸仁區"
+      },
+      "traits": {
+        "attitudes": [
+          "熟悉球場周邊巷道，對外來車流進入社區感到困擾",
+          "希望比賽活動能兼顧居民安寧與交通秩序"
+        ],
+        "habits": [
+          "傍晚常在住家附近採買、散步或接送家人",
+          "球賽日會避免把車停在容易被堵住的巷口",
+          "會觀察人潮變化再決定是否外出"
+        ],
+        "decision_making_tendencies": [
+          "若主幹道壅塞，會使用熟悉的小路或延後出門",
+          "對外地車輛亂停較敏感，會避開停車熱點",
+          "傾向選擇低風險、低衝突的路線"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "不願意為短程移動支付高額交通成本",
+          "願意犧牲一點時間以維持生活舒適與安全"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "林鈺婷",
+        "age": "45",
+        "occupation": "父親",
+        "wage": "新台幣 4.2 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "有一台電動機車，偏好短程快速移動",
+        "residential_location": "台南市麻豆區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視準時接送家人或朋友，對臨停空間與上下車動線敏感",
+          "希望停等時間短，避免影響其他車流"
+        ],
+        "habits": [
+          "會事先約定接送地點，並用手機確認對方位置",
+          "在散場尖峰會選擇離球場稍遠處會合",
+          "常以即時導航判斷是否需要繞路"
+        ],
+        "decision_making_tendencies": [
+          "若球場門口太擁擠，會改到次要路口或超商前接人",
+          "會在安全上下車與縮短等待時間之間取捨",
+          "若接送對象是小孩或長輩，會降低步行距離的容忍度"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意多花油錢繞路以避免長時間怠速等待",
+          "不喜歡支付停車費，只要能短暫臨停就傾向不進停車場"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "黃冠廷",
+        "age": "52",
+        "occupation": "球場設備維護員",
+        "wage": "新台幣 6.5 萬元",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "有一台小型汽車，平時多用自駕通勤",
+        "residential_location": "台南市安南區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視準時到班與活動流程順暢，對交通管制資訊高度敏感",
+          "能接受比賽日周邊人潮增加，但希望動線清楚"
+        ],
+        "habits": [
+          "球賽日會比一般觀眾更早抵達場館",
+          "常攜帶工作證與簡單物資，需考慮步行距離",
+          "散場後通常比觀眾更晚離開"
+        ],
+        "decision_making_tendencies": [
+          "會優先選擇可靠且不易遲到的交通方式",
+          "若臨時收到調度訊息，會快速改變到達入口或集合點",
+          "較能接受提早出發以降低不確定性"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意用時間換取準時到班與降低壓力",
+          "若交通補助有限，會避免高額停車或計程車費"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "張佩君",
+        "age": "59",
+        "occupation": "公車司機",
+        "wage": "新台幣 2.4 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "沒有自有車輛，主要搭乘公車與步行",
+        "residential_location": "台南市永康區"
+      },
+      "traits": {
+        "attitudes": [
+          "對球賽帶來的人潮與訂單變化敏感，會把交通狀況視為收入因素",
+          "希望能在尖峰時段維持服務效率，同時避免被壅塞拖慢"
+        ],
+        "habits": [
+          "會在比賽前後查看人潮熱點與道路狀況",
+          "常在球場周邊道路、商店與停車區之間移動",
+          "會根據客流或訂單量調整工作位置"
+        ],
+        "decision_making_tendencies": [
+          "若主要道路壅塞，會改走巷道或避開球場正門",
+          "會在收益機會與交通延誤風險之間取捨",
+          "對臨時停車、上下貨或載客空間很敏感"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意承擔較高移動成本以掌握尖峰商機",
+          "若壅塞造成效率下降，會轉往較外圍的需求點"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "李建志",
+        "age": "66",
+        "occupation": "餐飲店員",
+        "wage": "新台幣 3.8 萬元",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "家中共用一台汽車，尖峰時段不一定能使用",
+        "residential_location": "台南市安平區"
+      },
+      "traits": {
+        "attitudes": [
+          "喜歡現場看棒球，會把比賽氣氛視為重要休閒活動",
+          "對球賽進場前的車流與停車壓力敏感，願意提前規劃"
+        ],
+        "habits": [
+          "球賽日通常會在開賽前60分鐘抵達球場附近",
+          "會先查看導航與停車資訊，再決定是否自駕或改搭接駁",
+          "散場時常會觀察人潮再決定是否立刻離開"
+        ],
+        "decision_making_tendencies": [
+          "若停車場接近滿位，會改停較遠處再步行進場",
+          "若同行者有長輩或小孩，會優先選擇步行距離較短的路線",
+          "會在準時進場與避免塞車之間權衡"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意為了縮短步行距離支付中等停車費",
+          "若停車費過高，會接受多走一段路或搭接駁車"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "王欣妤",
+        "age": "18",
+        "occupation": "清潔人員",
+        "wage": "新台幣 5.5 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "沒有私家車，偶爾使用計程車或共享機車",
+        "residential_location": "台南市歸仁區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視上下班通勤穩定性，不希望球賽人潮影響日常行程",
+          "對突發壅塞與臨時交通管制較不耐煩"
+        ],
+        "habits": [
+          "平日傍晚固定經過球場周邊道路返家",
+          "會用導航確認主要道路是否壅塞",
+          "若知道有球賽，會提前或延後下班出發"
+        ],
+        "decision_making_tendencies": [
+          "偏好維持熟悉路線，但遇到明顯塞車會改道",
+          "若公車誤點嚴重，會改用機車、計程車或步行轉乘",
+          "通常不會為了省幾分鐘支付太高額外成本"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "重視時間可預期性勝過最短距離",
+          "願意多繞路以換取較穩定的行車速度"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "吳志豪",
+        "age": "25",
+        "occupation": "自由工作者",
+        "wage": "無固定收入",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "有一台機車，平時以機車短程移動為主",
+        "residential_location": "台南市麻豆區"
+      },
+      "traits": {
+        "attitudes": [
+          "熟悉球場周邊巷道，對外來車流進入社區感到困擾",
+          "希望比賽活動能兼顧居民安寧與交通秩序"
+        ],
+        "habits": [
+          "傍晚常在住家附近採買、散步或接送家人",
+          "球賽日會避免把車停在容易被堵住的巷口",
+          "會觀察人潮變化再決定是否外出"
+        ],
+        "decision_making_tendencies": [
+          "若主幹道壅塞，會使用熟悉的小路或延後出門",
+          "對外地車輛亂停較敏感，會避開停車熱點",
+          "傾向選擇低風險、低衝突的路線"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "不願意為短程移動支付高額交通成本",
+          "願意犧牲一點時間以維持生活舒適與安全"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "劉婉婷",
+        "age": "32",
+        "occupation": "社區志工",
+        "wage": "新台幣 3.2 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "有汽車也有機車，會依距離與停車狀況選擇",
+        "residential_location": "台南市關廟區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視準時接送家人或朋友，對臨停空間與上下車動線敏感",
+          "希望停等時間短，避免影響其他車流"
+        ],
+        "habits": [
+          "會事先約定接送地點，並用手機確認對方位置",
+          "在散場尖峰會選擇離球場稍遠處會合",
+          "常以即時導航判斷是否需要繞路"
+        ],
+        "decision_making_tendencies": [
+          "若球場門口太擁擠，會改到次要路口或超商前接人",
+          "會在安全上下車與縮短等待時間之間取捨",
+          "若接送對象是小孩或長輩，會降低步行距離的容忍度"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意多花油錢繞路以避免長時間怠速等待",
+          "不喜歡支付停車費，只要能短暫臨停就傾向不進停車場"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "蔡柏霖",
+        "age": "39",
+        "occupation": "停車場管理員",
+        "wage": "新台幣 4.8 萬元",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "有一台電動機車，偏好短程快速移動",
+        "residential_location": "台南市中西區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視準時到班與活動流程順暢，對交通管制資訊高度敏感",
+          "能接受比賽日周邊人潮增加，但希望動線清楚"
+        ],
+        "habits": [
+          "球賽日會比一般觀眾更早抵達場館",
+          "常攜帶工作證與簡單物資，需考慮步行距離",
+          "散場後通常比觀眾更晚離開"
+        ],
+        "decision_making_tendencies": [
+          "會優先選擇可靠且不易遲到的交通方式",
+          "若臨時收到調度訊息，會快速改變到達入口或集合點",
+          "較能接受提早出發以降低不確定性"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意用時間換取準時到班與降低壓力",
+          "若交通補助有限，會避免高額停車或計程車費"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "楊淑惠",
+        "age": "46",
+        "occupation": "物流司機",
+        "wage": "新台幣 7.5 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "有一台小型汽車，平時多用自駕通勤",
+        "residential_location": "台南市新市區"
+      },
+      "traits": {
+        "attitudes": [
+          "對球賽帶來的人潮與訂單變化敏感，會把交通狀況視為收入因素",
+          "希望能在尖峰時段維持服務效率，同時避免被壅塞拖慢"
+        ],
+        "habits": [
+          "會在比賽前後查看人潮熱點與道路狀況",
+          "常在球場周邊道路、商店與停車區之間移動",
+          "會根據客流或訂單量調整工作位置"
+        ],
+        "decision_making_tendencies": [
+          "若主要道路壅塞，會改走巷道或避開球場正門",
+          "會在收益機會與交通延誤風險之間取捨",
+          "對臨時停車、上下貨或載客空間很敏感"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意承擔較高移動成本以掌握尖峰商機",
+          "若壅塞造成效率下降，會轉往較外圍的需求點"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "許家瑋",
+        "age": "53",
+        "occupation": "工程顧問",
+        "wage": "新台幣 2.8 萬元",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "沒有自有車輛，主要搭乘公車與步行",
+        "residential_location": "台南市善化區"
+      },
+      "traits": {
+        "attitudes": [
+          "喜歡現場看棒球，會把比賽氣氛視為重要休閒活動",
+          "對球賽進場前的車流與停車壓力敏感，願意提前規劃"
+        ],
+        "habits": [
+          "球賽日通常會在開賽前30分鐘抵達球場附近",
+          "會先查看導航與停車資訊，再決定是否自駕或改搭接駁",
+          "散場時常會觀察人潮再決定是否立刻離開"
+        ],
+        "decision_making_tendencies": [
+          "若停車場接近滿位，會改停較遠處再步行進場",
+          "若同行者有長輩或小孩，會優先選擇步行距離較短的路線",
+          "會在準時進場與避免塞車之間權衡"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意為了縮短步行距離支付中等停車費",
+          "若停車費過高，會接受多走一段路或搭接駁車"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "鄭宜蓁",
+        "age": "60",
+        "occupation": "研究生",
+        "wage": "新台幣 4.2 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "家中共用一台汽車，尖峰時段不一定能使用",
+        "residential_location": "台南市麻豆區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視上下班通勤穩定性，不希望球賽人潮影響日常行程",
+          "對突發壅塞與臨時交通管制較不耐煩"
+        ],
+        "habits": [
+          "平日傍晚固定經過球場周邊道路返家",
+          "會用導航確認主要道路是否壅塞",
+          "若知道有球賽，會提前或延後下班出發"
+        ],
+        "decision_making_tendencies": [
+          "偏好維持熟悉路線，但遇到明顯塞車會改道",
+          "若公車誤點嚴重，會改用機車、計程車或步行轉乘",
+          "通常不會為了省幾分鐘支付太高額外成本"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "重視時間可預期性勝過最短距離",
+          "願意多繞路以換取較穩定的行車速度"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "謝宗霖",
+        "age": "67",
+        "occupation": "雜貨店老闆",
+        "wage": "新台幣 6.5 萬元",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "沒有私家車，偶爾使用計程車或共享機車",
+        "residential_location": "台南市關廟區"
+      },
+      "traits": {
+        "attitudes": [
+          "熟悉球場周邊巷道，對外來車流進入社區感到困擾",
+          "希望比賽活動能兼顧居民安寧與交通秩序"
+        ],
+        "habits": [
+          "傍晚常在住家附近採買、散步或接送家人",
+          "球賽日會避免把車停在容易被堵住的巷口",
+          "會觀察人潮變化再決定是否外出"
+        ],
+        "decision_making_tendencies": [
+          "若主幹道壅塞，會使用熟悉的小路或延後出門",
+          "對外地車輛亂停較敏感，會避開停車熱點",
+          "傾向選擇低風險、低衝突的路線"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "不願意為短程移動支付高額交通成本",
+          "願意犧牲一點時間以維持生活舒適與安全"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "郭美芳",
+        "age": "19",
+        "occupation": "公司主管",
+        "wage": "新台幣 2.4 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "有一台機車，平時以機車短程移動為主",
+        "residential_location": "台南市安南區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視準時接送家人或朋友，對臨停空間與上下車動線敏感",
+          "希望停等時間短，避免影響其他車流"
+        ],
+        "habits": [
+          "會事先約定接送地點，並用手機確認對方位置",
+          "在散場尖峰會選擇離球場稍遠處會合",
+          "常以即時導航判斷是否需要繞路"
+        ],
+        "decision_making_tendencies": [
+          "若球場門口太擁擠，會改到次要路口或超商前接人",
+          "會在安全上下車與縮短等待時間之間取捨",
+          "若接送對象是小孩或長輩，會降低步行距離的容忍度"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意多花油錢繞路以避免長時間怠速等待",
+          "不喜歡支付停車費，只要能短暫臨停就傾向不進停車場"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "洪承翰",
+        "age": "26",
+        "occupation": "接駁車站務人員",
+        "wage": "新台幣 3.8 萬元",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "有汽車也有機車，會依距離與停車狀況選擇",
+        "residential_location": "台南市南區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視準時到班與活動流程順暢，對交通管制資訊高度敏感",
+          "能接受比賽日周邊人潮增加，但希望動線清楚"
+        ],
+        "habits": [
+          "球賽日會比一般觀眾更早抵達場館",
+          "常攜帶工作證與簡單物資，需考慮步行距離",
+          "散場後通常比觀眾更晚離開"
+        ],
+        "decision_making_tendencies": [
+          "會優先選擇可靠且不易遲到的交通方式",
+          "若臨時收到調度訊息，會快速改變到達入口或集合點",
+          "較能接受提早出發以降低不確定性"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意用時間換取準時到班與降低壓力",
+          "若交通補助有限，會避免高額停車或計程車費"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "曾怡萱",
+        "age": "33",
+        "occupation": "早餐店老闆",
+        "wage": "新台幣 5.5 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "有一台電動機車，偏好短程快速移動",
+        "residential_location": "台南市仁德區"
+      },
+      "traits": {
+        "attitudes": [
+          "對球賽帶來的人潮與訂單變化敏感，會把交通狀況視為收入因素",
+          "希望能在尖峰時段維持服務效率，同時避免被壅塞拖慢"
+        ],
+        "habits": [
+          "會在比賽前後查看人潮熱點與道路狀況",
+          "常在球場周邊道路、商店與停車區之間移動",
+          "會根據客流或訂單量調整工作位置"
+        ],
+        "decision_making_tendencies": [
+          "若主要道路壅塞，會改走巷道或避開球場正門",
+          "會在收益機會與交通延誤風險之間取捨",
+          "對臨時停車、上下貨或載客空間很敏感"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意承擔較高移動成本以掌握尖峰商機",
+          "若壅塞造成效率下降，會轉往較外圍的需求點"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "邱俊廷",
+        "age": "40",
+        "occupation": "會計專員",
+        "wage": "無固定收入",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "有一台小型汽車，平時多用自駕通勤",
+        "residential_location": "台南市歸仁區"
+      },
+      "traits": {
+        "attitudes": [
+          "喜歡現場看棒球，會把比賽氣氛視為重要休閒活動",
+          "對球賽進場前的車流與停車壓力敏感，願意提前規劃"
+        ],
+        "habits": [
+          "球賽日通常會在開賽前60分鐘抵達球場附近",
+          "會先查看導航與停車資訊，再決定是否自駕或改搭接駁",
+          "散場時常會觀察人潮再決定是否立刻離開"
+        ],
+        "decision_making_tendencies": [
+          "若停車場接近滿位，會改停較遠處再步行進場",
+          "若同行者有長輩或小孩，會優先選擇步行距離較短的路線",
+          "會在準時進場與避免塞車之間權衡"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意為了縮短步行距離支付中等停車費",
+          "若停車費過高，會接受多走一段路或搭接駁車"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "廖佳樺",
+        "age": "47",
+        "occupation": "早餐店員",
+        "wage": "新台幣 3.2 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "沒有自有車輛，主要搭乘公車與步行",
+        "residential_location": "台南市關廟區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視上下班通勤穩定性，不希望球賽人潮影響日常行程",
+          "對突發壅塞與臨時交通管制較不耐煩"
+        ],
+        "habits": [
+          "平日傍晚固定經過球場周邊道路返家",
+          "會用導航確認主要道路是否壅塞",
+          "若知道有球賽，會提前或延後下班出發"
+        ],
+        "decision_making_tendencies": [
+          "偏好維持熟悉路線，但遇到明顯塞車會改道",
+          "若公車誤點嚴重，會改用機車、計程車或步行轉乘",
+          "通常不會為了省幾分鐘支付太高額外成本"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "重視時間可預期性勝過最短距離",
+          "願意多繞路以換取較穩定的行車速度"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "賴明軒",
+        "age": "54",
+        "occupation": "房仲業務",
+        "wage": "新台幣 4.8 萬元",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "家中共用一台汽車，尖峰時段不一定能使用",
+        "residential_location": "台南市安南區"
+      },
+      "traits": {
+        "attitudes": [
+          "熟悉球場周邊巷道，對外來車流進入社區感到困擾",
+          "希望比賽活動能兼顧居民安寧與交通秩序"
+        ],
+        "habits": [
+          "傍晚常在住家附近採買、散步或接送家人",
+          "球賽日會避免把車停在容易被堵住的巷口",
+          "會觀察人潮變化再決定是否外出"
+        ],
+        "decision_making_tendencies": [
+          "若主幹道壅塞，會使用熟悉的小路或延後出門",
+          "對外地車輛亂停較敏感，會避開停車熱點",
+          "傾向選擇低風險、低衝突的路線"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "不願意為短程移動支付高額交通成本",
+          "願意犧牲一點時間以維持生活舒適與安全"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "徐雅琪",
+        "age": "61",
+        "occupation": "機車通勤族",
+        "wage": "新台幣 7.5 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "沒有私家車，偶爾使用計程車或共享機車",
+        "residential_location": "台南市中西區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視準時接送家人或朋友，對臨停空間與上下車動線敏感",
+          "希望停等時間短，避免影響其他車流"
+        ],
+        "habits": [
+          "會事先約定接送地點，並用手機確認對方位置",
+          "在散場尖峰會選擇離球場稍遠處會合",
+          "常以即時導航判斷是否需要繞路"
+        ],
+        "decision_making_tendencies": [
+          "若球場門口太擁擠，會改到次要路口或超商前接人",
+          "會在安全上下車與縮短等待時間之間取捨",
+          "若接送對象是小孩或長輩，會降低步行距離的容忍度"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意多花油錢繞路以避免長時間怠速等待",
+          "不喜歡支付停車費，只要能短暫臨停就傾向不進停車場"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "周彥廷",
+        "age": "68",
+        "occupation": "攝影助理",
+        "wage": "新台幣 2.8 萬元",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "有一台機車，平時以機車短程移動為主",
+        "residential_location": "台南市安平區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視準時到班與活動流程順暢，對交通管制資訊高度敏感",
+          "能接受比賽日周邊人潮增加，但希望動線清楚"
+        ],
+        "habits": [
+          "球賽日會比一般觀眾更早抵達場館",
+          "常攜帶工作證與簡單物資，需考慮步行距離",
+          "散場後通常比觀眾更晚離開"
+        ],
+        "decision_making_tendencies": [
+          "會優先選擇可靠且不易遲到的交通方式",
+          "若臨時收到調度訊息，會快速改變到達入口或集合點",
+          "較能接受提早出發以降低不確定性"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意用時間換取準時到班與降低壓力",
+          "若交通補助有限，會避免高額停車或計程車費"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "葉郁雯",
+        "age": "20",
+        "occupation": "民宿業者",
+        "wage": "新台幣 4.2 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "有汽車也有機車，會依距離與停車狀況選擇",
+        "residential_location": "台南市佳里區"
+      },
+      "traits": {
+        "attitudes": [
+          "對球賽帶來的人潮與訂單變化敏感，會把交通狀況視為收入因素",
+          "希望能在尖峰時段維持服務效率，同時避免被壅塞拖慢"
+        ],
+        "habits": [
+          "會在比賽前後查看人潮熱點與道路狀況",
+          "常在球場周邊道路、商店與停車區之間移動",
+          "會根據客流或訂單量調整工作位置"
+        ],
+        "decision_making_tendencies": [
+          "若主要道路壅塞，會改走巷道或避開球場正門",
+          "會在收益機會與交通延誤風險之間取捨",
+          "對臨時停車、上下貨或載客空間很敏感"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意承擔較高移動成本以掌握尖峰商機",
+          "若壅塞造成效率下降，會轉往較外圍的需求點"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "蘇志偉",
+        "age": "27",
+        "occupation": "保險業務",
+        "wage": "新台幣 6.5 萬元",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "有一台電動機車，偏好短程快速移動",
+        "residential_location": "台南市麻豆區"
+      },
+      "traits": {
+        "attitudes": [
+          "喜歡現場看棒球，會把比賽氣氛視為重要休閒活動",
+          "對球賽進場前的車流與停車壓力敏感，願意提前規劃"
+        ],
+        "habits": [
+          "球賽日通常會在開賽前30分鐘抵達球場附近",
+          "會先查看導航與停車資訊，再決定是否自駕或改搭接駁",
+          "散場時常會觀察人潮再決定是否立刻離開"
+        ],
+        "decision_making_tendencies": [
+          "若停車場接近滿位，會改停較遠處再步行進場",
+          "若同行者有長輩或小孩，會優先選擇步行距離較短的路線",
+          "會在準時進場與避免塞車之間權衡"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意為了縮短步行距離支付中等停車費",
+          "若停車費過高，會接受多走一段路或搭接駁車"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "莊心怡",
+        "age": "34",
+        "occupation": "保全人員",
+        "wage": "新台幣 2.4 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "有一台小型汽車，平時多用自駕通勤",
+        "residential_location": "台南市安南區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視上下班通勤穩定性，不希望球賽人潮影響日常行程",
+          "對突發壅塞與臨時交通管制較不耐煩"
+        ],
+        "habits": [
+          "平日傍晚固定經過球場周邊道路返家",
+          "會用導航確認主要道路是否壅塞",
+          "若知道有球賽，會提前或延後下班出發"
+        ],
+        "decision_making_tendencies": [
+          "偏好維持熟悉路線，但遇到明顯塞車會改道",
+          "若公車誤點嚴重，會改用機車、計程車或步行轉乘",
+          "通常不會為了省幾分鐘支付太高額外成本"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "重視時間可預期性勝過最短距離",
+          "願意多繞路以換取較穩定的行車速度"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "江冠霖",
+        "age": "41",
+        "occupation": "市場攤販",
+        "wage": "新台幣 3.8 萬元",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "沒有自有車輛，主要搭乘公車與步行",
+        "residential_location": "台南市中西區"
+      },
+      "traits": {
+        "attitudes": [
+          "熟悉球場周邊巷道，對外來車流進入社區感到困擾",
+          "希望比賽活動能兼顧居民安寧與交通秩序"
+        ],
+        "habits": [
+          "傍晚常在住家附近採買、散步或接送家人",
+          "球賽日會避免把車停在容易被堵住的巷口",
+          "會觀察人潮變化再決定是否外出"
+        ],
+        "decision_making_tendencies": [
+          "若主幹道壅塞，會使用熟悉的小路或延後出門",
+          "對外地車輛亂停較敏感，會避開停車熱點",
+          "傾向選擇低風險、低衝突的路線"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "不願意為短程移動支付高額交通成本",
+          "願意犧牲一點時間以維持生活舒適與安全"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "陳惠婷",
+        "age": "48",
+        "occupation": "親友接送者",
+        "wage": "新台幣 5.5 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "家中共用一台汽車，尖峰時段不一定能使用",
+        "residential_location": "台南市南區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視準時接送家人或朋友，對臨停空間與上下車動線敏感",
+          "希望停等時間短，避免影響其他車流"
+        ],
+        "habits": [
+          "會事先約定接送地點，並用手機確認對方位置",
+          "在散場尖峰會選擇離球場稍遠處會合",
+          "常以即時導航判斷是否需要繞路"
+        ],
+        "decision_making_tendencies": [
+          "若球場門口太擁擠，會改到次要路口或超商前接人",
+          "會在安全上下車與縮短等待時間之間取捨",
+          "若接送對象是小孩或長輩，會降低步行距離的容忍度"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意多花油錢繞路以避免長時間怠速等待",
+          "不喜歡支付停車費，只要能短暫臨停就傾向不進停車場"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "林子揚",
+        "age": "55",
+        "occupation": "票務主管",
+        "wage": "無固定收入",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "沒有私家車，偶爾使用計程車或共享機車",
+        "residential_location": "台南市善化區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視準時到班與活動流程順暢，對交通管制資訊高度敏感",
+          "能接受比賽日周邊人潮增加，但希望動線清楚"
+        ],
+        "habits": [
+          "球賽日會比一般觀眾更早抵達場館",
+          "常攜帶工作證與簡單物資，需考慮步行距離",
+          "散場後通常比觀眾更晚離開"
+        ],
+        "decision_making_tendencies": [
+          "會優先選擇可靠且不易遲到的交通方式",
+          "若臨時收到調度訊息，會快速改變到達入口或集合點",
+          "較能接受提早出發以降低不確定性"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意用時間換取準時到班與降低壓力",
+          "若交通補助有限，會避免高額停車或計程車費"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "黃淑華",
+        "age": "62",
+        "occupation": "路邊攤助手",
+        "wage": "新台幣 3.2 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "有一台機車，平時以機車短程移動為主",
+        "residential_location": "台南市新營區"
+      },
+      "traits": {
+        "attitudes": [
+          "對球賽帶來的人潮與訂單變化敏感，會把交通狀況視為收入因素",
+          "希望能在尖峰時段維持服務效率，同時避免被壅塞拖慢"
+        ],
+        "habits": [
+          "會在比賽前後查看人潮熱點與道路狀況",
+          "常在球場周邊道路、商店與停車區之間移動",
+          "會根據客流或訂單量調整工作位置"
+        ],
+        "decision_making_tendencies": [
+          "若主要道路壅塞，會改走巷道或避開球場正門",
+          "會在收益機會與交通延誤風險之間取捨",
+          "對臨時停車、上下貨或載客空間很敏感"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意承擔較高移動成本以掌握尖峰商機",
+          "若壅塞造成效率下降，會轉往較外圍的需求點"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "張宇翔",
+        "age": "69",
+        "occupation": "科技業工程師",
+        "wage": "新台幣 4.8 萬元",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "有汽車也有機車，會依距離與停車狀況選擇",
+        "residential_location": "台南市關廟區"
+      },
+      "traits": {
+        "attitudes": [
+          "喜歡現場看棒球，會把比賽氣氛視為重要休閒活動",
+          "對球賽進場前的車流與停車壓力敏感，願意提前規劃"
+        ],
+        "habits": [
+          "球賽日通常會在開賽前60分鐘抵達球場附近",
+          "會先查看導航與停車資訊，再決定是否自駕或改搭接駁",
+          "散場時常會觀察人潮再決定是否立刻離開"
+        ],
+        "decision_making_tendencies": [
+          "若停車場接近滿位，會改停較遠處再步行進場",
+          "若同行者有長輩或小孩，會優先選擇步行距離較短的路線",
+          "會在準時進場與避免塞車之間權衡"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意為了縮短步行距離支付中等停車費",
+          "若停車費過高，會接受多走一段路或搭接駁車"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "李嘉玲",
+        "age": "21",
+        "occupation": "藥局助理",
+        "wage": "新台幣 7.5 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "有一台電動機車，偏好短程快速移動",
+        "residential_location": "台南市中西區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視上下班通勤穩定性，不希望球賽人潮影響日常行程",
+          "對突發壅塞與臨時交通管制較不耐煩"
+        ],
+        "habits": [
+          "平日傍晚固定經過球場周邊道路返家",
+          "會用導航確認主要道路是否壅塞",
+          "若知道有球賽，會提前或延後下班出發"
+        ],
+        "decision_making_tendencies": [
+          "偏好維持熟悉路線，但遇到明顯塞車會改道",
+          "若公車誤點嚴重，會改用機車、計程車或步行轉乘",
+          "通常不會為了省幾分鐘支付太高額外成本"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "重視時間可預期性勝過最短距離",
+          "願意多繞路以換取較穩定的行車速度"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "王建成",
+        "age": "28",
+        "occupation": "國中生家長",
+        "wage": "新台幣 2.8 萬元",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "有一台小型汽車，平時多用自駕通勤",
+        "residential_location": "台南市南區"
+      },
+      "traits": {
+        "attitudes": [
+          "熟悉球場周邊巷道，對外來車流進入社區感到困擾",
+          "希望比賽活動能兼顧居民安寧與交通秩序"
+        ],
+        "habits": [
+          "傍晚常在住家附近採買、散步或接送家人",
+          "球賽日會避免把車停在容易被堵住的巷口",
+          "會觀察人潮變化再決定是否外出"
+        ],
+        "decision_making_tendencies": [
+          "若主幹道壅塞，會使用熟悉的小路或延後出門",
+          "對外地車輛亂停較敏感，會避開停車熱點",
+          "傾向選擇低風險、低衝突的路線"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "不願意為短程移動支付高額交通成本",
+          "願意犧牲一點時間以維持生活舒適與安全"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "吳佳怡",
+        "age": "35",
+        "occupation": "保母",
+        "wage": "新台幣 4.2 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "沒有自有車輛，主要搭乘公車與步行",
+        "residential_location": "台南市安平區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視準時接送家人或朋友，對臨停空間與上下車動線敏感",
+          "希望停等時間短，避免影響其他車流"
+        ],
+        "habits": [
+          "會事先約定接送地點，並用手機確認對方位置",
+          "在散場尖峰會選擇離球場稍遠處會合",
+          "常以即時導航判斷是否需要繞路"
+        ],
+        "decision_making_tendencies": [
+          "若球場門口太擁擠，會改到次要路口或超商前接人",
+          "會在安全上下車與縮短等待時間之間取捨",
+          "若接送對象是小孩或長輩，會降低步行距離的容忍度"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意多花油錢繞路以避免長時間怠速等待",
+          "不喜歡支付停車費，只要能短暫臨停就傾向不進停車場"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "劉柏宏",
+        "age": "42",
+        "occupation": "場務人員",
+        "wage": "新台幣 6.5 萬元",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "家中共用一台汽車，尖峰時段不一定能使用",
+        "residential_location": "台南市歸仁區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視準時到班與活動流程順暢，對交通管制資訊高度敏感",
+          "能接受比賽日周邊人潮增加，但希望動線清楚"
+        ],
+        "habits": [
+          "球賽日會比一般觀眾更早抵達場館",
+          "常攜帶工作證與簡單物資，需考慮步行距離",
+          "散場後通常比觀眾更晚離開"
+        ],
+        "decision_making_tendencies": [
+          "會優先選擇可靠且不易遲到的交通方式",
+          "若臨時收到調度訊息，會快速改變到達入口或集合點",
+          "較能接受提早出發以降低不確定性"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意用時間換取準時到班與降低壓力",
+          "若交通補助有限，會避免高額停車或計程車費"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "蔡美珍",
+        "age": "49",
+        "occupation": "拖吊車司機",
+        "wage": "新台幣 2.4 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "沒有私家車，偶爾使用計程車或共享機車",
+        "residential_location": "台南市安定區"
+      },
+      "traits": {
+        "attitudes": [
+          "對球賽帶來的人潮與訂單變化敏感，會把交通狀況視為收入因素",
+          "希望能在尖峰時段維持服務效率，同時避免被壅塞拖慢"
+        ],
+        "habits": [
+          "會在比賽前後查看人潮熱點與道路狀況",
+          "常在球場周邊道路、商店與停車區之間移動",
+          "會根據客流或訂單量調整工作位置"
+        ],
+        "decision_making_tendencies": [
+          "若主要道路壅塞，會改走巷道或避開球場正門",
+          "會在收益機會與交通延誤風險之間取捨",
+          "對臨時停車、上下貨或載客空間很敏感"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意承擔較高移動成本以掌握尖峰商機",
+          "若壅塞造成效率下降，會轉往較外圍的需求點"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "楊哲銘",
+        "age": "56",
+        "occupation": "自由接案者",
+        "wage": "新台幣 3.8 萬元",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "有一台機車，平時以機車短程移動為主",
+        "residential_location": "台南市安南區"
+      },
+      "traits": {
+        "attitudes": [
+          "喜歡現場看棒球，會把比賽氣氛視為重要休閒活動",
+          "對球賽進場前的車流與停車壓力敏感，願意提前規劃"
+        ],
+        "habits": [
+          "球賽日通常會在開賽前30分鐘抵達球場附近",
+          "會先查看導航與停車資訊，再決定是否自駕或改搭接駁",
+          "散場時常會觀察人潮再決定是否立刻離開"
+        ],
+        "decision_making_tendencies": [
+          "若停車場接近滿位，會改停較遠處再步行進場",
+          "若同行者有長輩或小孩，會優先選擇步行距離較短的路線",
+          "會在準時進場與避免塞車之間權衡"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意為了縮短步行距離支付中等停車費",
+          "若停車費過高，會接受多走一段路或搭接駁車"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "許雅惠",
+        "age": "63",
+        "occupation": "採購專員",
+        "wage": "新台幣 5.5 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "有汽車也有機車，會依距離與停車狀況選擇",
+        "residential_location": "台南市南區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視上下班通勤穩定性，不希望球賽人潮影響日常行程",
+          "對突發壅塞與臨時交通管制較不耐煩"
+        ],
+        "habits": [
+          "平日傍晚固定經過球場周邊道路返家",
+          "會用導航確認主要道路是否壅塞",
+          "若知道有球賽，會提前或延後下班出發"
+        ],
+        "decision_making_tendencies": [
+          "偏好維持熟悉路線，但遇到明顯塞車會改道",
+          "若公車誤點嚴重，會改用機車、計程車或步行轉乘",
+          "通常不會為了省幾分鐘支付太高額外成本"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "重視時間可預期性勝過最短距離",
+          "願意多繞路以換取較穩定的行車速度"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "鄭宗祐",
+        "age": "70",
+        "occupation": "園藝工",
+        "wage": "無固定收入",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "有一台電動機車，偏好短程快速移動",
+        "residential_location": "台南市安平區"
+      },
+      "traits": {
+        "attitudes": [
+          "熟悉球場周邊巷道，對外來車流進入社區感到困擾",
+          "希望比賽活動能兼顧居民安寧與交通秩序"
+        ],
+        "habits": [
+          "傍晚常在住家附近採買、散步或接送家人",
+          "球賽日會避免把車停在容易被堵住的巷口",
+          "會觀察人潮變化再決定是否外出"
+        ],
+        "decision_making_tendencies": [
+          "若主幹道壅塞，會使用熟悉的小路或延後出門",
+          "對外地車輛亂停較敏感，會避開停車熱點",
+          "傾向選擇低風險、低衝突的路線"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "不願意為短程移動支付高額交通成本",
+          "願意犧牲一點時間以維持生活舒適與安全"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "謝佩穎",
+        "age": "22",
+        "occupation": "外籍看護",
+        "wage": "新台幣 3.2 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "有一台小型汽車，平時多用自駕通勤",
+        "residential_location": "台南市善化區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視準時接送家人或朋友，對臨停空間與上下車動線敏感",
+          "希望停等時間短，避免影響其他車流"
+        ],
+        "habits": [
+          "會事先約定接送地點，並用手機確認對方位置",
+          "在散場尖峰會選擇離球場稍遠處會合",
+          "常以即時導航判斷是否需要繞路"
+        ],
+        "decision_making_tendencies": [
+          "若球場門口太擁擠，會改到次要路口或超商前接人",
+          "會在安全上下車與縮短等待時間之間取捨",
+          "若接送對象是小孩或長輩，會降低步行距離的容忍度"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意多花油錢繞路以避免長時間怠速等待",
+          "不喜歡支付停車費，只要能短暫臨停就傾向不進停車場"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "郭明倫",
+        "age": "29",
+        "occupation": "賽事行政",
+        "wage": "新台幣 4.8 萬元",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "沒有自有車輛，主要搭乘公車與步行",
+        "residential_location": "台南市麻豆區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視準時到班與活動流程順暢，對交通管制資訊高度敏感",
+          "能接受比賽日周邊人潮增加，但希望動線清楚"
+        ],
+        "habits": [
+          "球賽日會比一般觀眾更早抵達場館",
+          "常攜帶工作證與簡單物資，需考慮步行距離",
+          "散場後通常比觀眾更晚離開"
+        ],
+        "decision_making_tendencies": [
+          "會優先選擇可靠且不易遲到的交通方式",
+          "若臨時收到調度訊息，會快速改變到達入口或集合點",
+          "較能接受提早出發以降低不確定性"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意用時間換取準時到班與降低壓力",
+          "若交通補助有限，會避免高額停車或計程車費"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "洪婉君",
+        "age": "36",
+        "occupation": "加油站員工",
+        "wage": "新台幣 7.5 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "家中共用一台汽車，尖峰時段不一定能使用",
+        "residential_location": "台南市北區"
+      },
+      "traits": {
+        "attitudes": [
+          "對球賽帶來的人潮與訂單變化敏感，會把交通狀況視為收入因素",
+          "希望能在尖峰時段維持服務效率，同時避免被壅塞拖慢"
+        ],
+        "habits": [
+          "會在比賽前後查看人潮熱點與道路狀況",
+          "常在球場周邊道路、商店與停車區之間移動",
+          "會根據客流或訂單量調整工作位置"
+        ],
+        "decision_making_tendencies": [
+          "若主要道路壅塞，會改走巷道或避開球場正門",
+          "會在收益機會與交通延誤風險之間取捨",
+          "對臨時停車、上下貨或載客空間很敏感"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意承擔較高移動成本以掌握尖峰商機",
+          "若壅塞造成效率下降，會轉往較外圍的需求點"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "曾家銘",
+        "age": "43",
+        "occupation": "超商店長",
+        "wage": "新台幣 2.8 萬元",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "沒有私家車，偶爾使用計程車或共享機車",
+        "residential_location": "台南市中西區"
+      },
+      "traits": {
+        "attitudes": [
+          "喜歡現場看棒球，會把比賽氣氛視為重要休閒活動",
+          "對球賽進場前的車流與停車壓力敏感，願意提前規劃"
+        ],
+        "habits": [
+          "球賽日通常會在開賽前60分鐘抵達球場附近",
+          "會先查看導航與停車資訊，再決定是否自駕或改搭接駁",
+          "散場時常會觀察人潮再決定是否立刻離開"
+        ],
+        "decision_making_tendencies": [
+          "若停車場接近滿位，會改停較遠處再步行進場",
+          "若同行者有長輩或小孩，會優先選擇步行距離較短的路線",
+          "會在準時進場與避免塞車之間權衡"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意為了縮短步行距離支付中等停車費",
+          "若停車費過高，會接受多走一段路或搭接駁車"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "邱詩婷",
+        "age": "50",
+        "occupation": "美髮助理",
+        "wage": "新台幣 4.2 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "有一台機車，平時以機車短程移動為主",
+        "residential_location": "台南市安平區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視上下班通勤穩定性，不希望球賽人潮影響日常行程",
+          "對突發壅塞與臨時交通管制較不耐煩"
+        ],
+        "habits": [
+          "平日傍晚固定經過球場周邊道路返家",
+          "會用導航確認主要道路是否壅塞",
+          "若知道有球賽，會提前或延後下班出發"
+        ],
+        "decision_making_tendencies": [
+          "偏好維持熟悉路線，但遇到明顯塞車會改道",
+          "若公車誤點嚴重，會改用機車、計程車或步行轉乘",
+          "通常不會為了省幾分鐘支付太高額外成本"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "重視時間可預期性勝過最短距離",
+          "願意多繞路以換取較穩定的行車速度"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "廖文豪",
+        "age": "57",
+        "occupation": "修車師傅",
+        "wage": "新台幣 6.5 萬元",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "有汽車也有機車，會依距離與停車狀況選擇",
+        "residential_location": "台南市善化區"
+      },
+      "traits": {
+        "attitudes": [
+          "熟悉球場周邊巷道，對外來車流進入社區感到困擾",
+          "希望比賽活動能兼顧居民安寧與交通秩序"
+        ],
+        "habits": [
+          "傍晚常在住家附近採買、散步或接送家人",
+          "球賽日會避免把車停在容易被堵住的巷口",
+          "會觀察人潮變化再決定是否外出"
+        ],
+        "decision_making_tendencies": [
+          "若主幹道壅塞，會使用熟悉的小路或延後出門",
+          "對外地車輛亂停較敏感，會避開停車熱點",
+          "傾向選擇低風險、低衝突的路線"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "不願意為短程移動支付高額交通成本",
+          "願意犧牲一點時間以維持生活舒適與安全"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "賴惠萍",
+        "age": "64",
+        "occupation": "退休父親",
+        "wage": "新台幣 2.4 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "有一台電動機車，偏好短程快速移動",
+        "residential_location": "台南市歸仁區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視準時接送家人或朋友，對臨停空間與上下車動線敏感",
+          "希望停等時間短，避免影響其他車流"
+        ],
+        "habits": [
+          "會事先約定接送地點，並用手機確認對方位置",
+          "在散場尖峰會選擇離球場稍遠處會合",
+          "常以即時導航判斷是否需要繞路"
+        ],
+        "decision_making_tendencies": [
+          "若球場門口太擁擠，會改到次要路口或超商前接人",
+          "會在安全上下車與縮短等待時間之間取捨",
+          "若接送對象是小孩或長輩，會降低步行距離的容忍度"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意多花油錢繞路以避免長時間怠速等待",
+          "不喜歡支付停車費，只要能短暫臨停就傾向不進停車場"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "徐承佑",
+        "age": "71",
+        "occupation": "物資搬運員",
+        "wage": "新台幣 3.8 萬元",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "有一台小型汽車，平時多用自駕通勤",
+        "residential_location": "台南市關廟區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視準時到班與活動流程順暢，對交通管制資訊高度敏感",
+          "能接受比賽日周邊人潮增加，但希望動線清楚"
+        ],
+        "habits": [
+          "球賽日會比一般觀眾更早抵達場館",
+          "常攜帶工作證與簡單物資，需考慮步行距離",
+          "散場後通常比觀眾更晚離開"
+        ],
+        "decision_making_tendencies": [
+          "會優先選擇可靠且不易遲到的交通方式",
+          "若臨時收到調度訊息，會快速改變到達入口或集合點",
+          "較能接受提早出發以降低不確定性"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意用時間換取準時到班與降低壓力",
+          "若交通補助有限，會避免高額停車或計程車費"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "周郁涵",
+        "age": "23",
+        "occupation": "uber司機",
+        "wage": "新台幣 5.5 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "沒有自有車輛，主要搭乘公車與步行",
+        "residential_location": "台南市東區"
+      },
+      "traits": {
+        "attitudes": [
+          "對球賽帶來的人潮與訂單變化敏感，會把交通狀況視為收入因素",
+          "希望能在尖峰時段維持服務效率，同時避免被壅塞拖慢"
+        ],
+        "habits": [
+          "會在比賽前後查看人潮熱點與道路狀況",
+          "常在球場周邊道路、商店與停車區之間移動",
+          "會根據客流或訂單量調整工作位置"
+        ],
+        "decision_making_tendencies": [
+          "若主要道路壅塞，會改走巷道或避開球場正門",
+          "會在收益機會與交通延誤風險之間取捨",
+          "對臨時停車、上下貨或載客空間很敏感"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意承擔較高移動成本以掌握尖峰商機",
+          "若壅塞造成效率下降，會轉往較外圍的需求點"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "葉信安",
+        "age": "30",
+        "occupation": "社群小編",
+        "wage": "無固定收入",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "家中共用一台汽車，尖峰時段不一定能使用",
+        "residential_location": "台南市南區"
+      },
+      "traits": {
+        "attitudes": [
+          "喜歡現場看棒球，會把比賽氣氛視為重要休閒活動",
+          "對球賽進場前的車流與停車壓力敏感，願意提前規劃"
+        ],
+        "habits": [
+          "球賽日通常會在開賽前30分鐘抵達球場附近",
+          "會先查看導航與停車資訊，再決定是否自駕或改搭接駁",
+          "散場時常會觀察人潮再決定是否立刻離開"
+        ],
+        "decision_making_tendencies": [
+          "若停車場接近滿位，會改停較遠處再步行進場",
+          "若同行者有長輩或小孩，會優先選擇步行距離較短的路線",
+          "會在準時進場與避免塞車之間權衡"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意為了縮短步行距離支付中等停車費",
+          "若停車費過高，會接受多走一段路或搭接駁車"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "蘇欣樺",
+        "age": "37",
+        "occupation": "幼教老師",
+        "wage": "新台幣 3.2 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "沒有私家車，偶爾使用計程車或共享機車",
+        "residential_location": "台南市善化區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視上下班通勤穩定性，不希望球賽人潮影響日常行程",
+          "對突發壅塞與臨時交通管制較不耐煩"
+        ],
+        "habits": [
+          "平日傍晚固定經過球場周邊道路返家",
+          "會用導航確認主要道路是否壅塞",
+          "若知道有球賽，會提前或延後下班出發"
+        ],
+        "decision_making_tendencies": [
+          "偏好維持熟悉路線，但遇到明顯塞車會改道",
+          "若公車誤點嚴重，會改用機車、計程車或步行轉乘",
+          "通常不會為了省幾分鐘支付太高額外成本"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "重視時間可預期性勝過最短距離",
+          "願意多繞路以換取較穩定的行車速度"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "莊哲宇",
+        "age": "44",
+        "occupation": "咖啡店員",
+        "wage": "新台幣 4.8 萬元",
+        "household_income": "新台幣 7.5 萬元",
+        "vehicle_ownership": "有一台機車，平時以機車短程移動為主",
+        "residential_location": "台南市歸仁區"
+      },
+      "traits": {
+        "attitudes": [
+          "熟悉球場周邊巷道，對外來車流進入社區感到困擾",
+          "希望比賽活動能兼顧居民安寧與交通秩序"
+        ],
+        "habits": [
+          "傍晚常在住家附近採買、散步或接送家人",
+          "球賽日會避免把車停在容易被堵住的巷口",
+          "會觀察人潮變化再決定是否外出"
+        ],
+        "decision_making_tendencies": [
+          "若主幹道壅塞，會使用熟悉的小路或延後出門",
+          "對外地車輛亂停較敏感，會避開停車熱點",
+          "傾向選擇低風險、低衝突的路線"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "不願意為短程移動支付高額交通成本",
+          "願意犧牲一點時間以維持生活舒適與安全"
+        ]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "江秀鳳",
+        "age": "51",
+        "occupation": "自由業者",
+        "wage": "新台幣 7.5 萬元",
+        "household_income": "新台幣 18 萬元",
+        "vehicle_ownership": "有汽車也有機車，會依距離與停車狀況選擇",
+        "residential_location": "台南市麻豆區"
+      },
+      "traits": {
+        "attitudes": [
+          "重視準時接送家人或朋友，對臨停空間與上下車動線敏感",
+          "希望停等時間短，避免影響其他車流"
+        ],
+        "habits": [
+          "會事先約定接送地點，並用手機確認對方位置",
+          "在散場尖峰會選擇離球場稍遠處會合",
+          "常以即時導航判斷是否需要繞路"
+        ],
+        "decision_making_tendencies": [
+          "若球場門口太擁擠，會改到次要路口或超商前接人",
+          "會在安全上下車與縮短等待時間之間取捨",
+          "若接送對象是小孩或長輩，會降低步行距離的容忍度"
+        ],
+        "economic_preferences_and_tradeoffs": [
+          "願意多花油錢繞路以避免長時間怠速等待",
+          "不喜歡支付停車費，只要能短暫臨停就傾向不進停車場"
         ]
       },
       "memory": {
