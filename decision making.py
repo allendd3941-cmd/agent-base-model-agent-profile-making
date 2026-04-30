@@ -9,11 +9,6 @@ import threading
 import time 
 import requests
 
-agent_profile_data = run_agent_profile()
-perception_data = run_perception()
-
-retrieved_texts =RAG(agent_profile_data, perception_data)
-
 BASE_DIR = Path(__file__).resolve().parent
 
 SYSTEM_PROMPT_PATH = BASE_DIR / "system_prompt.txt"
@@ -21,18 +16,23 @@ SYSTEM_PROMPT_PATH = BASE_DIR / "system_prompt.txt"
 with open(SYSTEM_PROMPT_PATH, "r", encoding="utf-8") as f:
     SYSTEM_PROMPT = f.read()
 
-USER_PROMPT = f"""
-請幫我依據以下資料，生成每位agents的完整出行計畫。
-格式如下:
-待補
-資料如下:
-{retrieved_texts}
-"""
-
 MODE = "generate"
 url = f"http://localhost:11434/api/{MODE}"
 
-payload = {
+def run_decision_making(json_output: bool= False):
+    agent_profile_data = run_agent_profile()
+    perception_data = run_perception()
+
+    retrieved_texts =RAG(agent_profile_data, perception_data)
+
+    USER_PROMPT = f"""
+    請幫我依據以下資料，生成每位agents的完整出行計畫。
+    格式如下:
+    待補
+    資料如下:
+    {retrieved_texts}
+    """
+    payload = {
     "model": "gpt-oss:20b",
     "prompt": USER_PROMPT,
     "system": SYSTEM_PROMPT,
@@ -44,7 +44,6 @@ payload = {
     "stream": False
     }
 
-def run_decision_making(json_output: bool= False):
     done_event = threading.Event()
     start_time = time.perf_counter()
 
