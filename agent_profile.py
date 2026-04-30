@@ -1,32 +1,28 @@
-#gg
-from RAG import RAG
+﻿# ollama api
 import json
 from pathlib import Path
+import requests
+import time 
 from timer import print_elapsed_time
 import threading
-import time 
-import requests
-#接gama的payload
-
-gama_data ="gama payload"
+from requests.exceptions import ReadTimeout
+from RAG import RAG
 
 BASE_DIR = Path(__file__).resolve().parent
-
 SYSTEM_PROMPT_PATH = BASE_DIR / "system_prompt.txt"
+USER_PROMPT_PATH = BASE_DIR / "user_prompt.txt"
 
 with open(SYSTEM_PROMPT_PATH, "r", encoding="utf-8") as f:
     SYSTEM_PROMPT = f.read()
 
-USER_PROMPT = """
-請幫我依據以下內容，生成完整的模擬環境狀況
-內容如下:
-{gama_data}
-"""
+with open(USER_PROMPT_PATH, "r", encoding="utf-8") as f:
+    USER_PROMPT = f.read()
 
 MODE = "generate"
 url = f"http://localhost:11434/api/{MODE}"
 
-# def get_perception_RAG_data():
+agent_profile_response = None
+
 payload = {
     "model": "gpt-oss:20b",
     "prompt": USER_PROMPT,
@@ -37,9 +33,9 @@ payload = {
         "seed": 42   # 改變 seed 增加多樣性
     },
     "stream": False
-    }
+}
 
-def run_perception(json_output: bool= False):
+def run_agent_profile(json_output: bool= False):
     done_event = threading.Event()
     start_time = time.perf_counter()
 
@@ -49,7 +45,7 @@ def run_perception(json_output: bool= False):
         daemon=True
     )
     timer_thread.start()
-    print("開始等待perception回應")
+    print("開始等待agent profile回應")
     try:
         response = requests.post(url, json=payload)
         response.raise_for_status()  # 確保 HTTP 狀態碼為 200
@@ -58,9 +54,9 @@ def run_perception(json_output: bool= False):
         timer_thread.join(timeout=1)
 
     elapsed_time = time.perf_counter() - start_time
-    print(f"已收到 response，perception總運行時間 {elapsed_time:.2f} 秒")
-
-    perception_response = response.text
+    print(f"已收到 response，agent profile總運行時間 {elapsed_time:.2f} 秒")
+        
+    agent_profile_response = response.text
 
     if json_output:
         response_data = response.json()
@@ -71,14 +67,15 @@ def run_perception(json_output: bool= False):
         # print(repr(raw_text[:500]))
 
         if not raw_text:
-            raise ValueError("Ollama perception response 是空的，無法解析 JSON")
+            raise ValueError("Ollama agent profile response 是空的，無法解析 JSON")
 
         agents = json.loads(raw_text)
                 
-        with open("perception.json", "w", encoding="utf-8") as f:
-            json.dump({"perception":agents}, f, ensure_ascii=False, indent=2)
-            print("已完成perception")
-    return perception_response
+        with open("agents_samples.json", "w", encoding="utf-8") as f:
+            json.dump({"agents":agents}, f, ensure_ascii=False, indent=2)
+            print("已完成agent profile")
+    return agent_profile_response
 
 if __name__ == "__main__":
-    run_perception(json_output=False)
+    run_agent_profile(json_output=False)
+

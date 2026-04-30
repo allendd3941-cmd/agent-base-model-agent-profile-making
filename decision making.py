@@ -1,14 +1,18 @@
-#gg
+#decision making
 from RAG import RAG
+from agent_profile import run_agent_profile
+from perception import run_perception
 import json
 from pathlib import Path
 from timer import print_elapsed_time
 import threading
 import time 
 import requests
-#接gama的payload
 
-gama_data ="gama payload"
+agent_profile_data = run_agent_profile()
+perception_data = run_perception()
+
+retrieved_texts =RAG(agent_profile_data, perception_data)
 
 BASE_DIR = Path(__file__).resolve().parent
 
@@ -17,16 +21,17 @@ SYSTEM_PROMPT_PATH = BASE_DIR / "system_prompt.txt"
 with open(SYSTEM_PROMPT_PATH, "r", encoding="utf-8") as f:
     SYSTEM_PROMPT = f.read()
 
-USER_PROMPT = """
-請幫我依據以下內容，生成完整的模擬環境狀況
-內容如下:
-{gama_data}
+USER_PROMPT = f"""
+請幫我依據以下資料，生成每位agents的完整出行計畫。
+格式如下:
+待補
+資料如下:
+{retrieved_texts}
 """
 
 MODE = "generate"
 url = f"http://localhost:11434/api/{MODE}"
 
-# def get_perception_RAG_data():
 payload = {
     "model": "gpt-oss:20b",
     "prompt": USER_PROMPT,
@@ -39,7 +44,7 @@ payload = {
     "stream": False
     }
 
-def run_perception(json_output: bool= False):
+def run_decision_making(json_output: bool= False):
     done_event = threading.Event()
     start_time = time.perf_counter()
 
@@ -49,7 +54,7 @@ def run_perception(json_output: bool= False):
         daemon=True
     )
     timer_thread.start()
-    print("開始等待perception回應")
+    print("開始等待decision_making回應")
     try:
         response = requests.post(url, json=payload)
         response.raise_for_status()  # 確保 HTTP 狀態碼為 200
@@ -58,9 +63,9 @@ def run_perception(json_output: bool= False):
         timer_thread.join(timeout=1)
 
     elapsed_time = time.perf_counter() - start_time
-    print(f"已收到 response，perception總運行時間 {elapsed_time:.2f} 秒")
+    print(f"已收到 response，decision_making總運行時間 {elapsed_time:.2f} 秒")
 
-    perception_response = response.text
+    decision_making_response = response.text
 
     if json_output:
         response_data = response.json()
@@ -71,14 +76,16 @@ def run_perception(json_output: bool= False):
         # print(repr(raw_text[:500]))
 
         if not raw_text:
-            raise ValueError("Ollama perception response 是空的，無法解析 JSON")
+            raise ValueError("Ollama decision_making response 是空的，無法解析 JSON")
 
         agents = json.loads(raw_text)
                 
-        with open("perception.json", "w", encoding="utf-8") as f:
-            json.dump({"perception":agents}, f, ensure_ascii=False, indent=2)
-            print("已完成perception")
-    return perception_response
+        with open("decision_making.json", "w", encoding="utf-8") as f:
+            json.dump({"decision_making":agents}, f, ensure_ascii=False, indent=2)
+            print("已完成decision_making")
+    return decision_making_response
 
 if __name__ == "__main__":
-    run_perception(json_output=False)
+    run_decision_making(json_output=False)
+
+#agent profile 的 response還要改，目前的prompt是叫他生成json
