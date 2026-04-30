@@ -7,7 +7,7 @@ import requests
 
 #system prompt打在這
 SYSTEM_PROMPT = """
-我是一個都市計劃技師。
+
 """
 
 #你要他做的是打在這
@@ -35,7 +35,7 @@ def print_elapsed_time(start_time, done_event, interval=60):
         elapsed = time.perf_counter() - start_time
         print(f"仍在等待 Ollama 回應，已運行 {elapsed:.0f} 秒")
 
-def run_decision_making(json_output: bool= False):
+def run_decision_making(json_output: bool= False, only_response: bool=False):
     done_event = threading.Event()
     start_time = time.perf_counter()
 
@@ -55,8 +55,12 @@ def run_decision_making(json_output: bool= False):
 
     elapsed_time = time.perf_counter() - start_time
     print(f"已收到 response，decision_making總運行時間 {elapsed_time:.2f} 秒")
-
-    decision_making_response = response.text
+    
+    if only_response:
+        response = response.json()
+        decision_making_response = response["response"]
+    else:
+        decision_making_response = response.text
 
     if json_output:
         response_data = response.json()
@@ -78,5 +82,5 @@ def run_decision_making(json_output: bool= False):
     return decision_making_response
 
 if __name__ == "__main__":
-    response = run_decision_making(json_output=False)
+    response = run_decision_making(json_output=False,only_response=True)
     print(response)
