@@ -1,49 +1,41 @@
 #decision making
-from RAG import RAG
-from agent_profile import run_agent_profile
-from perception import run_perception
 import json
 from pathlib import Path
-from timer import print_elapsed_time
 import threading
 import time 
 import requests
 
-BASE_DIR = Path(__file__).resolve().parent
+#system prompt打在這
+SYSTEM_PROMPT = """
+我是一個都市計劃技師。
+"""
 
-SYSTEM_PROMPT_PATH = BASE_DIR / "system_prompt.txt"
+#你要他做的是打在這
+USER_PROMPT = f"""
+哈囉
 
-with open(SYSTEM_PROMPT_PATH, "r", encoding="utf-8") as f:
-    SYSTEM_PROMPT = f.read()
+"""
 
 MODE = "generate"
+payload = {
+"model": "gpt-oss:20b",
+"prompt": USER_PROMPT,
+"system": SYSTEM_PROMPT,
+#"format": "json",  # 強制以 JSON 格式輸出，方便解析
+"think": "low",
+"options": {
+    "seed": 42   # 改變 seed 增加多樣性
+},
+"stream": False
+}
 url = f"http://localhost:11434/api/{MODE}"
 
+def print_elapsed_time(start_time, done_event, interval=60):
+    while not done_event.wait(interval):
+        elapsed = time.perf_counter() - start_time
+        print(f"仍在等待 Ollama 回應，已運行 {elapsed:.0f} 秒")
+
 def run_decision_making(json_output: bool= False):
-    agent_profile_data = run_agent_profile()
-    perception_data = run_perception()
-
-    retrieved_texts =RAG(agent_profile_data, perception_data)
-
-    USER_PROMPT = f"""
-    請幫我依據以下資料，生成每位agents的完整出行計畫。
-    格式如下:
-    待補
-    資料如下:
-    {retrieved_texts}
-    """
-    payload = {
-    "model": "gpt-oss:20b",
-    "prompt": USER_PROMPT,
-    "system": SYSTEM_PROMPT,
-    #"format": "json",  # 強制以 JSON 格式輸出，方便解析
-    "think": "low",
-    "options": {
-        "seed": 42   # 改變 seed 增加多樣性
-    },
-    "stream": False
-    }
-
     done_event = threading.Event()
     start_time = time.perf_counter()
 
@@ -86,6 +78,5 @@ def run_decision_making(json_output: bool= False):
     return decision_making_response
 
 if __name__ == "__main__":
-    run_decision_making(json_output=False)
-
-#agent profile 的 response還要改，目前的prompt是叫他生成json
+    response = run_decision_making(json_output=False)
+    print(response)
