@@ -12,7 +12,7 @@ SYSTEM_PROMPT = """
 
 #你要他做的是打在這
 USER_PROMPT = f"""
-哈囉
+哈囉你好大家好
 
 """
 
