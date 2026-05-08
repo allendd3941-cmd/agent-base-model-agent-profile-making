@@ -1,4 +1,3 @@
-#gg
 import json
 from pathlib import Path
 from timer import print_elapsed_time

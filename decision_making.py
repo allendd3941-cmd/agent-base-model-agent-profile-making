@@ -1,4 +1,3 @@
-#decision making
 from RAG import RAG
 import json
 from pathlib import Path

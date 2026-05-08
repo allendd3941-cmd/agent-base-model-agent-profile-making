@@ -1,14 +1,11 @@
-﻿# ollama api
-import json
+﻿import json
 from pathlib import Path
 import requests
 import time 
 from timer import print_elapsed_time
 import threading
 from requests.exceptions import ReadTimeout
-from RAG import RAG
 from llm_config import OLLAMA_URL, OLLAMA_MODE, OLLAMA_MODEL
-
 
 BASE_DIR = Path(__file__).resolve().parent
 SYSTEM_PROMPT_PATH = BASE_DIR / "system_prompt.txt"
