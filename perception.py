@@ -6,9 +6,6 @@ from timer import print_elapsed_time
 import threading
 import time 
 import requests
-#接gama的payload
-
-gama_data ="gama payload"
 
 BASE_DIR = Path(__file__).resolve().parent
 
@@ -17,17 +14,18 @@ SYSTEM_PROMPT_PATH = BASE_DIR / "system_prompt.txt"
 with open(SYSTEM_PROMPT_PATH, "r", encoding="utf-8") as f:
     SYSTEM_PROMPT = f.read()
 
-USER_PROMPT = """
-請幫我依據以下內容，生成完整的模擬環境狀況
-內容如下:
-{gama_data}
-"""
-
 MODE = "generate"
 url = f"http://localhost:11434/api/{MODE}"
 
-# def get_perception_RAG_data():
-payload = {
+def run_perception(gama_body, json_output: bool= False):
+    
+    USER_PROMPT = f"""
+    請幫我依據以下內容，生成完整的模擬環境狀況
+    內容如下:
+    {gama_body}
+    """
+
+    payload = {
     "model": "gpt-oss:20b",
     "prompt": USER_PROMPT,
     "system": SYSTEM_PROMPT,
@@ -39,7 +37,6 @@ payload = {
     "stream": False
     }
 
-def run_perception(json_output: bool= False):
     done_event = threading.Event()
     start_time = time.perf_counter()
 

@@ -19,9 +19,10 @@ with open(SYSTEM_PROMPT_PATH, "r", encoding="utf-8") as f:
 MODE = "generate"
 url = f"http://localhost:11434/api/{MODE}"
 
-def run_decision_making(json_output: bool= False):
-    agent_profile_data = run_agent_profile()
-    perception_data = run_perception()
+def run_decision_making(agent_profile_data, perception_data, json_output: bool= False):
+    #在單測檔案的時候再uncommand
+    # agent_profile_data = run_agent_profile()
+    # perception_data = run_perception()
 
     retrieved_texts =RAG(agent_profile_data, perception_data)
 

@@ -1,0 +1,29 @@
+from fastapi import FastAPI
+from pydantic import BaseModel
+from agent_profile import run_agent_profile
+from perception import run_perception
+from decision_making import run_decision_making
+
+
+app = FastAPI()
+
+class GamaRequest(BaseModel):
+    cycle: int
+    agent_id: str
+    x: float
+    y: float
+    value: float
+
+@app.post("/from-gama")
+def receive_from_gama(gama_body: GamaRequest):
+    print("收到 GAMA 請求")
+
+    agent_profile = run_agent_profile()
+    perception = run_perception(gama_body)
+    decision_making = run_decision_making(agent_profile, perception)
+
+    return decision_making
+
+
+
+
