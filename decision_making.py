@@ -1,7 +1,5 @@
 #decision making
 from RAG import RAG
-from agent_profile import run_agent_profile
-from perception import run_perception
 import json
 from pathlib import Path
 from timer import print_elapsed_time
