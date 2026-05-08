@@ -9,7 +9,7 @@ from llm_config import OLLAMA_URL, OLLAMA_MODE, OLLAMA_MODEL
 
 BASE_DIR = Path(__file__).resolve().parent
 SYSTEM_PROMPT_PATH = BASE_DIR / "system_prompt.txt"
-USER_PROMPT_PATH = BASE_DIR / "user_prompt.txt"
+USER_PROMPT_PATH = BASE_DIR / "agentprofile_prompt.txt"
 
 with open(SYSTEM_PROMPT_PATH, "r", encoding="utf-8") as f:
     SYSTEM_PROMPT = f.read()
