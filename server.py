@@ -4,7 +4,8 @@ from agent_profile import run_agent_profile
 from perception import run_perception
 from decision_making import run_decision_making
 
-
+#uvicorn server:app --host 127.0.0.1 --port 8000 --reload
+#檔名:伺服器名 -> server:app
 app = FastAPI()
 
 class GamaRequest(BaseModel):

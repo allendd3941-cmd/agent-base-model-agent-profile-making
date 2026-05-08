@@ -7,6 +7,8 @@ from timer import print_elapsed_time
 import threading
 from requests.exceptions import ReadTimeout
 from RAG import RAG
+from llm_config import OLLAMA_URL, OLLAMA_MODE, OLLAMA_MODEL
+
 
 BASE_DIR = Path(__file__).resolve().parent
 SYSTEM_PROMPT_PATH = BASE_DIR / "system_prompt.txt"
@@ -18,24 +20,24 @@ with open(SYSTEM_PROMPT_PATH, "r", encoding="utf-8") as f:
 with open(USER_PROMPT_PATH, "r", encoding="utf-8") as f:
     USER_PROMPT = f.read()
 
-MODE = "generate"
-url = f"http://localhost:11434/api/{MODE}"
-
-agent_profile_response = None
-
-payload = {
-    "model": "gpt-oss:20b",
-    "prompt": USER_PROMPT,
-    "system": SYSTEM_PROMPT,
-    #"format": "json",  # 強制以 JSON 格式輸出，方便解析
-    "think": "low",
-    "options": {
-        "seed": 42   # 改變 seed 增加多樣性
-    },
-    "stream": False
-}
+# MODE = "generate"
+# url = f"http://localhost:11434/api/{MODE}"
 
 def run_agent_profile(json_output: bool= False):
+    url = f"{OLLAMA_URL}{OLLAMA_MODE}"
+
+    payload = {
+        "model": OLLAMA_MODEL,
+        "prompt": USER_PROMPT,
+        "system": SYSTEM_PROMPT,
+        #"format": "json",  # 強制以 JSON 格式輸出，方便解析
+        "think": "low",
+        "options": {
+            "seed": 42   # 改變 seed 增加多樣性
+        },
+        "stream": False
+   }
+
     done_event = threading.Event()
     start_time = time.perf_counter()
 

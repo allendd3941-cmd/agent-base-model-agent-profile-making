@@ -8,6 +8,7 @@ from timer import print_elapsed_time
 import threading
 import time 
 import requests
+from llm_config import OLLAMA_URL, OLLAMA_MODEL, OLLAMA_MODE
 
 BASE_DIR = Path(__file__).resolve().parent
 
@@ -16,8 +17,8 @@ SYSTEM_PROMPT_PATH = BASE_DIR / "system_prompt.txt"
 with open(SYSTEM_PROMPT_PATH, "r", encoding="utf-8") as f:
     SYSTEM_PROMPT = f.read()
 
-MODE = "generate"
-url = f"http://localhost:11434/api/{MODE}"
+# MODE = "generate"
+# url = f"http://localhost:11434/api/{MODE}"
 
 def run_decision_making(agent_profile_data, perception_data, json_output: bool= False):
     #在單測檔案的時候再uncommand
@@ -26,6 +27,8 @@ def run_decision_making(agent_profile_data, perception_data, json_output: bool= 
 
     retrieved_texts =RAG(agent_profile_data, perception_data)
 
+    url = f"{OLLAMA_URL}{OLLAMA_MODE}"
+
     USER_PROMPT = f"""
     請幫我依據以下資料，生成每位agents的完整出行計畫。
     格式如下:
@@ -33,16 +36,17 @@ def run_decision_making(agent_profile_data, perception_data, json_output: bool= 
     資料如下:
     {retrieved_texts}
     """
+
     payload = {
-    "model": "gpt-oss:20b",
-    "prompt": USER_PROMPT,
-    "system": SYSTEM_PROMPT,
-    #"format": "json",  # 強制以 JSON 格式輸出，方便解析
-    "think": "low",
-    "options": {
-        "seed": 42   # 改變 seed 增加多樣性
-    },
-    "stream": False
+        "model": OLLAMA_MODEL,
+        "prompt": USER_PROMPT,
+        "system": SYSTEM_PROMPT,
+        #"format": "json",  # 強制以 JSON 格式輸出，方便解析
+        "think": "low",
+        "options": {
+            "seed": 42   # 改變 seed 增加多樣性
+        },
+        "stream": False
     }
 
     done_event = threading.Event()
@@ -88,5 +92,3 @@ def run_decision_making(agent_profile_data, perception_data, json_output: bool= 
 
 if __name__ == "__main__":
     run_decision_making(json_output=False)
-
-#agent profile 的 response還要改，目前的prompt是叫他生成json

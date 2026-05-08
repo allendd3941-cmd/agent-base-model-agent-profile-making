@@ -6,6 +6,7 @@ from timer import print_elapsed_time
 import threading
 import time 
 import requests
+from llm_config import OLLAMA_URL, OLLAMA_MODEL, OLLAMA_MODE
 
 BASE_DIR = Path(__file__).resolve().parent
 
@@ -14,10 +15,11 @@ SYSTEM_PROMPT_PATH = BASE_DIR / "system_prompt.txt"
 with open(SYSTEM_PROMPT_PATH, "r", encoding="utf-8") as f:
     SYSTEM_PROMPT = f.read()
 
-MODE = "generate"
-url = f"http://localhost:11434/api/{MODE}"
+# MODE = "generate"
+# url = f"http://localhost:11434/api/{MODE}"
 
 def run_perception(gama_body, json_output: bool= False):
+    url = f"{OLLAMA_URL}{OLLAMA_MODE}"
     
     USER_PROMPT = f"""
     請幫我依據以下內容，生成完整的模擬環境狀況
@@ -26,7 +28,7 @@ def run_perception(gama_body, json_output: bool= False):
     """
 
     payload = {
-    "model": "gpt-oss:20b",
+    "model": OLLAMA_MODEL,
     "prompt": USER_PROMPT,
     "system": SYSTEM_PROMPT,
     #"format": "json",  # 強制以 JSON 格式輸出，方便解析
