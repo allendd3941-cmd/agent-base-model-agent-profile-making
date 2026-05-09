@@ -17,18 +17,19 @@ USER_PROMPT = f"""
 """
 
 MODE = "generate"
+url = f"http://localhost:11434/api/{MODE}"
+
 payload = {
 "model": "gpt-oss:20b",
 "prompt": USER_PROMPT,
 "system": SYSTEM_PROMPT,
-#"format": "json",  # 強制以 JSON 格式輸出，方便解析
+#"format": "json",  
 "think": "low",
 "options": {
-    "seed": 42   # 改變 seed 增加多樣性
+    "seed": 42   
 },
 "stream": False
 }
-url = f"http://localhost:11434/api/{MODE}"
 
 def print_elapsed_time(start_time, done_event, interval=60):
     while not done_event.wait(interval):
@@ -45,7 +46,7 @@ def run_decision_making(json_output: bool= False, only_response: bool=False):
         daemon=True
     )
     timer_thread.start()
-    print("開始等待decision_making回應")
+    print("開始等待回應")
     try:
         response = requests.post(url, json=payload)
         response.raise_for_status()  # 確保 HTTP 狀態碼為 200
@@ -54,16 +55,17 @@ def run_decision_making(json_output: bool= False, only_response: bool=False):
         timer_thread.join(timeout=1)
 
     elapsed_time = time.perf_counter() - start_time
-    print(f"已收到 response，decision_making總運行時間 {elapsed_time:.2f} 秒")
+    print(f"已收到 response，總運行時間 {elapsed_time:.2f} 秒")
     
+    response_data = response.json()
+    response_text = response.text
+
     if only_response:
-        response = response.json()
-        decision_making_response = response["response"]
+        decision_making_response = response_data["response"]
     else:
-        decision_making_response = response.text
+        decision_making_response = response_text
 
     if json_output:
-        response_data = response.json()
         print(response_data)
         raw_text = response_data.get("response", "").strip()
 
@@ -71,16 +73,16 @@ def run_decision_making(json_output: bool= False, only_response: bool=False):
         # print(repr(raw_text[:500]))
 
         if not raw_text:
-            raise ValueError("Ollama decision_making response 是空的，無法解析 JSON")
+            raise ValueError("Ollama response 是空的，無法解析 JSON")
 
         agents = json.loads(raw_text)
                 
-        with open("decision_making.json", "w", encoding="utf-8") as f:
-            json.dump({"decision_making":agents}, f, ensure_ascii=False, indent=2)
-            print("已完成decision_making")
+        with open("test_output.json", "w", encoding="utf-8") as f:
+            json.dump({"test_output":agents}, f, ensure_ascii=False, indent=2)
+            print("已完成")
             
     return decision_making_response
 
 if __name__ == "__main__":
-    response = run_decision_making(json_output=False,only_response=True)
+    response = run_decision_making(json_output=True,only_response=True)
     print(response)
