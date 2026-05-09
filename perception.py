@@ -8,33 +8,33 @@ from llm_config import OLLAMA_URL, OLLAMA_MODEL, OLLAMA_MODE
 
 BASE_DIR = Path(__file__).resolve().parent
 
-SYSTEM_PROMPT_PATH = BASE_DIR / "system_prompt.txt"
+SYSTEM_PROMPT_PATH = BASE_DIR / "prompts" / "system_prompt.txt"
+USER_PROMPT_PATH = BASE_DIR / "prompts" / "perception_prompt.txt"
 
 with open(SYSTEM_PROMPT_PATH, "r", encoding="utf-8") as f:
     SYSTEM_PROMPT = f.read()
+
+with open(USER_PROMPT_PATH, "r", encoding="utf-8") as f:
+    USER_PROMPT = f.read()
 
 # MODE = "generate"
 # url = f"http://localhost:11434/api/{MODE}"
 
 def run_perception(gama_body, json_output: bool= False):
     url = f"{OLLAMA_URL}{OLLAMA_MODE}"
-    
-    USER_PROMPT = f"""
-    請幫我依據以下內容，生成完整的模擬環境狀況
-    內容如下:
-    {gama_body}
-    """
 
+    user_prompt = f"{USER_PROMPT} \n {gama_body}"
+    
     payload = {
-    "model": OLLAMA_MODEL,
-    "prompt": USER_PROMPT,
-    "system": SYSTEM_PROMPT,
-    #"format": "json",  # 強制以 JSON 格式輸出，方便解析
-    "think": "low",
-    "options": {
-        "seed": 42   # 改變 seed 增加多樣性
-    },
-    "stream": False
+        "model": OLLAMA_MODEL,
+        "prompt": user_prompt,
+        "system": SYSTEM_PROMPT,
+        #"format": "json",  # 強制以 JSON 格式輸出，方便解析
+        "think": "low",
+        "options": {
+            "seed": 42   # 改變 seed 增加多樣性
+        },
+        "stream": False
     }
 
     done_event = threading.Event()
@@ -75,6 +75,7 @@ def run_perception(gama_body, json_output: bool= False):
         with open("perception.json", "w", encoding="utf-8") as f:
             json.dump({"perception":agents}, f, ensure_ascii=False, indent=2)
             print("已完成perception")
+            
     return perception_response
 
 if __name__ == "__main__":

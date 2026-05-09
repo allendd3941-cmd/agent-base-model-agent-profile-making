@@ -1,4 +1,4 @@
-請依照以下 JSON 結構，生成 10 個交通模擬用的 agent profile。
+請依照以下 JSON 結構，生成 1 個交通模擬用的 agent profile。
     重要規則：
     1. 最外層請輸出一個 JSON array，array 中必須有指定數量的 agent object。
     2. 每個 agent object 只能包含三個欄位：identity、traits、memory。

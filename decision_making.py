@@ -6,37 +6,33 @@ import threading
 import time 
 import requests
 from llm_config import OLLAMA_URL, OLLAMA_MODEL, OLLAMA_MODE
+from agent_profile import run_agent_profile
+from perception import run_perception
 
 BASE_DIR = Path(__file__).resolve().parent
 
-SYSTEM_PROMPT_PATH = BASE_DIR / "system_prompt.txt"
+SYSTEM_PROMPT_PATH = BASE_DIR / "prompts" / "system_prompt.txt"
+USER_PROMPT_PATH = BASE_DIR / "prompts" / "decision_making_prompt.txt"
 
 with open(SYSTEM_PROMPT_PATH, "r", encoding="utf-8") as f:
     SYSTEM_PROMPT = f.read()
+
+with open(USER_PROMPT_PATH, "r", encoding="utf-8") as f:
+    USER_PROMPT = f.read()
 
 # MODE = "generate"
 # url = f"http://localhost:11434/api/{MODE}"
 
 def run_decision_making(agent_profile_data, perception_data, json_output: bool= False):
-    #在單測檔案的時候再uncommand
-    # agent_profile_data = run_agent_profile()
-    # perception_data = run_perception()
+    url = f"{OLLAMA_URL}{OLLAMA_MODE}"
 
     retrieved_texts =RAG(agent_profile_data, perception_data)
 
-    url = f"{OLLAMA_URL}{OLLAMA_MODE}"
-
-    USER_PROMPT = f"""
-    請幫我依據以下資料，生成每位agents的完整出行計畫。
-    格式如下:
-    待補
-    資料如下:
-    {retrieved_texts}
-    """
+    user_prompt = f"{USER_PROMPT} \n {retrieved_texts}"
 
     payload = {
         "model": OLLAMA_MODEL,
-        "prompt": USER_PROMPT,
+        "prompt": user_prompt,
         "system": SYSTEM_PROMPT,
         #"format": "json",  # 強制以 JSON 格式輸出，方便解析
         "think": "low",
@@ -88,4 +84,6 @@ def run_decision_making(agent_profile_data, perception_data, json_output: bool= 
     return decision_making_response
 
 if __name__ == "__main__":
-    run_decision_making(json_output=False)
+    agent_profile_data = run_agent_profile()
+    perception_data = run_perception()
+    run_decision_making(agent_profile_data, perception_data, json_output=False)

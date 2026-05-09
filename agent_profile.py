@@ -2,14 +2,16 @@
 from pathlib import Path
 import requests
 import time 
-from timer import print_elapsed_time
+from timer import time_counter
 import threading
 from requests.exceptions import ReadTimeout
 from llm_config import OLLAMA_URL, OLLAMA_MODE, OLLAMA_MODEL
 
 BASE_DIR = Path(__file__).resolve().parent
-SYSTEM_PROMPT_PATH = BASE_DIR / "system_prompt.txt"
-USER_PROMPT_PATH = BASE_DIR / "agentprofile_prompt.txt"
+FILE_NAME = Path(__file__).stem
+
+SYSTEM_PROMPT_PATH = BASE_DIR / "prompts" / "system_prompt.txt"
+USER_PROMPT_PATH = BASE_DIR / "prompts" / "agentprofile_prompt.txt"
 
 with open(SYSTEM_PROMPT_PATH, "r", encoding="utf-8") as f:
     SYSTEM_PROMPT = f.read()
@@ -35,25 +37,33 @@ def run_agent_profile(json_output: bool= False):
         "stream": False
    }
 
-    done_event = threading.Event()
-    start_time = time.perf_counter()
-
-    timer_thread = threading.Thread(
-        target=print_elapsed_time,
-        args=(start_time, done_event),
-        daemon=True
-    )
-    timer_thread.start()
-    print("開始等待agent profile回應")
-    try:
-        response = requests.post(url, json=payload)
+    @time_counter
+    def request_with_timeout(url, payload, file_name : str = FILE_NAME):
+        response = requests.post(url, json = payload)
         response.raise_for_status()  # 確保 HTTP 狀態碼為 200
-    finally:
-        done_event.set()
-        timer_thread.join(timeout=1)
+        return response
 
-    elapsed_time = time.perf_counter() - start_time
-    print(f"已收到 response，agent profile總運行時間 {elapsed_time:.2f} 秒")
+    response = request_with_timeout(url, payload, file_name=FILE_NAME)
+
+    # done_event = threading.Event()
+    # start_time = time.perf_counter()
+
+    # timer_thread = threading.Thread(
+    #     target=print_elapsed_time,
+    #     args=(start_time, done_event),
+    #     daemon=True
+    # )
+    # timer_thread.start()
+    # print("開始等待agent profile回應")
+    # try:
+    #     response = requests.post(url, json=payload)
+    #     response.raise_for_status()  # 確保 HTTP 狀態碼為 200
+    # finally:
+    #     done_event.set()
+    #     timer_thread.join(timeout=1)
+
+    # elapsed_time = time.perf_counter() - start_time
+    # print(f"已收到 response，agent profile總運行時間 {elapsed_time:.2f} 秒")
         
     agent_profile_response = response.text
 
@@ -73,6 +83,7 @@ def run_agent_profile(json_output: bool= False):
         with open("agents_samples.json", "w", encoding="utf-8") as f:
             json.dump({"agents":agents}, f, ensure_ascii=False, indent=2)
             print("已完成agent profile")
+            
     return agent_profile_response
 
 if __name__ == "__main__":
