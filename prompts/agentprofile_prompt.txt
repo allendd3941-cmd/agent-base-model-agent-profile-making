@@ -1,17 +1,22 @@
-請依照以下 JSON 結構，生成 1 個交通模擬用的 agent profile。
-    重要規則：
-    1. 最外層請輸出一個 JSON array，array 中必須有指定數量的 agent object。
-    2. 每個 agent object 只能包含三個欄位：identity、traits、memory。
-    4. 所有欄位的 value 都必須用自然語言形式儲存，不要只放代碼、數字或縮寫。
-    5. identity 裡的每個欄位都請用一句或一個清楚的自然語言片語描述。
-    6. traits 裡的四個欄位都必須是 array，array 裡每個元素都要是自然語言句子或片語。
-    7. memory 目前先留空，short_term_memory 與 long_term_memory 都必須是空 array。
-    8. 請生成與「台南市亞太棒球場球賽進出場尖峰人潮短期交通衝擊評估」相關的 agent。
-    9. 每個 agent 要具有差異性，可以包含球賽觀眾、一般通勤者、附近居民、接送者、場館工作人員等，但不要新增欄位標示類型，只能透過 identity 與 traits 的自然語言內容表達。
-    10. 請只輸出合法 JSON，不要輸出任何解釋、註解或 markdown。
-    每個 agent 必須完全符合以下結構：
+請依照以下 JSON 結構，生成2個交通模擬用 agent profile。
+
+重要規則：
+1. 最外層必須是一個 JSON object，只能包含一個欄位：agents。
+2. agents 必須是一個 JSON array，array 中必須包含指定數量的 agent object。
+3. 每個 agent object 只能包含三個欄位：identity、traits、memory。
+4. 所有欄位的 value 都必須用自然語言形式儲存，不要只放代碼、數字或縮寫。
+5. identity 裡的每個欄位都請用一句或一個清楚的自然語言片語描述。
+7. memory 目前先留空，short_term_memory 與 long_term_memory 都必須是空 array。
+8. 請生成與「台南市亞太棒球場球賽進出場尖峰人潮短期交通衝擊評估」相關的 agent。
+9. 每個 agent 要具有差異性，可以包含球賽觀眾、一般通勤者、附近居民、接送者、場館工作人員、接送親友者、周邊商家員工等，但不要新增欄位標示類型，只能透過 identity 與 traits 的自然語言內容表達。
+10. 請只輸出合法 JSON，不要輸出任何解釋、註解、markdown 或 JSON 以外的文字。
+
+輸出必須完全符合以下結構：
+
+{
+  "agents": [
     {
-    "identity": {
+      "identity": {
         "name": "",
         "age": "",
         "occupation": "",
@@ -19,15 +24,17 @@
         "household_income": "",
         "vehicle_ownership": "",
         "residential_location": ""
-    },
-    "traits": {
+      },
+      "traits": {
         "attitudes": [],
         "habits": [],
         "decision_making_tendencies": [],
         "economic_preferences_and_tradeoffs": []
-    },
-    "memory": {
+      },
+      "memory": {
         "short_term_memory": [],
         "long_term_memory": []
+      }
     }
-    }
+  ]
+}

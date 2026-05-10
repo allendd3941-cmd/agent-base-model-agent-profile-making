@@ -3,6 +3,7 @@ import requests
 from timer import time_counter
 from llm_config import OLLAMA_URL, OLLAMA_MODE, OLLAMA_MODEL
 from output_engine import output_process
+from schemas.agentprofile_schema import AgentProfileSchema
 
 BASE_DIR = Path(__file__).resolve().parent
 FILE_NAME = Path(__file__).stem
@@ -29,8 +30,8 @@ def run_agent_profile(output: bool= False):
         "model": OLLAMA_MODEL,
         "prompt": USER_PROMPT,
         "system": SYSTEM_PROMPT,
-        #"format": "json",
-        "think": "low",
+        #"format": AgentProfileSchema.model_json_schema(),
+        #"think": "low",
         "options": {
             "seed": 42 
         },
