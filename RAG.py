@@ -1,5 +1,3 @@
-#RAG
-#寫函式把USER PORMPT跟要進vector store的計算完直接回傳給原始模組讓他直接進prompt
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
@@ -15,7 +13,7 @@ def RAG(user_prompt, data):
 
     chunks = splitter.split_text(data)
     vectorizer = TfidfVectorizer(analyzer="char", ngram_range=(2, 4))
-    vectors = vectorizer.fit_transform([user_prompt] + data) #再回來確認data格式，需要的是list of strings
+    vectors = vectorizer.fit_transform([user_prompt] + chunks) #再回來確認data格式，需要的是list of strings
 
     user_vector = vectors[0:1]
     data_vectors = vectors[1:]
