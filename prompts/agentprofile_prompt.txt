@@ -1,4 +1,4 @@
-請依照以下 JSON 結構，生成2個交通模擬用 agent profile。
+請依照以下 JSON 結構，生成 2 個交通模擬用 agent profile。
 
 重要規則：
 1. 最外層必須是一個 JSON object，只能包含一個欄位：agents。

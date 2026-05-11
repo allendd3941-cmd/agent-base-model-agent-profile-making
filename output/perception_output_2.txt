@@ -1,0 +1,99 @@
+以下為「cycle = 1, vehicles = 100」之微觀交通模擬環境設定。  
+為方便後續模型執行，所有數值以統計分布方式呈現，並附上可直接載入程式（如 VISSIM、MATSim 或 SUMO）所需的資料欄位說明。
+
+---
+
+## 1. 基本場景描述  
+| 參數 | 數值 | 說明 |
+|------|------|------|
+| 模擬週期 | 1 秒 | 每 1 秒更新一次車輛狀態 |
+| 車輛總數 | 100 | 以 100 台車輛為實驗樣本 |
+| 佈局 | 小型城市區域（直角交叉道路，兩條東西向、兩條南北向車道） | 總路長 400 m × 400 m，路口中心設置標準紅綠燈 |
+
+---
+
+## 2. 車輛屬性（Agent Profile）
+
+| 欄位 | 資料型別 | 範圍 / 產生規則 | 說明 |
+|------|----------|----------------|------|
+| `id` | 整數 | 1–100 | 車輛唯一識別碼 |
+| `type` | 字串 | `["car","truck","bus","motorcycle"]` | 以 80/10/5/5% 的比例隨機分配 |
+| `length` | 數值 | `car:4.5~4.8` m<br>`truck:12~15` m<br>`bus:12~14` m<br>`motorcycle:2.0~2.5` m | 車身長度 |
+| `width` | 數值 | `car:1.8~2.0` m<br>`truck:2.5~2.8` m<br>`bus:2.5~2.8` m<br>`motorcycle:0.6~0.7` m | 車身寬度 |
+| `max_speed` | 數值 | `car:25~30` m/s (90–108 km/h)<br>`truck:20~25` m/s<br>`bus:20~24` m/s<br>`motorcycle:30~35` m/s | 最高行車速 |
+| `desired_speed` | 數值 | `max_speed × U(0.8,1.0)` | 車主期望速度，受路況影響 |
+| `accel` | 數值 | `car:2.5` m/s²<br>`truck:1.5` m/s²<br>`bus:1.8` m/s²<br>`motorcycle:3.0` m/s² | 加速度 |
+| `decel` | 數值 | `car:3.0` m/s²<br>`truck:2.5` m/s²<br>`bus:2.8` m/s²<br>`motorcycle:4.0` m/s² | 減速度 |
+| `current_speed` | 數值 | `desired_speed × U(0.9,1.1)` | 初始速度 |
+| `lane` | 整數 | `1~2` | 車道編號（1 = 右側車道） |
+| `direction` | 字串 | `["N","S","E","W"]` | 進入方向 |
+| `route` | 數列 | 依 `direction` 隨機選擇「直行」或「轉彎」(90 % 直行、10 % 轉彎) | 走向序列（如 N→S→E→W） |
+| `position` | `(x,y)` | 在道路網格上隨機分布；初始位置位於入口路口前 5–10 m 內 | 初始座標 |
+| `headway` | 數值 | `U(1.5,3.5)` 秒 | 期望車距（與前車距離） |
+| `safety_time_gap` | 數值 | `1.2` 秒 | 進行追尾保險距離的時延 |
+| `reaction_time` | 數值 | `U(0.7,1.2)` 秒 | 司機/駕駛反應時間 |
+| `max_following_distance` | 數值 | `current_speed × reaction_time + 2.5` m | 最遠可追尾距離 |
+| `driver_profile` | 字串 | `["aggressive","normal","cautious"]` | 以 30/50/20% 分配 |
+| `weather` | 字串 | 固定為 `["clear"]` | 此模擬不考慮天候變化 |
+
+> **備註**  
+> * 所有隨機數 (`U(a,b)`) 代表在區間 `[a,b]` 上的均勻分布。  
+> * 以上參數設定符合實際道路行駛情況，可直接輸入到如 SUMO 的 `vehicle.xml` 或 MATSim 的 `vehicles.xml`。
+
+---
+
+## 3. 道路網格（Road Network）
+
+| 參數 | 數值 | 說明 |
+|------|------|------|
+| `intersection` | 1 | 單一交叉口（直角交叉） |
+| `lane_count` | 2（每條方向） | 每條直線方向兩條車道 |
+| `lane_width` | 3.5 m | 車道寬度 |
+| `lane_length` | 400 m | 車道總長度（入口至出口） |
+| `signal` | 1 | 標準紅綠燈，週期 60 s（紅光 30 s，綠光 30 s） |
+| `signal_timing` | 60 s | 交叉口信號循環時間 |
+| `speed_limit` | `["car":30 m/s, "truck":20 m/s, "bus":20 m/s, "motorcycle":35 m/s]` | 各車類速限 |
+
+> **備註**  
+> 交叉口中心距離 50 m，車道進出口各設 25 m。  
+> 信號控制采用「相位 1: N–S 綠光」+「相位 2: E–W 綠光」交替。
+
+---
+
+## 4. 初始分佈與動態行為
+
+### 4.1 初始分佈  
+* 所有車輛均隨機從四個入口（北、南、東、西）進入，位置距離入口 5–10 m。  
+* 車道與方向根據 `route` 決定，初始速度為 `current_speed`。
+
+### 4.2 行為模型  
+| 模型 | 描述 |
+|------|------|
+| **CarFollowing** | 使用 IDM（Intelligent Driver Model）：加速度 = `a * (1 - (v/v_des)^4 - (s_star/(s))^2)`，其中 `s_star = headway * v + (v * delta_v)/(2*sqrt(a*b))`。 |
+| **LaneChanging** | 基於 MOBIL 模型：前車速度快、後車速度慢且前方車道距離遠，則可切換車道。 |
+| **Signal Compliance** | 依照信號相位及距離判斷是否停車；若距離 < `current_speed * reaction_time + safety_gap`，則減速或停車。 |
+
+---
+
+## 5. 數據輸出格式（示例）
+
+```xml
+<vehicles>
+  <vehicle id="1" type="car" length="4.6" width="1.9" max_speed="28" desired_speed="26" accel="2.5" decel="3.0" current_speed="26" lane="1" direction="N" route="straight" position="10,390" headway="2.0" safety_time_gap="1.2" reaction_time="0.9" max_following_distance="26.1" driver_profile="normal" weather="clear"/>
+  ...
+  <vehicle id="100" type="motorcycle" length="2.3" width="0.65" max_speed="32" desired_speed="30" accel="3.0" decel="4.0" current_speed="30" lane="2" direction="E" route="left_turn" position="390,10" headway="1.7" safety_time_gap="1.2" reaction_time="0.7" max_following_distance="32.2" driver_profile="aggressive" weather="clear"/>
+</vehicles>
+```
+
+> * 上述 XML 片段可直接導入 SUMO 或相容工具；若使用 MATSim，可轉換為 `.xml` 或 `.json` 格式。  
+> * 需要時可加入更詳細的 `timestep` 記錄、車輛行為日誌等。
+
+---
+
+## 6. 結論與使用建議
+
+* **適用場景**：單一交叉口、車流量中等（100 台車）。  
+* **可擴充性**：若需增加車流量，可將 `vehicles` 數量拉高，同時調整 `signal_timing` 以避免擁堵。  
+* **驗證**：建議先執行 10 秒前的短暫測試，觀察車速分布、平均停車時間，確保模型行為符合預期。  
+
+以上即為完整、可直接使用於微觀交通模擬的環境設定與 Agent Profile。祝模型運行順利！

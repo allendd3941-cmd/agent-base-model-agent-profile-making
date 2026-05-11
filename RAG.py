@@ -26,6 +26,7 @@ def RAG(user_prompt, data):
     retrieved_texts = []
 
     for rank, idx in enumerate(top_k_indices, start=1):
+        print(f"RAG info:")
         print(f"Rank {rank}")
         print(f"Index: {idx}")
         print(f"Score: {similarities[idx]:.4f}")
