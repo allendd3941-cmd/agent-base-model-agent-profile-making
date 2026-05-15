@@ -22,6 +22,8 @@ class GamaRequest(BaseModel):
     vehicles: int
     # memory: str #收到之後combine進agent profile然後再進short term memory
 
+
+#要寫一個迴圈，step總數到了就要break
 @app.post("/from-gama")
 def receive_from_gama(gama_body: GamaRequest):
     print("收到 GAMA 請求:\n", gama_body)
@@ -31,7 +33,7 @@ def receive_from_gama(gama_body: GamaRequest):
     perception = run_perception(gama_body, output=True)
     decision_making = run_decision_making(agent_profile, perception, output=True)
     action = convert_to_od_csv(source=decision_making, output_csv=OUTPUT_PATH / "final_od.csv")
-    action_response = action[0]
+    action_response = action[0] #出發點(o)、目的地(d)、出發時間
 
     return action_response
 

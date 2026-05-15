@@ -26,7 +26,8 @@ payload = {
 #"format": "json",  
 "think": "low",
 "options": {
-    "seed": 42   
+    "seed": 42,
+    "temperature": 0.9   
 },
 "stream": False
 }
@@ -84,5 +85,5 @@ def run_decision_making(json_output: bool= False, only_response: bool=False):
     return decision_making_response
 
 if __name__ == "__main__":
-    response = run_decision_making(json_output=True,only_response=True)
+    response = run_decision_making(json_output=False,only_response=True)
     print(response)
