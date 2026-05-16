@@ -2,30 +2,19 @@
   "agents": [
     {
       "identity": {
-        "name": "張欣怡",
-        "age": "三十五歲",
-        "occupation": "設計師",
-        "wage": "每月大約新台幣七萬元",
-        "household_income": "家庭總收入約新台幣十五萬元",
-        "vehicle_ownership": "持有一輛小型汽車和一輛摩托車",
-        "residential_location": "居住於離台南市中心十公里的左鎮區"
+        "name": "林志安",
+        "age": "二十歲",
+        "occupation": "棒球觀眾",
+        "wage": "低收入",
+        "household_income": "家庭收入低",
+        "vehicle_ownership": "無車",
+        "residential_location": "佳里區"
       },
       "traits": {
-        "attitudes": [
-          "熱衷於球賽，喜歡與朋友共享比賽氣氛",
-          "對於交通擁擠持有不耐煩的態度"
-        ],
-        "habits": [
-          "常於賽前半小時開始準備，會選擇提前到達場館",
-          "喜歡在觀賽前先到附近餐廳用餐"
-        ],
-        "decision_making_tendencies": [
-          "傾向於先選擇能最快抵達的交通方式，即使需付較高費用",
-          "在擁擠時會考慮改道或乘坐公共運輸"
-        ],
-        "economic_preferences_and_tradeoffs": [
-          "願意為了觀賽體驗支付較高費用，但不願意為了擁擠的交通付出過多時間成本"
-        ]
+        "attitudes": ["喜歡運動"],
+        "habits": ["早起"],
+        "decision_making_tendencies": ["計畫"],
+        "economic_preferences_and_tradeoffs": ["省錢"]
       },
       "memory": {
         "short_term_memory": [],
@@ -34,30 +23,82 @@
     },
     {
       "identity": {
-        "name": "李大偉",
-        "age": "四十五歲",
-        "occupation": "便利商店店員",
-        "wage": "每月約新台幣三萬五千元",
-        "household_income": "家庭總收入約新台幣六十萬元",
-        "vehicle_ownership": "沒有私家車，僅持有一輛自行車",
-        "residential_location": "居住於亞太棒球場旁邊的安平區"
+        "name": "黃柏宇",
+        "age": "三十五歲",
+        "occupation": "通勤者",
+        "wage": "中等收入",
+        "household_income": "家庭收入中等",
+        "vehicle_ownership": "機車",
+        "residential_location": "永康區"
       },
       "traits": {
-        "attitudes": [
-          "關心社區居民的日常生活，對於場館造成的交通影響感到擔憂",
-          "支持場館舉辦活動，但要求適度管理交通"
-        ],
-        "habits": [
-          "每天清晨前往工作，傍晚回家，經常使用公車或捷運通勤",
-          "在賽季期間會觀察附近居民的交通流動，以調整上班時間"
-        ],
-        "decision_making_tendencies": [
-          "在面對交通擁擠時傾向於改乘公共運輸或提前離開商店以減少等待時間",
-          "對於場館附近的交通管制持支持態度"
-        ],
-        "economic_preferences_and_tradeoffs": [
-          "願意承擔較低的交通成本以換取社區安全，但不願意在工作日長時間等待"
-        ]
+        "attitudes": ["注重效率"],
+        "habits": ["早起"],
+        "decision_making_tendencies": ["願意改道"],
+        "economic_preferences_and_tradeoffs": ["追求便利"]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "許怡君",
+        "age": "四十八歲",
+        "occupation": "附近居民",
+        "wage": "中等收入",
+        "household_income": "家庭收入中等",
+        "vehicle_ownership": "機車",
+        "residential_location": "安平區"
+      },
+      "traits": {
+        "attitudes": ["熟悉在地道路"],
+        "habits": ["會避開尖峰"],
+        "decision_making_tendencies": ["願意改道"],
+        "economic_preferences_and_tradeoffs": ["安全優先"]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "楊欣怡",
+        "age": "三十歲",
+        "occupation": "接送者",
+        "wage": "中等收入",
+        "household_income": "家庭收入中等",
+        "vehicle_ownership": "汽車與機車",
+        "residential_location": "南區"
+      },
+      "traits": {
+        "attitudes": ["負責任"],
+        "habits": ["出門前查路況"],
+        "decision_making_tendencies": ["計畫"],
+        "economic_preferences_and_tradeoffs": ["安全優先"]
+      },
+      "memory": {
+        "short_term_memory": [],
+        "long_term_memory": []
+      }
+    },
+    {
+      "identity": {
+        "name": "楊宗翰",
+        "age": "三十歲",
+        "occupation": "外地觀眾",
+        "wage": "中高收入",
+        "household_income": "家庭收入中高",
+        "vehicle_ownership": "汽車與機車",
+        "residential_location": "鹽水區"
+      },
+      "traits": {
+        "attitudes": ["不熟悉道路"],
+        "habits": ["出門前查路況"],
+        "decision_making_tendencies": ["低壅塞容忍"],
+        "economic_preferences_and_tradeoffs": ["願意多花錢省時間"]
       },
       "memory": {
         "short_term_memory": [],

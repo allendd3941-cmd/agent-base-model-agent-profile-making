@@ -1,0 +1,820 @@
+{
+  "rag_document_batch": {
+    "source_model": "TrafficABM_Tainan_LLM",
+    "cycle": "8",
+    "batch_type": "gama_traffic_abm_environment_and_agent_memory",
+    "document_count": "6",
+    "language": "zh-TW"
+  },
+  "documents": [
+    {
+      "document_id": "environment::TrafficABM_Tainan_LLM::cycle::8",
+      "document_type": "environment_snapshot",
+      "title": "GAMA 模擬環境狀況 - cycle 8",
+      "metadata": {
+        "model": "TrafficABM_Tainan_LLM",
+        "cycle": "8",
+        "step_minutes": "5",
+        "elapsed_minutes": "40",
+        "max_steps": "5000",
+        "agent_count": "5",
+        "destination_town": "安南區"
+      },
+      "summary_text": "本 cycle 8 的模擬時間為 40 分鐘，目的地為安南區。可用行政區包含 41 個區域。道路流量資料顯示四條道路皆有流量，平均壅塞 proxy 為 0.000875，且無壅塞道路。",
+      "content": {
+        "simulation": {
+          "cycle": 8,
+          "step_minutes": 5,
+          "elapsed_minutes": 40,
+          "max_steps": 5000,
+          "agent_count": 5
+        },
+        "spatial": {
+          "destination_town": "安南區",
+          "available_towns": [
+            "新營區",
+            "鹽水區",
+            "白河區",
+            "後壁區",
+            "麻豆區",
+            "下營區",
+            "六甲區",
+            "官田區",
+            "大內區",
+            "佳里區",
+            "學甲區",
+            "西港區",
+            "新化區",
+            "新市區",
+            "安定區",
+            "玉井區",
+            "楠西區",
+            "南化區",
+            "左鎮區",
+            "仁德區",
+            "歸仁區",
+            "關廟區",
+            "龍崎區",
+            "永康區",
+            "北區",
+            "北門區",
+            "安南區",
+            "南區",
+            "東區",
+            "安平區",
+            "中西區",
+            "善化區",
+            "山上區",
+            "柳營區",
+            "東山區",
+            "七股區",
+            "將軍區"
+          ],
+          "crs_note": "ROADLINK=TWD97 TM Taiwan meter; TOWN_MOI=GCS_TWD97[2020]."
+        },
+        "traffic": {
+          "active_road_count": 4,
+          "crowded_road_count": 0,
+          "average_congestion_proxy": 0.000875,
+          "roads_with_flow": [
+            {
+              "raw": {
+                "road_id": "765",
+                "NAME": "公園路",
+                "highway": "tertiary",
+                "highway_ty": "tertiary",
+                "length": 171.80469786,
+                "lanes": 1.0,
+                "capacity": 1000.0,
+                "speed_car": 11.11111111,
+                "speed_moto": 11.11111111,
+                "time_car": 15.49910359,
+                "time_moto": 15.49910359,
+                "time": 15.49910359,
+                "current_flow": 1,
+                "congestion_proxy": 0.001
+              },
+              "interpretation": "公園路為三級道路，單車道，容量 1000，當前流量 1，壅塞 proxy 0.001，表示道路流量極低。"
+            },
+            {
+              "raw": {
+                "road_id": "12938",
+                "NAME": "和緯路五段",
+                "highway": "tertiary",
+                "highway_ty": "tertiary",
+                "length": 244.36930418,
+                "lanes": 1.0,
+                "capacity": 1000.0,
+                "speed_car": 11.11111111,
+                "speed_moto": 11.11111111,
+                "time_car": 21.99383584,
+                "time_moto": 21.99383584,
+                "time": 21.99383584,
+                "current_flow": 1,
+                "congestion_proxy": 0.001
+              },
+              "interpretation": "和緯路五段為三級道路，單車道，容量 1000，流量 1，壅塞 proxy 0.001，亦為低流量道路。"
+            },
+            {
+              "raw": {
+                "road_id": "35267",
+                "NAME": "中央公路, 佳南僑",
+                "highway": "primary",
+                "highway_ty": "primary",
+                "length": 316.32015331,
+                "lanes": 2.0,
+                "capacity": 2000.0,
+                "speed_car": 13.88888889,
+                "speed_moto": 13.88888889,
+                "time_car": 22.88036566,
+                "time_moto": 22.88036566,
+                "time": 22.88036566,
+                "current_flow": 1,
+                "congestion_proxy": 0.0005
+              },
+              "interpretation": "中央公路為主要道路，雙車道，容量 2000，流量 1，壅塞 proxy 0.0005，表示極低壅塞。"
+            },
+            {
+              "raw": {
+                "road_id": "39539",
+                "NAME": "永安橋, 永安路",
+                "highway": "tertiary",
+                "highway_ty": "tertiary",
+                "length": 459.90629715,
+                "lanes": 1.0,
+                "capacity": 1000.0,
+                "speed_car": 11.11111111,
+                "speed_moto": 11.11111111,
+                "time_car": 41.48330201,
+                "time_moto": 41.48330201,
+                "time": 41.48330201,
+                "current_flow": 1,
+                "congestion_proxy": 0.001
+              },
+              "interpretation": "永安橋為三級道路，單車道，容量 1000，流量 1，壅塞 proxy 0.001，仍屬低流量。"
+            }
+          ]
+        }
+      },
+      "keywords": [
+        "GAMA",
+        "ABM",
+        "traffic simulation",
+        "environment",
+        "cycle 8",
+        "安南區"
+      ]
+    },
+    {
+      "document_id": "agent::許怡君::cycle::8",
+      "document_type": "agent_travel_memory",
+      "title": "Agent 旅行記憶 - 許怡君 - cycle 8",
+      "metadata": {
+        "model": "TrafficABM_Tainan_LLM",
+        "cycle": "8",
+        "agent_name": "許怡君",
+        "residential_location": "安平區",
+        "current_town": "北區",
+        "current_road_id": "12938",
+        "destination_town": "安南區",
+        "active_mode": "avoid_congestion",
+        "active_mode_label": "避開壅塞",
+        "speed_kmh": 11.11111111,
+        "route_status": "moving",
+        "nearby_agent_count": 0
+      },
+      "summary_text": "許怡君目前位於北區和緯路五段，行進至安南區，使用避開壅塞模式，速度 11.11 km/h，距離目的地 8148.84 m，無警告訊息，路段流量低。",
+      "content": {
+        "agent name": "許怡君",
+        "current_state": {
+          "residential_location": "安平區",
+          "current_town": "北區",
+          "current_road_id": "12938",
+          "destination_town": "安南區",
+          "active mode": "avoid_congestion",
+          "active_mode_label": "避開壅塞",
+          "speed_kmh": 11.11111111,
+          "route_status": "moving",
+          "nearby_agent_count": 0
+        },
+        "travel_memory": [
+          {
+            "raw": {
+              "cycle": 0,
+              "elapsed_minutes": 0,
+              "current_location": "{16432.768348019297,45884.4407517612,0.0}",
+              "current_town": "東區",
+              "current_road_id": "532",
+              "current_road_name": "裕農路",
+              "current_road_type": "tertiary",
+              "active_mode": {
+                "mode_name": "active_mode",
+                "mode_label": "預設模式",
+                "move_speed": 40.0,
+                "speed_car": 45.0,
+                "speed_moto": 35.0,
+                "congestion_tolerance": 0.5,
+                "recompute_when_crowded": true,
+                "road_type_preference": [
+                  "primary",
+                  "secondary",
+                  "tertiary",
+                  "residential"
+                ],
+                "route_randomness": 0.15,
+                "comfort_weight": 0.2,
+                "time_weight": 0.45,
+                "distance_weight": 0.25,
+                "capacity_weight": 0.1,
+                "custom_params": {}
+              },
+              "selected_action": "none",
+              "speed_used_kmh": 40.0,
+              "distance_moved_m": 0.0,
+              "distance_to_destination_m": 7986.61829212,
+              "nearby_agent_count": 0,
+              "api_request_status": "not_sent",
+              "api_response_summary": "",
+              "warning": ""
+            },
+            "interpretation": "cycle 0 時，許怡君位於東區裕農路，未行動，速度 40 km/h，距離目的地 7986.62 m，無警告。"
+          },
+          {
+            "raw": {
+              "cycle": 1,
+              "elapsed_minutes": 5,
+              "current_location": "{7920.744564339873,44699.66389469446,0.0}",
+              "current_town": "安平區",
+              "current_road_id": "5279",
+              "current_road_name": "安北路",
+              "current_road_type": "tertiary",
+              "active_mode": {
+                "mode_name": "avoid_congestion",
+                "mode_label": "避開壅塞",
+                "move_speed": 40.0,
+                "speed_car": 40.0,
+                "speed_moto": 35.0,
+                "congestion_tolerance": 0.2,
+                "recompute_when_crowded": true,
+                "road_type_preference": [
+                  "secondary",
+                  "tertiary",
+                  "residential"
+                ],
+                "route_randomness": 0.15,
+                "comfort_weight": 0.1,
+                "time_weight": 0.35,
+                "distance_weight": 0.15,
+                "capacity_weight": 0.4,
+                "custom_params": {}
+              },
+              "selected_action": "goto_destination",
+              "speed_used_kmh": 11.11111111,
+              "distance_moved_m": 912.02766892,
+              "distance_to_destination_m": 11052.41568542,
+              "nearby_agent_count": 0,
+              "api_request_status": "response_applied",
+              "api_response_summary": "",
+              "warning": ""
+            },
+            "interpretation": "cycle 1 時，已切換至避開壅塞模式，行進 912 m，速度 11.11 km/h，距離目的地 11052.42 m。"
+          },
+          {
+            "raw": {
+              "cycle": 2,
+              "elapsed_minutes": 10,
+              "current_location": "{8554.272932755497,44400.16688080138,0.0}",
+              "current_town": "安平區",
+              "current_road_id": "16437",
+              "current_road_name": "安北路",
+              "current_road_type": "tertiary",
+              "active_mode": {
+                "mode_name": "avoid_congestion",
+                "mode_label": "避開壅塞",
+                "move_speed": 40.0,
+                "speed_car": 40.0,
+                "speed_moto": 35.0,
+                "congestion_tolerance": 0.2,
+                "recompute_when_crowded": true,
+                "road_type_preference": [
+                  "secondary",
+                  "tertiary",
+                  "residential"
+                ],
+                "route_randomness": 0.15,
+                "comfort_weight": 0.1,
+                "time_weight": 0.35,
+                "distance_weight": 0.15,
+                "capacity_weight": 0.4,
+                "custom_params": {}
+              },
+              "selected_action": "goto_destination",
+              "speed_used_kmh": 11.11111111,
+              "distance_moved_m": 700.75434706,
+              "distance_to_destination_m": 10369.84502779,
+              "nearby_agent_count": 0,
+              "api_request_status": "response_applied",
+              "api_response_summary": "{\n  \"agents\": [\n    {\n      \"agent name\": \"林志安\",\n      \"active mode\": \"short_distance\",\n      \"residential_location\": \"佳里區\"\n    },\n    {\n      \"agent name\": \"黃柏宇\",\n      \"active mode\": \"fast\",\n      \"residential_location\": \"永康區\"\n    },\n    {\n      \"agent name\": \"許怡君\",\n      \"active mode\": \"avoid_congestion\",\n      \"residential_location\": \"安平區\"\n    },\n    {\n      \"agent name\": \"楊欣怡\",\n      \"active mode\": \"comfortable\",\n      \"residential_location\": \"南區\"\n    },\n    {\n      \"agent name\": \"楊宗翰\",\n      \"active mode\": \"fast\",\n      \"residential_location\": \"鹽水區\"\n    }\n  ]\n}",
+              "warning": ""
+            },
+            "interpretation": "cycle 2 時，行進 700.75 m，距離 10369.85 m，仍使用避開壅塞模式，API 回應已套用。"
+          },
+          {
+            "raw": {
+              "cycle": 3,
+              "elapsed_minutes": 15,
+              "current_location": "{9144.580122598803,44268.906132341566,0.0}",
+              "current_town": "安平區",
+              "current_road_id": "34309",
+              "current_road_name": "安北路",
+              "current_road_type": "tertiary",
+              "active_mode": {
+                "mode_name": "avoid_congestion",
+                "mode_label": "避開壅塞",
+                "move_speed": 40.0,
+                "speed_car": 40.0,
+                "speed_moto": 35.0,
+                "congestion_tolerance": 0.2,
+                "recompute_when_crowded": true,
+                "road_type_preference": [
+                  "secondary",
+                  "tertiary",
+                  "residential"
+                ],
+                "route_randomness": 0.15,
+                "comfort_weight": 0.1,
+                "time_weight": 0.35,
+                "distance_weight": 0.15,
+                "capacity_weight": 0.4,
+                "custom_params": {}
+              },
+              "selected_action": "goto_destination",
+              "speed_used_kmh": 11.11111111,
+              "distance_moved_m": 604.72469973,
+              "distance_to_destination_m": 9831.26066798,
+              "nearby_agent_count": 0,
+              "api_request_status": "response_applied",
+              "api_response_summary": "{\n  \"agents\": [\n    {\n      \"agent name\": \"林志安\",\n      \"active mode\": \"short_distance\",\n      \"residential_location\": \"佳里區\"\n    },\n    {\n      \"agent name\": \"黃柏宇\",\n      \"active mode\": \"fast\",\n      \"residential_location\": \"永康區\"\n    },\n    {\n      \"agent name\": \"許怡君\",\n      \"active mode\": \"avoid_congestion\",\n      \"residential_location\": \"安平區\"\n    },\n    {\n      \"agent name\": \"楊欣怡\",\n      \"active mode\": \"comfortable\",\n      \"residential_location\": \"南區\"\n    },\n    {\n      \"agent name\": \"楊宗翰\",\n      \"active mode\": \"fast\",\n      \"residential_location\": \"鹽水區\"\n    }\n  ]\n}",
+              "warning": ""
+            },
+            "interpretation": "cycle 3 時，行進 604.72 m，距離 9831.26 m，仍避開壅塞。"
+          },
+          {
+            "raw": {
+              "cycle": 4,
+              "elapsed_minutes": 20,
+              "current_location": "{9877.864048014275,44279.82486038406,0.0}",
+              "current_town": "中西區",
+              "current_road_id": "34379",
+              "current_road_name": "和緯路五段",
+              "current_road_type": "tertiary",
+              "active_mode": {
+                "mode_name": "avoid_congestion",
+                "mode_label": "避開壅塞",
+                "move_speed": 40.0,
+                "speed_car": 40.0,
+                "speed_moto": 35.0,
+                "congestion_tolerance": 0.2,
+                "recompute_when_crowded": true,
+                "road_type_preference": [
+                  "secondary",
+                  "tertiary",
+                  "residential"
+                ],
+                "route_randomness": 0.15,
+                "comfort_weight": 0.1,
+                "time_weight": 0.35,
+                "distance_weight": 0.15,
+                "capacity_weight": 0.4,
+                "custom_params": {}
+              },
+              "selected_action": "goto_destination",
+              "speed_used_kmh": 11.11111111,
+              "distance_moved_m": 733.36521181,
+              "distance_to_destination_m": 9292.27926315,
+              "nearby_agent_count": 0,
+              "api_request_status": "response_applied",
+              "api_response_summary": "{\n  \"agents\": [\n    {\n      \"agent name\": \"林志安\",\n      \"active mode\": \"short_distance\",\n      \"residential_location\": \"佳里區\"\n    },\n    {\n      \"agent name\": \"黃柏宇\",\n      \"active mode\": \"fast\",\n      \"residential_location\": \"永康區\"\n    },\n    {\n      \"agent name\": \"許怡君\",\n      \"active mode\": \"avoid_congestion\",\n      \"residential_location\": \"安平區\"\n    },\n    {\n      \"agent name\": \"楊欣怡\",\n      \"active mode\": \"comfortable\",\n      \"residential_location\": \"南區\"\n    },\n    {\n      \"agent name\": \"楊宗翰\",\n      \"active mode\": \"fast\",\n      \"residential_location\": \"鹽水區\"\n    }\n  ]\n}",
+              "warning": ""
+            },
+            "interpretation": "cycle 4 時，行進 733.37 m，距離 9292.28 m，仍避開壅塞。"
+          },
+          {
+            "raw": {
+              "cycle": 5,
+              "elapsed_minutes": 25,
+              "current_location": "{10155.941281697937,44145.91100363554,0.0}",
+              "current_town": "中西區",
+              "current_road_id": "34379",
+              "current_road_name": "和緯路五段",
+              "current_road_type": "tertiary",
+              "active_mode": {
+                "mode_name": "avoid_congestion",
+                "mode_label": "避開壅塞",
+                "move_speed": 40.0,
+                "speed_car": 40.0,
+                "speed_moto": 35.0,
+                "congestion_tolerance": 0.2,
+                "recompute_when_crowded": true,
+                "road_type_preference": [
+                  "secondary",
+                  "tertiary",
+                  "residential"
+                ],
+                "route_randomness": 0.15,
+                "comfort_weight": 0.1,
+                "time_weight": 0.35,
+                "distance_weight": 0.15,
+                "capacity_weight": 0.4,
+                "custom_params": {}
+              },
+              "selected_action": "goto_destination",
+              "speed_used_kmh": 11.11111111,
+              "distance_moved_m": 308.64197531,
+              "distance_to_destination_m": 8998.63964572,
+              "nearby_agent_count": 0,
+              "api_request_status": "response_applied",
+              "api_response_summary": "{\n  \"agents\": [\n    {\n      \"agent name\": \"林志安\",\n      \"active mode\": \"short_distance\",\n      \"residential_location\": \"佳里區\"\n    },\n    {\n      \"agent name\": \"黃柏宇\",\n      \"active mode\": \"fast\",\n      \"residential_location\": \"永康區\"\n    },\n    {\n      \"agent name\": \"許怡君\",\n      \"active mode\": \"avoid_congestion\",\n      \"residential_location\": \"安平區\"\n    },\n    {\n      \"agent name\": \"楊欣怡\",\n      \"active mode\": \"comfortable\",\n      \"residential_location\": \"南區\"\n    },\n    {\n      \"agent name\": \"楊宗翰\",\n      \"active mode\": \"fast\",\n      \"residential_location\": \"鹽水區\"\n    }\n  ]\n}",
+              "warning": ""
+            },
+            "interpretation": "cycle 5 時，行進 308.64 m，距離 8998.64 m，仍避開壅塞。"
+          },
+          {
+            "raw": {
+              "cycle": 6,
+              "elapsed_minutes": 30,
+              "current_location": "{10434.018515381598,44011.99714688703,0.0}",
+              "current_town": "中西區",
+              "current_road_id": "34379",
+              "current_road_name": "和緯路五段",
+              "current_road_type": "tertiary",
+              "active_mode": {
+                "mode_name": "avoid_congestion",
+                "mode_label": "避開壅塞",
+                "move_speed": 40.0,
+                "speed_car": 40.0,
+                "speed_moto": 35.0,
+                "congestion_tolerance": 0.2,
+                "recompute_when_crowded": true,
+                "road_type_preference": [
+                  "secondary",
+                  "tertiary",
+                  "residential"
+                ],
+                "route_randomness": 0.15,
+                "comfort_weight": 0.1,
+                "time_weight": 0.35,
+                "distance_weight": 0.15,
+                "capacity_weight": 0.4,
+                "custom_params": {}
+              },
+              "selected_action": "goto_destination",
+              "speed_used_kmh": 11.11111111,
+              "distance_moved_m": 308.64197531,
+              "distance_to_destination_m": 8706.03794964,
+              "nearby_agent_count": 0,
+              "api_request_status": "response_applied",
+              "api_response_summary": "{\n  \"agents\": [\n    {\n      \"agent name\": \"林志安\",\n      \"active mode\": \"avoid_congestion\",\n      \"residential_location\": \"佳里區\"\n    },\n    {\n      \"agent name\": \"黃柏宇\",\n      \"active mode\": \"fast\",\n      \"residential_location\": \"永康區\"\n    },\n    {\n      \"agent name\": \"許怡君\",\n      \"active mode\": \"avoid_congestion\",\n      \"residential_location\": \"安平區\"\n    },\n    {\n      \"agent name\": \"楊欣怡\",\n      \"active mode\": \"comfortable\",\n      \"residential_location\": \"南區\"\n    },\n    {\n      \"agent name\": \"楊宗翰\",\n      \"active mode\": \"tolerate_congestion\",\n      \"residential_location\": \"鹽水區\"\n    }\n  ]\n}",
+              "warning": ""
+            },
+            "interpretation": "cycle 6 時，行進 308.64 m，距離 8706.04 m，仍避開壅塞。"
+          },
+          {
+            "raw": {
+              "cycle": 7,
+              "elapsed_minutes": 35,
+              "current_location": "{11222.898036946364,43993.04097114502,0.0}",
+              "current_town": "北區",
+              "current_road_id": "12938",
+              "current_road_name": "和緯路五段",
+              "current_road_type": "tertiary",
+              "active_mode": {
+                "mode_name": "avoid_congestion",
+                "mode_label": "避開壅塞",
+                "move_speed": 40.0,
+                "speed_car": 40.0,
+                "speed_moto": 35.0,
+                "congestion_tolerance": 0.2,
+                "recompute_when_crowded": true,
+                "road_type_preference": [
+                  "secondary",
+                  "tertiary",
+                  "residential"
+                ],
+                "route_randomness": 0.15,
+                "comfort_weight": 0.1,
+                "time_weight": 0.35,
+                "distance_weight": 0.15,
+                "capacity_weight": 0.4,
+                "custom_params": {}
+              },
+              "selected_action": "goto_destination",
+              "speed_used_kmh": 11.11111111,
+              "distance_moved_m": 789.10723995,
+              "distance_to_destination_m": 8148.83962029,
+              "nearby_agent_count": 0,
+              "api_request_status": "response_applied",
+              "api_response_summary": "{\n  \"agents\": [\n    {\n      \"agent name\": \"林志安\",\n      \"active mode\": \"short_distance\",\n      \"residential_location\": \"佳里區\"\n    },\n    {\n      \"agent name\": \"黃柏宇\",\n      \"active mode\": \"fast\",\n      \"residential_location\": \"永康區\"\n    },\n    {\n      \"agent name\": \"許怡君\",\n      \"active mode\": \"avoid_congestion\",\n      \"residential_location\": \"安平區\"\n    },\n    {\n      \"agent name\": \"楊欣怡\",\n      \"active mode\": \"comfortable\",\n      \"residential_location\": \"南區\"\n    },\n    {\n      \"agent name\": \"楊宗翰\",\n      \"active mode\": \"fast\",\n      \"residential_location\": \"鹽水區\"\n    }\n  ]\n}",
+              "warning": ""
+            },
+            "interpretation": "cycle 7 時，行進 789.11 m，距離 8148.84 m，仍避開壅塞。"
+          }
+        ]
+      },
+      "keywords": [
+        "GAMA",
+        "ABM",
+        "agent memory",
+        "許怡君",
+        "安平區",
+        "北區",
+        "安南區",
+        "avoid_congestion",
+        "moving"
+      ]
+    },
+    {
+      "document_id": "agent::林志安::cycle::8",
+      "document_type": "agent_travel_memory",
+      "title": "Agent 旅行記憶 - 林志安 - cycle 8",
+      "metadata": {
+        "model": "TrafficABM_Tainan_LLM",
+        "cycle": "8",
+        "agent_name": "林志安",
+        "residential_location": "佳里區",
+        "current_town": "佳里區",
+        "current_road_id": "35267",
+        "destination_town": "安南區",
+        "active_mode": "short_distance",
+        "active_mode_label": "想走短一點",
+        "speed_kmh": 13.88888889,
+        "route_status": "moving",
+        "nearby_agent_count": 0
+      },
+      "summary_text": "林志安目前位於佳里區中央公路，行進至安南區，使用短距離模式，速度 13.89 km/h，距離目的地 10422.58 m，無警告訊息。",
+      "content": {
+        "agent name": "林志安",
+        "current_state": {
+          "residential_location": "佳里區",
+          "current_town": "佳里區",
+          "current_road_id": "35267",
+          "destination_town": "安南區",
+          "active mode": "short_distance",
+          "active_mode_label": "想走短一點",
+          "speed_kmh": 13.88888889,
+          "route_status": "moving",
+          "nearby_agent_count": 0
+        },
+        "travel_memory": [
+          {
+            "raw": {
+              "cycle": 0,
+              "elapsed_minutes": 0,
+              "current_location": "{16181.817810460368,45384.40027852034,0.0}",
+              "current_town": "東區",
+              "current_road_id": "39642",
+              "current_road_name": "凱旋路",
+              "current_road_type": "tertiary",
+              "active_mode": {
+                "mode_name": "active_mode",
+                "mode_label": "預設模式",
+                "move_speed": 40.0,
+                "speed_car": 45.0,
+                "speed_moto": 35.0,
+                "congestion_tolerance": 0.5,
+                "recompute_when_crowded": true,
+                "road_type_preference": [
+                  "primary",
+                  "secondary",
+                  "tertiary",
+                  "residential"
+                ],
+                "route_randomness": 0.15,
+                "comfort_weight": 0.2,
+                "time_weight": 0.45,
+                "distance_weight": 0.25,
+                "capacity_weight": 0.1,
+                "custom_params": {}
+              },
+              "selected_action": "none",
+              "speed_used_kmh": 40.0,
+              "distance_moved_m": 0.0,
+              "distance_to_destination_m": 7497.6994423,
+              "nearby_agent_count": 0,
+              "api_request_status": "not_sent",
+              "api_response_summary": "",
+              "warning": ""
+            },
+            "interpretation": "cycle 0 時，位於東區凱旋路，未行動，距離目的地 7497.70 m。"
+          },
+          {
+            "raw": {
+              "cycle": 1,
+              "elapsed_minutes": 5,
+              "current_location": "{9047.648183172369,26417.277633930047,0.0}",
+              "current_town": "佳里區",
+              "current_road_id": "35172",
+              "current_road_name": "Unknown",
+              "current_road_type": "tertiary",
+              "active_mode": {
+                "mode_name": "short_distance",
+                "mode_label": "想走短一點",
+                "move_speed": 38.0,
+                "speed_car": 38.0,
+                "speed_moto": 32.0,
+                "congestion_tolerance": 0.45,
+                "recompute_when_crowded": true,
+                "road_type_preference": [
+                  "secondary",
+                  "tertiary",
+                  "residential"
+                ],
+                "route_randomness": 0.15,
+                "comfort_weight": 0.1,
+                "time_weight": 0.2,
+                "distance_weight": 0.6,
+                "capacity_weight": 0.1,
+                "custom_params": {}
+              },
+              "selected_action": "goto_destination",
+              "speed_used_kmh": 11.11111111,
+              "distance_moved_m": 924.41161714,
+              "distance_to_destination_m": 13762.92222138,
+              "nearby_agent_count": 0,
+              "api_request_status": "response_applied",
+              "api_response_summary": "",
+              "warning": ""
+            },
+            "interpretation": "cycle 1 時，已切換至短距離模式，行進 924.41 m，距離 13762.92 m。"
+          },
+          {
+            "raw": {
+              "cycle": 2,
+              "elapsed_minutes": 10,
+              "current_location": "{9771.021556582202,26529.70746463961,0.0}",
+              "current_town": "佳里區",
+              "current_road_id": "6771",
+              "current_road_name": "文化路",
+              "current_road_type": "tertiary",
+              "active_mode": {
+                "mode_name": "short_distance",
+                "mode_label": "想走短一點",
+                "move_speed": 38.0,
+                "speed_car": 38.0,
+                "speed_moto": 32.0,
+                "congestion_tolerance": 0.45,
+                "recompute_when_crowded": true,
+                "road_type_preference": [
+                  "secondary",
+                  "tertiary",
+                  "residential"
+                ],
+                "route_randomness": 0.15,
+                "comfort_weight": 0.1,
+                "time_weight": 0.2,
+                "distance_weight": 0.6,
+                "capacity_weight": 0.1,
+                "custom_params": {}
+              },
+              "selected_action": "goto_destination",
+              "speed_used_kmh": 11.11111111,
+              "distance_moved_m": 732.05840217,
+              "distance_to_destination_m": 13281.41342847,
+              "nearby_agent_count": 0,
+              "api_request_status": "response_applied",
+              "api_response_summary": "{\n  \"agents\": [\n    {\n      \"agent name\": \"林志安\",\n      \"active mode\": \"short_distance\",\n      \"residential_location\": \"佳里區\"\n    },\n    {\n      \"agent name\": \"黃柏宇\",\n      \"active mode\": \"fast\",\n      \"residential_location\": \"永康區\"\n    },\n    {\n      \"agent name\": \"許怡君\",\n      \"active mode\": \"avoid_congestion\",\n      \"residential_location\": \"安平區\"\n    },\n    {\n      \"agent name\": \"楊欣怡\",\n      \"active mode\": \"comfortable\",\n      \"residential_location\": \"南區\"\n    },\n    {\n      \"agent name\": \"楊宗翰\",\n      \"active mode\": \"fast\",\n      \"residential_location\": \"鹽水區\"\n    }\n  ]\n}",
+              "warning": ""
+            },
+            "interpretation": "cycle 2 時，行進 732.06 m，距離 13281.41 m，仍短距離模式。"
+          },
+          {
+            "raw": {
+              "cycle": 3,
+              "elapsed_minutes": 15,
+              "current_location": "{9807.26780145216,27443.177291582517,0.0}",
+              "current_town": "佳里區",
+              "current_road_id": "6781",
+              "current_road_name": "佳南路",
+              "current_road_type": "tertiary",
+              "active_mode": {
+                "mode_name": "short_distance",
+                "mode_label": "想走短一點",
+                "move_speed": 38.0,
+                "speed_car": 38.0,
+                "speed_moto": 32.0,
+                "congestion_tolerance": 0.45,
+                "recompute_when_crowded": true,
+                "road_type_preference": [
+                  "secondary",
+                  "tertiary",
+                  "residential"
+                ],
+                "route_randomness": 0.15,
+                "comfort_weight": 0.1,
+                "time_weight": 0.2,
+                "distance_weight": 0.6,
+                "capacity_weight": 0.1,
+                "custom_params": {}
+              },
+              "selected_action": "goto_destination",
+              "speed_used_kmh": 11.11111111,
+              "distance_moved_m": 914.18866488,
+              "distance_to_destination_m": 12488.42045795,
+              "nearby_agent_count": 0,
+              "api_request_status": "response_applied",
+              "api_response_summary": "{\n  \"agents\": [\n    {\n      \"agent name\": \"林志安\",\n      \"active mode\": \"short_distance\",\n      \"residential_location\": \"佳里區\"\n    },\n    {\n      \"agent name\": \"黃柏宇\",\n      \"active mode\": \"fast\",\n      \"residential_location\": \"永康區\"\n    },\n    {\n      \"agent name\": \"許怡君\",\n      \"active mode\": \"avoid_congestion\",\n      \"residential_location\": \"安平區\"\n    },\n    {\n      \"agent name\": \"楊欣怡\",\n      \"active mode\": \"comfortable\",\n      \"residential_location\": \"南區\"\n    },\n    {\n      \"agent name\": \"楊宗翰\",\n      \"active mode\": \"fast\",\n      \"residential_location\": \"鹽水區\"\n    }\n  ]\n}",
+              "warning": ""
+            },
+            "interpretation": "cycle 3 時，行進 914.19 m，距離 12488.42 m，仍短距離模式。"
+          },
+          {
+            "raw": {
+              "cycle": 4,
+              "elapsed_minutes": 20,
+              "current_location": "{10340.72425442992,28119.99970327788,0.0}",
+              "current_town": "佳里區",
+              "current_road_id": "33765",
+              "current_road_name": "佳南路",
+              "current_road_type": "tertiary",
+              "active_mode": {
+                "mode_name": "short_distance",
+                "mode_label": "想走短一點",
+                "move_speed": 38.0,
+                "speed_car": 38.0,
+                "speed_moto": 32.0,
+                "congestion_tolerance": 0.45,
+                "recompute_when_crowded": true,
+                "road_type_preference": [
+                  "secondary",
+                  "tertiary",
+                  "residential"
+                ],
+                "route_randomness": 0.15,
+                "comfort_weight": 0.1,
+                "time_weight": 0.2,
+                "distance_weight": 0.6,
+                "capacity_weight": 0.1,
+                "custom_params": {}
+              },
+              "selected_action": "goto_destination",
+              "speed_used_kmh": 11.11111111,
+              "distance_moved_m": 861.77976548,
+              "distance_to_destination_m": 11630.31306255,
+              "nearby_agent_count": 0,
+              "api_request_status": "response_applied",
+              "api_response_summary": "{\n  \"agents\": [\n    {\n      \"agent name\": \"林志安\",\n      \"active mode\": \"short_distance\",\n      \"residential_location\": \"佳里區\"\n    },\n    {\n      \"agent name\": \"黃柏宇\",\n      \"active mode\": \"fast\",\n      \"residential_location\": \"永康區\"\n    },\n    {\n      \"agent name\": \"許怡君\",\n      \"active mode\": \"avoid_congestion\",\n      \"residential_location\": \"安平區\"\n    },\n    {\n      \"agent name\": \"楊欣怡\",\n      \"active mode\": \"comfortable\",\n      \"residential_location\": \"南區\"\n    },\n    {\n      \"agent name\": \"楊宗翰\",\n      \"active mode\": \"fast\",\n      \"residential_location\": \"鹽水區\"\n    }\n  ]\n}",
+              "warning": ""
+            },
+            "interpretation": "cycle 4 時，行進 861.78 m，距離 11630.31 m，仍短距離模式。"
+          },
+          {
+            "raw": {
+              "cycle": 5,
+              "elapsed_minutes": 25,
+              "current_location": "{10951.300797454958,28128.040782582437,0.0}",
+              "current_town": "佳里區",
+              "current_road_id": "6706",
+              "current_road_name": "佳南路",
+              "current_road_type": "tertiary",
+              "active_mode": {
+                "mode_name": "short_distance",
+                "mode_label": "想走短一點",
+                "move_speed": 38.0,
+                "speed_car": 38.0,
+                "speed_moto": 32.0,
+                "congestion_tolerance": 0.45,
+                "recompute_when_crowded": true,
+                "road_type_preference": [
+                  "secondary",
+                  "tertiary",
+                  "residential"
+                ],
+                "route_randomness": 0.15,
+                "comfort_weight": 0.1,
+                "time_weight": 0.2,
+                "distance_weight": 0.6,
+                "capacity_weight": 0.1,
+                "custom_params": {}
+              },
+              "selected_action": "goto_destination",
+              "speed_used_kmh": 11.11111111,
+              "distance_moved_m": 610.62948983,
+              "distance_to_destination_m": 11304.61787737,
+              "nearby_agent_count": 0,
+              "api_request_status": "response_applied",
+              "api_response_summary": "{\n  \"agents\": [\n    {\n      \"agent name\": \"林志安\",\n      \"active mode\": \"short_distance\",\n      \"residential_location\": \"佳里區\"\n    },\n    {\n      \"agent name\": \"黃柏宇\",\n      \"active mode\": \"fast\",\n      \"residential_location\": \"永康區\"\n    },\n    {\n      \"agent name\": \"許怡君\",\n      \"active mode\": \"avoid_congestion\",\n      \"residential_location\": \"安平區\"\n    },\n    {\n      \"agent name\": \"楊欣怡\",\n      \"active mode\": \"comfortable\",\n      \"residential_location\": \"南區\"\n    },\n    {\n      \"agent name\": \"楊宗翰\",\n      \"active mode\": \"fast\",\n      \"residential_location\": \"鹽水區\"\n    }\n  ]\n}",
+              "warning": ""
+            },
+            "interpretation": "cycle 5 時，行進 610.63 m，距離 11304.62 m，仍短距離模式。"
+          },
+          {
+            "raw": {
+              "cycle": 6,
+              "elapsed_minutes": 30,
+              "current_location": "{11531.713931032335,27840.25403369585,0.0}",
+              "current_town": "佳里區",
+              "current_road_id": "6515",
+              "current_road_name": "仁愛路",
+              "current_road_type": "primary",
+              "active_mode": {
+               

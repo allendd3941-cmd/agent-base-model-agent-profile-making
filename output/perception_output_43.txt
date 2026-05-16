@@ -1,0 +1,22 @@
+It looks like the simulation has progressed to **cycle 42** (210 minutes elapsed).  
+All five agents have reached their destinations, and the user‑controlled agent (`GCS_1`) is in the **“arrived”** state in the town **安南區**.  
+
+**Key points**
+
+| Agent | Current town | Current road | Status | Nearby agents |
+|-------|--------------|--------------|--------|---------------|
+| GCS_1 | 安南區 | 39539 | arrived | 3 |
+| GCS_2 | 安南區 | 39539 | arrived | 3 |
+| GCS_3 | 安南區 | 39539 | arrived | 3 |
+| GCS_4 | 安南區 | 39539 | arrived | 3 |
+| GCS_5 | 安南區 | 39539 | arrived | 3 |
+
+All agents are on the same road segment (`39539` – 永安橋, 永安路) and the traffic conditions are light (average congestion proxy ≈ 0.0013).  
+
+**What to do next**
+
+- If you want to **restart** the simulation, you can reset the environment or re‑initialize the agents.  
+- If you want to **run another scenario**, you can change the destination town or the agents’ modes and then call `step()` again.  
+- If you’d like to **inspect** the current state, you can query the environment or the agents’ `current_state` dictionaries.
+
+Let me know how you’d like to proceed!

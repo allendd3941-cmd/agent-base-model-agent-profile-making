@@ -1,0 +1,13 @@
+```json
+{
+  "residential_location": "南區",
+  "current_town": "安南區",
+  "current_road_id": "39539",
+  "destination_town": "安南區",
+  "active mode": "comfortable",
+  "active_mode_label": "穩定舒適",
+  "speed_kmh": 11.11111111,
+  "route_status": "arrived",
+  "nearby_agent_count": 3
+}
+```

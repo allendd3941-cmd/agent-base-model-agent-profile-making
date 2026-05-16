@@ -1,0 +1,1 @@
+{"action":"arrived","comment":"Agent has reached the destination town (安南區) and is currently stationary. No further movement is required."}

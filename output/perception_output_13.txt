@@ -1,0 +1,712 @@
+```json
+[
+  {
+    "ragged_id": "env_001",
+    "ragged_type": "environment",
+    "ragged_content": [
+      {
+        "ragged_id": "env_001_0",
+        "ragged_type": "simulation",
+        "ragged_content": {
+          "cycle": 12,
+          "step_minutes": 5,
+          "elapsed_minutes": 60,
+          "max_steps": 36,
+          "agent_count": 5
+        },
+        "ragged_metadata": [
+          {
+            "ragged_id": "env_001_0",
+            "ragged_type": "simulation",
+            "ragged_metadata": "Simulation metadata"
+          }
+        ]
+      },
+      {
+        "ragged_id": "env_001_1",
+        "ragged_type": "spatial",
+        "ragged_content": {
+          "destination_town": "安南區",
+          "available_towns": [
+            "新營區", "鹽水區", "白河區", "後壁區", "麻豆區", "下營區",
+            "六甲區", "官田區", "大內區", "佳里區", "學甲區", "西港區",
+            "新化區", "新市區", "安定區", "玉井區", "楠西區", "南化區",
+            "左鎮區", "仁德區", "歸仁區", "關廟區", "龍崎區", "永康區",
+            "北區", "北門區", "安南區", "南區", "東區", "安平區",
+            "中西區", "善化區", "山上區", "柳營區", "東山區", "七股區",
+            "將軍區"
+          ],
+          "crs_note": "ROADLINK=TWD97 TM Taiwan meter; TOWN_MOI=GCS_TWD97[2020]."
+        },
+        "ragged_metadata": [
+          {
+            "ragged_id": "env_001_1",
+            "ragged_type": "spatial",
+            "ragged_metadata": "Spatial metadata"
+          }
+        ]
+      },
+      {
+        "ragged_id": "env_001_2",
+        "ragged_type": "traffic",
+        "ragged_content": [
+          {
+            "road_id": "4386",
+            "NAME": "安明路二段",
+            "highway": "primary",
+            "highway_ty": "primary",
+            "length": 1245.38150601,
+            "lanes": 2.0,
+            "capacity": 2000.0,
+            "speed_car": 13.88888889,
+            "speed_moto": 13.88888889,
+            "time_car": 89.98261163,
+            "time_moto": 89.98261163,
+            "time": 89.98261163,
+            "current_flow": 1,
+            "congestion_proxy": 0.0005
+          },
+          {
+            "road_id": "11462",
+            "NAME": "怡安路一段",
+            "highway": "tertiary",
+            "highway_ty": "tertiary",
+            "length": 90.73937564,
+            "lanes": 1.0,
+            "capacity": 1000.0,
+            "speed_car": 11.11111111,
+            "speed_moto": 11.11111111,
+            "time_car": 8.15545295,
+            "time_moto": 8.15545295,
+            "time": 8.15545295,
+            "current_flow": 1,
+            "congestion_proxy": 0.001
+          },
+          {
+            "road_id": "30634",
+            "NAME": "台江大道五段",
+            "highway": "primary",
+            "highway_ty": "primary",
+            "length": 1054.30634614,
+            "lanes": 2.0,
+            "capacity": 2000.0,
+            "speed_car": 13.88888889,
+            "speed_moto": 13.88888889,
+            "time_car": 75.82556181,
+            "time_moto": 75.82556181,
+            "time": 75.82556181,
+            "current_flow": 1,
+            "congestion_proxy": 0.0005
+          },
+          {
+            "road_id": "33148",
+            "NAME": "臺南都會區北外環道路",
+            "highway": "trunk",
+            "highway_ty": "trunk",
+            "length": 1959.25031938,
+            "lanes": 2.0,
+            "capacity": 3000.0,
+            "speed_car": 19.44444444,
+            "speed_moto": 0.00277778,
+            "time_car": 101.16128707,
+            "time_moto": 708129.00949749,
+            "time": 101.16128707,
+            "current_flow": 1,
+            "congestion_proxy": 0.0003333333333333333
+          },
+          {
+            "road_id": "35098",
+            "NAME": "北安路二段",
+            "highway": "tertiary",
+            "highway_ty": "tertiary",
+            "length": 198.66404446,
+            "lanes": 1.0,
+            "capacity": 1000.0,
+            "speed_car": 11.11111111,
+            "speed_moto": 11.11111111,
+            "time_car": 17.95088498,
+            "time_moto": 17.95088498,
+            "time": 17.95088498,
+            "current_flow": 1,
+            "congestion_proxy": 0.001
+          }
+        ],
+        "ragged_metadata": [
+          {
+            "ragged_id": "env_001_2",
+            "ragged_type": "traffic",
+            "ragged_metadata": "Traffic metadata"
+          }
+        ]
+      }
+    ],
+    "ragged_metadata": [
+      {
+        "ragged_id": "env_001",
+        "ragged_type": "environment",
+        "ragged_metadata": "Overall environment metadata"
+      }
+    ]
+  },
+  {
+    "ragged_id": "agent_001",
+    "ragged_type": "agent",
+    "ragged_content": [
+      {
+        "ragged_id": "agent_001_0",
+        "ragged_type": "travel_memory",
+        "ragged_content": {
+          "cycle": 0,
+          "elapsed_minutes": 0,
+          "current_location": "{15379.56416606809,45890.89235961743,0.0}",
+          "current_town": "東區",
+          "current_road_id": "18176",
+          "current_road_name": "林森路二段",
+          "current_road_type": "tertiary",
+          "active_mode": {
+            "mode_name": "active_mode",
+            "mode_label": "預設模式",
+            "move_speed": 40.0,
+            "speed_car": 45.0,
+            "speed_moto": 35.0,
+            "congestion_tolerance": 0.5,
+            "recompute_when_crowded": true,
+            "road_type_preference": ["primary", "secondary", "tertiary", "residential"],
+            "route_randomness": 0.15,
+            "comfort_weight": 0.2,
+            "time_weight": 0.45,
+            "distance_weight": 0.25,
+            "capacity_weight": 0.1
+          },
+          "selected_action": "none",
+          "speed_used_kmh": 40.0,
+          "distance_moved_m": 0.0,
+          "distance_to_destination_m": 9185.67809716,
+          "nearby_agent_count": 0,
+          "api_request_status": "not_sent",
+          "api_response_summary": "",
+          "warning": ""
+        },
+        "ragged_metadata": [
+          {
+            "ragged_id": "agent_001_0",
+            "ragged_type": "travel_memory",
+            "ragged_metadata": "Travel memory entry 0"
+          }
+        ]
+      },
+      {
+        "ragged_id": "agent_001_1",
+        "ragged_type": "travel_memory",
+        "ragged_content": {
+          "cycle": 1,
+          "elapsed_minutes": 5,
+          "current_location": "{11314.211580892488,48397.27049368685,0.0}",
+          "current_town": "南區",
+          "current_road_id": "25057",
+          "current_road_name": "中華西路一段",
+          "current_road_type": "primary",
+          "active_mode": {
+            "mode_name": "comfortable",
+            "mode_label": "穩定舒適",
+            "move_speed": 32.0,
+            "speed_car": 32.0,
+            "speed_moto": 28.0,
+            "congestion_tolerance": 0.55,
+            "recompute_when_crowded": false,
+            "road_type_preference": ["primary", "secondary"],
+            "route_randomness": 0.15,
+            "comfort_weight": 0.45,
+            "time_weight": 0.2,
+            "distance_weight": 0.2,
+            "capacity_weight": 0.15
+          },
+          "selected_action": "goto_destination",
+          "speed_used_kmh": 11.11111111,
+          "distance_moved_m": 747.66013165,
+          "distance_to_destination_m": 7416.6028496,
+          "nearby_agent_count": 0,
+          "api_request_status": "response_applied",
+          "api_response_summary": "",
+          "warning": ""
+        },
+        "ragged_metadata": [
+          {
+            "ragged_id": "agent_001_1",
+            "ragged_type": "travel_memory",
+            "ragged_metadata": "Travel memory entry 1"
+          }
+        ]
+      },
+      {
+        "ragged_id": "agent_001_2",
+        "ragged_type": "travel_memory",
+        "ragged_content": {
+          "cycle": 2,
+          "elapsed_minutes": 10,
+          "current_location": "{11315.932679229876,47641.82938296669,0.0}",
+          "current_town": "南區",
+          "current_road_id": "15748",
+          "current_road_name": "中華西路一段",
+          "current_road_type": "primary",
+          "active_mode": {
+            "mode_name": "fast",
+            "mode_label": "想要快一點",
+            "move_speed": 55.0,
+            "speed_car": 55.0,
+            "speed_moto": 45.0,
+            "congestion_tolerance": 0.25,
+            "recompute_when_crowded": true,
+            "road_type_preference": ["primary", "secondary", "tertiary"],
+            "route_randomness": 0.15,
+            "comfort_weight": 0.05,
+            "time_weight": 0.7,
+            "distance_weight": 0.15,
+            "capacity_weight": 0.1
+          },
+          "selected_action": "goto_destination",
+          "speed_used_kmh": 13.88888889,
+          "distance_moved_m": 755.44307128,
+          "distance_to_destination_m": 6701.9350033,
+          "nearby_agent_count": 0,
+          "api_request_status": "response_applied",
+          "api_response_summary": "{\n  \"agents\": [\n    {\n      \"agent name\": \"林志安\",\n      \"active mode\": \"tolerate_congestion\",\n      \"residential location\": \"安南區\"\n    },\n    {\n      \"agent name\": \"黃柏宇\",\n      \"active mode\": \"avoid_congestion\",\n      \"residential location\": \"永康區\"\n    },\n    {\n      \"agent name\": \"許怡君\",\n      \"active mode\": \"comfortable\",\n      \"residential location\": \"安平區\"\n    },\n    {\n      \"agent name\": \"楊欣怡\",\n      \"active mode\": \"fast\",\n      \"residential location\": \"南區\"\n    },\n    {\n      \"agent name\": \"楊宗翰\",\n      \"active mode\": \"fast\",\n      \"residential location\": \"善化區\"\n    }\n  ]\n}",
+          "warning": ""
+        },
+        "ragged_metadata": [
+          {
+            "ragged_id": "agent_001_2",
+            "ragged_type": "travel_memory",
+            "ragged_metadata": "Travel memory entry 2"
+          }
+        ]
+      },
+      {
+        "ragged_id": "agent_001_3",
+        "ragged_type": "travel_memory",
+        "ragged_content": {
+          "cycle": 3,
+          "elapsed_minutes": 15,
+          "current_location": "{11505.55236084445,46700.541939493516,0.0}",
+          "current_town": "南區",
+          "current_road_id": "35723",
+          "current_road_name": "安工三號橋, 中華西路一段",
+          "current_road_type": "primary",
+          "active_mode": {
+            "mode_name": "comfortable",
+            "mode_label": "穩定舒適",
+            "move_speed": 32.0,
+            "speed_car": 32.0,
+            "speed_moto": 28.0,
+            "congestion_tolerance": 0.55,
+            "recompute_when_crowded": false,
+            "road_type_preference": ["primary", "secondary"],
+            "route_randomness": 0.15,
+            "comfort_weight": 0.45,
+            "time_weight": 0.2,
+            "distance_weight": 0.2,
+            "capacity_weight": 0.15
+          },
+          "selected_action": "goto_destination",
+          "speed_used_kmh": 13.88888889,
+          "distance_moved_m": 960.19668553,
+          "distance_to_destination_m": 5754.53625124,
+          "nearby_agent_count": 0,
+          "api_request_status": "response_applied",
+          "api_response_summary": "{\n  \"agents\": [\n    {\n      \"agent name\": \"林志安\",\n      \"active mode\": \"short_distance\",\n      \"residential location\": \"安南區\"\n    },\n    {\n      \"agent name\": \"黃柏宇\",\n      \"active mode\": \"fast\",\n      \"residential location\": \"永康區\"\n    },\n    {\n      \"agent name\": \"許怡君\",\n      \"active mode\": \"avoid_congestion\",\n      \"residential location\": \"安平區\"\n    },\n    {\n      \"agent name\": \"楊欣怡\",\n      \"active mode\": \"comfortable\",\n      \"residential location\": \"南區\"\n    },\n    {\n      \"agent name\": \"楊宗翰\",\n      \"active mode\": \"avoid_congestion\",\n      \"residential location\": \"善化區\"\n    }\n  ]\n}",
+          "warning": ""
+        },
+        "ragged_metadata": [
+          {
+            "ragged_id": "agent_001_3",
+            "ragged_type": "travel_memory",
+            "ragged_metadata": "Travel memory entry 3"
+          }
+        ]
+      },
+      {
+        "ragged_id": "agent_001_4",
+        "ragged_type": "travel_memory",
+        "ragged_content": {
+          "cycle": 4,
+          "elapsed_minutes": 20,
+          "current_location": "{11657.143374553678,45593.47662663618,0.0}",
+          "current_town": "中西區",
+          "current_road_id": "16006",
+          "current_road_name": "中華西路二段",
+          "current_road_type": "primary",
+          "active_mode": {
+            "mode_name": "comfortable",
+            "mode_label": "穩定舒適",
+            "move_speed": 32.0,
+            "speed_car": 32.0,
+            "speed_moto": 28.0,
+            "congestion_tolerance": 0.55,
+            "recompute_when_crowded": false,
+            "road_type_preference": ["primary", "secondary"],
+            "route_randomness": 0.15,
+            "comfort_weight": 0.45,
+            "time_weight": 0.2,
+            "distance_weight": 0.2,
+            "capacity_weight": 0.15
+          },
+          "selected_action": "goto_destination",
+          "speed_used_kmh": 13.88888889,
+          "distance_moved_m": 1117.39583066,
+          "distance_to_destination_m": 4676.45900787,
+          "nearby_agent_count": 0,
+          "api_request_status": "response_applied",
+          "api_response_summary": "{\n  \"agents\": [\n    {\n      \"agent name\": \"林志安\",\n      \"active mode\": \"avoid_congestion\",\n      \"residential location\": \"安南區\"\n    },\n    {\n      \"agent name\": \"黃柏宇\",\n      \"active mode\": \"fast\",\n      \"residential location\": \"永康區\"\n    },\n    {\n      \"agent name\": \"許怡君\",\n      \"active mode\": \"comfortable\",\n      \"residential location\": \"安平區\"\n    },\n    {\n      \"agent name\": \"楊欣怡\",\n      \"active mode\": \"comfortable\",\n      \"residential location\": \"南區\"\n    },\n    {\n      \"agent name\": \"楊宗翰\",\n      \"active mode\": \"fast\",\n      \"residential location\": \"善化區\"\n    }\n  ]\n}",
+          "warning": ""
+        },
+        "ragged_metadata": [
+          {
+            "ragged_id": "agent_001_4",
+            "ragged_type": "travel_memory",
+            "ragged_metadata": "Travel memory entry 4"
+          }
+        ]
+      }
+    ],
+    "ragged_metadata": [
+      {
+        "ragged_id": "agent_001",
+        "ragged_type": "agent",
+        "ragged_metadata": "Agent 001 metadata"
+      }
+    ]
+  },
+  {
+    "ragged_id": "agent_002",
+    "ragged_type": "agent",
+    "ragged_content": [
+      {
+        "ragged_id": "agent_002_0",
+        "ragged_type": "travel_memory",
+        "ragged_content": {
+          "cycle": 0,
+          "elapsed_minutes": 0,
+          "current_location": "{15379.56416606809,45890.89235961743,0.0}",
+          "current_town": "東區",
+          "current_road_id": "18176",
+          "current_road_name": "林森路二段",
+          "current_road_type": "tertiary",
+          "active_mode": {
+            "mode_name": "active_mode",
+            "mode_label": "預設模式",
+            "move_speed": 40.0,
+            "speed_car": 45.0,
+            "speed_moto": 35.0,
+            "congestion_tolerance": 0.5,
+            "recompute_when_crowded": true,
+            "road_type_preference": ["primary", "secondary", "tertiary", "residential"],
+            "route_randomness": 0.15,
+            "comfort_weight": 0.2,
+            "time_weight": 0.45,
+            "distance_weight": 0.25,
+            "capacity_weight": 0.1
+          },
+          "selected_action": "none",
+          "speed_used_kmh": 40.0,
+          "distance_moved_m": 0.0,
+          "distance_to_destination_m": 9185.67809716,
+          "nearby_agent_count": 0,
+          "api_request_status": "not_sent",
+          "api_response_summary": "",
+          "warning": ""
+        },
+        "ragged_metadata": [
+          {
+            "ragged_id": "agent_002_0",
+            "ragged_type": "travel_memory",
+            "ragged_metadata": "Travel memory entry 0"
+          }
+        ]
+      },
+      {
+        "ragged_id": "agent_002_1",
+        "ragged_type": "travel_memory",
+        "ragged_content": {
+          "cycle": 1,
+          "elapsed_minutes": 5,
+          "current_location": "{11314.211580892488,48397.27049368685,0.0}",
+          "current_town": "南區",
+          "current_road_id": "25057",
+          "current_road_name": "中華西路一段",
+          "current_road_type": "primary",
+          "active_mode": {
+            "mode_name": "comfortable",
+            "mode_label": "穩定舒適",
+            "move_speed": 32.0,
+            "speed_car": 32.0,
+            "speed_moto": 28.0,
+            "congestion_tolerance": 0.55,
+            "recompute_when_crowded": false,
+            "road_type_preference": ["primary", "secondary"],
+            "route_randomness": 0.15,
+            "comfort_weight": 0.45,
+            "time_weight": 0.2,
+            "distance_weight": 0.2,
+            "capacity_weight": 0.15
+          },
+          "selected_action": "goto_destination",
+          "speed_used_kmh": 11.11111111,
+          "distance_moved_m": 747.66013165,
+          "distance_to_destination_m": 7416.6028496,
+          "nearby_agent_count": 0,
+          "api_request_status": "response_applied",
+          "api_response_summary": "",
+          "warning": ""
+        },
+        "ragged_metadata": [
+          {
+            "ragged_id": "agent_002_1",
+            "ragged_type": "travel_memory",
+            "ragged_metadata": "Travel memory entry 1"
+          }
+        ]
+      },
+      {
+        "ragged_id": "agent_002_2",
+        "ragged_type": "travel_memory",
+        "ragged_content": {
+          "cycle": 2,
+          "elapsed_minutes": 10,
+          "current_location": "{11315.932679229876,47641.82938296669,0.0}",
+          "current_town": "南區",
+          "current_road_id": "15748",
+          "current_road_name": "中華西路一段",
+          "current_road_type": "primary",
+          "active_mode": {
+            "mode_name": "fast",
+            "mode_label": "想要快一點",
+            "move_speed": 55.0,
+            "speed_car": 55.0,
+            "speed_moto": 45.0,
+            "congestion_tolerance": 0.25,
+            "recompute_when_crowded": true,
+            "road_type_preference": ["primary", "secondary", "tertiary"],
+            "route_randomness": 0.15,
+            "comfort_weight": 0.05,
+            "time_weight": 0.7,
+            "distance_weight": 0.15,
+            "capacity_weight": 0.1
+          },
+          "selected_action": "goto_destination",
+          "speed_used_kmh": 13.88888889,
+          "distance_moved_m": 755.44307128,
+          "distance_to_destination_m": 6701.9350033,
+          "nearby_agent_count": 0,
+          "api_request_status": "response_applied",
+          "api_response_summary": "{\n  \"agents\": [\n    {\n      \"agent name\": \"林志安\",\n      \"active mode\": \"tolerate_congestion\",\n      \"residential location\": \"安南區\"\n    },\n    {\n      \"agent name\": \"黃柏宇\",\n      \"active mode\": \"avoid_congestion\",\n      \"residential location\": \"永康區\"\n    },\n    {\n      \"agent name\": \"許怡君\",\n      \"active mode\": \"comfortable\",\n      \"residential location\": \"安平區\"\n    },\n    {\n      \"agent name\": \"楊欣怡\",\n      \"active mode\": \"fast\",\n      \"residential location\": \"南區\"\n    },\n    {\n      \"agent name\": \"楊宗翰\",\n      \"active mode\": \"fast\",\n      \"residential location\": \"善化區\"\n    }\n  ]\n}",
+          "warning": ""
+        },
+        "ragged_metadata": [
+          {
+            "ragged_id": "agent_002_2",
+            "ragged_type": "travel_memory",
+            "ragged_metadata": "Travel memory entry 2"
+          }
+        ]
+      },
+      {
+        "ragged_id": "agent_002_3",
+        "ragged_type": "travel_memory",
+        "ragged_content": {
+          "cycle": 3,
+          "elapsed_minutes": 15,
+          "current_location": "{10512.652568780943,44614.97222967127,0.0}",
+          "current_town": "中西區",
+          "current_road_id": "13458",
+          "current_road_name": "華平路",
+          "current_road_type": "tertiary",
+          "active_mode": {
+            "mode_name": "avoid_congestion",
+            "mode_label": "避開壅塞",
+            "move_speed": 40.0,
+            "speed_car": 40.0,
+            "speed_moto": 35.0,
+            "congestion_tolerance": 0.2,
+            "recompute_when_crowded": true,
+            "road_type_preference": ["secondary", "tertiary", "residential"],
+            "route_randomness": 0.15,
+            "comfort_weight": 0.1,
+            "time_weight": 0.35,
+            "distance_weight": 0.15,
+            "capacity_weight": 0.4
+          },
+          "selected_action": "goto_destination",
+          "speed_used_kmh": 11.11111111,
+          "distance_moved_m": 517.62184592,
+          "distance_to_destination_m": 8418.52260118,
+          "nearby_agent_count": 0,
+          "api_request_status": "response_applied",
+          "api_response_summary": "{\n  \"agents\": [\n    {\n      \"agent name\": \"林志安\",\n      \"active mode\": \"short_distance\",\n      \"residential location\": \"安南區\"\n    },\n    {\n      \"agent name\": \"黃柏宇\",\n      \"active mode\": \"fast\",\n      \"residential location\": \"永康區\"\n    },\n    {\n      \"agent name\": \"許怡君\",\n      \"active mode\": \"avoid_congestion\",\n      \"residential location\": \"安平區\"\n    },\n    {\n      \"agent name\": \"楊欣怡\",\n      \"active mode\": \"comfortable\",\n      \"residential location\": \"南區\"\n    },\n    {\n      \"agent name\": \"楊宗翰\",\n      \"active mode\": \"avoid_congestion\",\n      \"residential location\": \"善化區\"\n    }\n  ]\n}",
+          "warning": ""
+        },
+        "ragged_metadata": [
+          {
+            "ragged_id": "agent_002_3",
+            "ragged_type": "travel_memory",
+            "ragged_metadata": "Travel memory entry 3"
+          }
+        ]
+      },
+      {
+        "ragged_id": "agent_002_4",
+        "ragged_type": "travel_memory",
+        "ragged_content": {
+          "cycle": 4,
+          "elapsed_minutes": 20,
+          "current_location": "{10652.621508468557,43993.953245548386,0.0}",
+          "current_town": "中西區",
+          "current_road_id": "39587",
+          "current_road_name": "和緯路五段",
+          "current_road_type": "tertiary",
+          "active_mode": {
+            "mode_name": "avoid_congestion",
+            "mode_label": "避開壅塞",
+            "move_speed": 40.0,
+            "speed_car": 40.0,
+            "speed_moto": 35.0,
+            "congestion_tolerance": 0.2,
+            "recompute_when_crowded": true,
+            "road_type_preference": ["secondary", "tertiary", "residential"],
+            "route_randomness": 0.15,
+            "comfort_weight": 0.1,
+            "time_weight": 0.35,
+            "distance_weight": 0.15,
+            "capacity_weight": 0.4
+          },
+          "selected_action": "goto_destination",
+          "speed_used_kmh": 11.11111111,
+          "distance_moved_m": 636.59711177,
+          "distance_to_destination_m": 7994.15991343,
+          "nearby_agent_count": 0,
+          "api_request_status": "response_applied",
+          "api_response_summary": "{\n  \"agents\": [\n    {\n      \"agent name\": \"林志安\",\n      \"active mode\": \"avoid_congestion\",\n      \"residential location\": \"安南區\"\n    },\n    {\n      \"agent name\": \"黃柏宇\",\n      \"active mode\": \"fast\",\n      \"residential location\": \"永康區\"\n    },\n    {\n      \"agent name\": \"許怡君\",\n      \"active mode\": \"avoid_congestion\",\n      \"residential location\": \"安平區\"\n    },\n    {\n      \"agent name\": \"楊欣怡\",\n      \"active mode\": \"comfortable\",\n      \"residential location\": \"南區\"\n    },\n    {\n      \"agent name\": \"楊宗翰\",\n      \"active mode\": \"fast\",\n      \"residential location\": \"善化區\"\n    }\n  ]\n}",
+          "warning": ""
+        },
+        "ragged_metadata": [
+          {
+            "ragged_id": "agent_002_4",
+            "ragged_type": "travel_memory",
+            "ragged_metadata": "Travel memory entry 4"
+          }
+        ]
+      },
+      {
+        "ragged_id": "agent_002_5",
+        "ragged_type": "travel_memory",
+        "ragged_content": {
+          "cycle": 5,
+          "elapsed_minutes": 25,
+          "current_location": "{11474.683169500824,43876.637990154435,0.0}",
+          "current_town": "中西區",
+          "current_road_id": "12962",
+          "current_road_name": "和緯路五段",
+          "current_road_type": "tertiary",
+          "active_mode": {
+            "mode_name": "avoid_congestion",
+            "mode_label": "避開壅塞",
+            "move_speed": 40.0,
+            "speed_car": 40.0,
+            "speed_moto": 35.0,
+            "congestion_tolerance": 0.2,
+            "recompute_when_crowded": true,
+            "road_type_preference": ["secondary", "tertiary", "residential"],
+            "route_randomness": 0.15,
+            "comfort_weight": 0.1,
+            "time_weight": 0.35,
+            "distance_weight": 0.15,
+            "capacity_weight": 0.4
+          },
+          "selected_action": "goto_destination",
+          "speed_used_kmh": 11.11111111,
+          "distance_moved_m": 830.39041642,
+          "distance_to_destination_m": 8428.68746761,
+          "nearby_agent_count": 0,
+          "api_request_status": "response_applied",
+          "api_response_summary": "{\n  \"agents\": [\n    {\n      \"agent name\": \"林志安\",\n      \"active mode\": \"short_distance\",\n      \"residential location\": \"安南區\"\n    },\n    {\n      \"agent name\": \"黃柏宇\",\n      \"active mode\": \"fast\",\n      \"residential location\": \"永康區\"\n    },\n    {\n      \"agent name\": \"許怡君\",\n      \"active mode\": \"avoid_congestion\",\n      \"residential location\": \"安平區\"\n    },\n    {\n      \"agent name\": \"楊欣怡\",\n      \"active mode\": \"comfortable\",\n      \"residential location\": \"南區\"\n    },\n    {\n      \"agent name\": \"楊宗翰\",\n      \"active mode\": \"tolerate_congestion\",\n      \"residential location\": \"善化區\"\n    }\n  ]\n}",
+          "warning": ""
+        },
+        "ragged_metadata": [
+          {
+            "ragged_id": "agent_002_5",
+            "ragged_type": "travel_memory",
+            "ragged_metadata": "Travel memory entry 5"
+          }
+        ]
+      },
+      {
+        "ragged_id": "agent_002_6",
+        "ragged_type": "travel_memory",
+        "ragged_content": {
+          "cycle": 6,
+          "elapsed_minutes": 30,
+          "current_location": "{11322.011419401339,43178.80415811284,0.0}",
+          "current_town": "北區",
+          "current_road_id": "35783",
+          "current_road_name": "安明路一段, 大港觀海橋",
+          "current_road_type": "primary",
+          "active_mode": {
+            "mode_name": "avoid_congestion",
+            "mode_label": "避開壅塞",
+            "move_speed": 40.0,
+            "speed_car": 40.0,
+            "speed_moto": 35.0,
+            "congestion_tolerance": 0.2,
+            "recompute_when_crowded": true,
+            "road_type_preference": ["secondary", "tertiary", "residential"],
+            "route_randomness": 0.15,
+            "comfort_weight": 0.1,
+            "time_weight": 0.35,
+            "distance_weight": 0.15,
+            "capacity_weight": 0.4
+          },
+          "selected_action": "goto_destination",
+          "speed_used_kmh": 11.11111111,
+          "distance_moved_m": 714.33935942,
+          "distance_to_destination_m": 7816.68270346,
+          "nearby_agent_count": 0,
+          "api_request_status": "response_applied",
+          "api_response_summary": "{\n  \"agents\": [\n    {\n      \"agent name\": \"林志安\",\n      \"active mode\": \"short_distance\",\n      \"residential location\": \"安南區\"\n    },\n    {\n      \"agent name\": \"黃柏宇\",\n      \"active mode\": \"fast\",\n      \"residential location\": \"永康區\"\n    },\n    {\n      \"agent name\": \"許怡君\",\n      \"active mode\": \"avoid_congestion\",\n      \"residential location\": \"安平區\"\n    },\n    {\n      \"agent name\": \"楊欣怡\",\n      \"active mode\": \"fast\",\n      \"residential location\": \"南區\"\n    },\n    {\n      \"agent name\": \"楊宗翰\",\n      \"active mode\": \"fast\",\n      \"residential location\": \"善化區\"\n    }\n  ]\n}",
+          "warning": ""
+        },
+        "ragged_metadata": [
+          {
+            "ragged_id": "agent_002_6",
+            "ragged_type": "travel_memory",
+            "ragged_metadata": "Travel memory entry 6"
+          }
+        ]
+      },
+      {
+        "ragged_id": "agent_002_7",
+        "ragged_type": "travel_memory",
+        "ragged_content": {
+          "cycle": 7,
+          "elapsed_minutes": 35,
+          "current_location": "{11029.686895809215,42842.50172703944,0.0}",
+          "current_town": "安南區",
+          "current_road_id": "31024",
+          "current_road_name": "安明路一段",
+          "current_road_type": "primary",
+          "active_mode": {
+            "mode_name": "avoid_congestion",
+            "mode_label": "避開壅塞",
+            "move_speed": 40.0,
+            "speed_car": 40.0,
+            "speed_moto": 35.0,
+            "congestion_tolerance": 0.2,
+            "recompute_when_crowded": true,
+            "road_type_preference": ["secondary", "tertiary", "residential"],
+            "route_randomness": 0.15,
+            "comfort_weight": 0.1,
+            "time_weight": 0.35,
+            "distance_weight": 0.15,
+            "capacity_weight": 0.4
+          },
+          "selected_action": "goto_destination",
+          "speed_used_kmh": 13.88888889,
+          "distance_moved_m": 445.592

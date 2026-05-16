@@ -1,0 +1,24 @@
+**Next simulation step (cycle 17)**  
+
+| Agent | Current town | Current road | Active mode | Speed (km/h) | Elapsed time (min) | Distance to destination (m) | Status |
+|-------|--------------|--------------|-------------|--------------|--------------------|----------------------------|--------|
+| **林志安** | 安南區 | 永安橋, 永安路 (39539) | fast | 11.11 | 80 | 0 | **arrived** |
+| **黃柏宇** | 安南區 | 永安橋, 永安路 (39539) | fast | 11.11 | 80 | 0 | **arrived** |
+| **許怡君** | 安南區 | 永安橋, 永安路 (39539) | avoid_congestion | 11.11 | 80 | 0 | **arrived** |
+| **楊宗翰** | 安南區 | 永安橋, 永安路 (39539) | fast | 11.11 | 80 | 0 | **arrived** |
+| **楊欣怡** | 安南區 | 永安橋, 永安路 (39539) | tolerate_congestion | 11.11 | 80 | 0 | **arrived** |
+
+**Environment update**
+
+- **Simulation**: cycle 17, step 5 min, elapsed 85 min, max 5000 steps, 5 agents.  
+- **Spatial**: destination town remains **安南區**.  
+- **Traffic**:  
+  - Active roads: 3 (8475, 35594, 39539).  
+  - Crowded roads: 0.  
+  - Average congestion proxy: 0.001.  
+  - Road flows:  
+    - 8475 (中央公路): length 708 m, lanes 2, capacity 2000, speed 13.89 m/s, flow 1.  
+    - 35594 (中正南路): length 288 m, lanes 2, capacity 2000, speed 13.89 m/s, flow 1.  
+    - 39539 (永安橋, 永安路): length 460 m, lanes 1, capacity 1000, speed 11.11 m/s, flow 2.  
+
+All agents have reached their destination **安南區** and are in the **arrived** state. The simulation can now terminate or proceed to a new scenario.

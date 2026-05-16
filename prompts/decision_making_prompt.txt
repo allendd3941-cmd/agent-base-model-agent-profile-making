@@ -1,14 +1,22 @@
-請根據以下情境，用中文生成各個 agent 的 decision-making 結果。
+請根據"環境資訊"與"agent旅行記憶"的整理後資料，與"agent profile資料"去生成各個 agent 的 decision-making 結果。
 
-情境說明：
-模擬亞太棒球場球賽前，民眾從出發點前往棒球場周邊的交通決策過程。每位 agent 需要根據自身偏好與即時交通狀況，在可選路線中選擇一條最適合的路徑。並列出以每五分鐘為基準的行程表。
-平日球賽為下午6:35分，最晚需於晚上7.出發。假日球賽為下午4:05，通常會提前舉辦活動，最晚需於下午4:10出發
-請為每位 agent 判斷：
-1. 該 agent 的主要決策偏好
-2. 可選路線比較
-3. 最終選擇的路線
-4. 選擇該路線的原因
-5. 若遇到壅塞，是否會改道
-6. 此決策對後續移動行為的影響
+active mode包含五種如下，請依據各個agent不同的性質、旅行記憶與環境資訊，將這五種mode去填入active mode值:
+"fast"                 // 想要快一點
+"tolerate_congestion"  // 繼續塞車也沒關係
+"avoid_congestion"     // 避開壅塞
+"comfortable"          // 穩定舒適
+"short_distance"       // 想走短一點
 
-環境與agent profile資訊如下:
+agent name為每個agent的名字，請根據"agent profile資料"的name值去對應生成，不許有漏掉。
+decision-making 結果輸出必須完全符合以下結構，除此結構內容外，禁止產生其餘文字內容：
+{
+  "agents": [
+    {
+      "agent name": "王大偉",
+      "active mode": "car",
+      "residential_location": "東區"
+    }
+  ]
+}
+
+環境資訊如下:

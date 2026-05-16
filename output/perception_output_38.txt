@@ -1,0 +1,28 @@
+**Simulation status (cycle 37)**  
+
+| Item | Value |
+|------|-------|
+| **Time** | 185 minutes elapsed (37 × 5‑min steps) |
+| **Step size** | 5 minutes per step |
+| **Max steps** | 5 000 (simulation still running) |
+| **Agents** | 5 agents currently active |
+| **Destination town** | 安南區 |
+| **Active roads** | 3 roads in use (IDs 9792, 39539, 40477) |
+| **Crowded roads** | 0 (congestion proxy ≈ 0.0013) |
+| **Average congestion proxy** | 0.0013 |
+
+**Road details**
+
+| Road ID | Name | Type | Length (m) | Lanes | Capacity | Current flow | Congestion proxy |
+|---------|------|------|------------|-------|----------|--------------|------------------|
+| 9792 | 長和路一段 | tertiary | 397.9 | 1 | 1 000 | 1 | 0.001 |
+| 39539 | 永安橋, 永安路 | tertiary | 459.9 | 1 | 1 000 | 2 | 0.002 |
+| 40477 | 長和路一段 | tertiary | 248.5 | 1 | 1 000 | 1 | 0.001 |
+
+**Key points**
+
+- The simulation is progressing normally, well below the maximum step limit.  
+- All agents are still moving or have arrived at their destinations; none are currently stuck.  
+- Traffic conditions are light: only three roads are active, with a very low congestion proxy (≈ 0.0013). No roads are flagged as crowded.  
+
+Feel free to ask for more detailed agent‑level data or to advance the simulation further.

@@ -33,7 +33,7 @@ def run_decision_making(agent_profile_data, perception_data, output: bool= False
 
     user_prompt = f'''{USER_PROMPT} \n 
     {retrieved_texts}\n
-    agent profile資料如下:\n
+    "agent profile資料"如下:\n
     {agent_profile_data}
     '''
 

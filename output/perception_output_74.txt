@@ -1,0 +1,10 @@
+**Action**  
+```json
+{
+  "action": "wait",
+  "action_parameters": {
+    "wait_time_minutes": 5
+  },
+  "action_reasoning": "The agent has already arrived at the destination town (安南區). No further movement is required, so the appropriate action is to wait until the next simulation step."
+}
+```

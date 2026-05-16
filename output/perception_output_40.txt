@@ -1,0 +1,8 @@
+**Current Simulation State**
+
+- **Simulation**: 39 cycles completed (195 min elapsed, 5‑min steps, 5 k agents).  
+- **Spatial**: Destination = 安南區; 39 towns available (e.g., 新營區, 鹽水區, 白河區, …, 安南區, 南區, 東區, …).  
+- **Traffic**: 3 active tertiary roads, no crowded roads, average congestion proxy ≈ 0.0013.  
+  - *Road 9792*: 長和路一段, 397.9 m, 1 lane, 1 vehicle, speed ≈ 11.1 m/s.  
+  - *Road 39539*: 永安橋, 永安路, 459.9 m, 1 lane, 2 vehicles, speed ≈ 11.1 m/s.  
+  - *Road 40477*: 長和路一段, 248.5 m, 1 lane, 1 vehicle, speed ≈ 11.1 m/s.

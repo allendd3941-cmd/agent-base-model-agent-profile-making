@@ -1,17 +1,19 @@
-請依照以下 JSON 結構，生成 2 個交通模擬用 agent profile。
+請依照以下 JSON 結構，生成 100 個交通模擬用 agent profile。
 
 重要規則：
 1. 最外層必須是一個 JSON object，只能包含一個欄位：agents。
 2. agents 必須是一個 JSON array，array 中必須包含指定數量的 agent object。
 3. 每個 agent object 只能包含三個欄位：identity、traits、memory。
 4. 所有欄位的 value 都必須用自然語言形式儲存，不要只放代碼、數字或縮寫。
-5. identity 裡除了 residential_location 欄位以外，每個欄位都請用一句或一個清楚的自然語言片語描述。
-6. traits 裡的每個欄位都請用一句或一個清楚的自然語言片語描述。
+5. identity 裡除了 residential_location 欄位以外，每個欄位都請用一句或一個清楚的、十個字以內的自然語言片語描述。
+6. traits 裡的attitudes、habits、decision_making_tendencies跟economic_preferences_and_tradeoffs欄位都請用一句或一個清楚的、十個字以內的自然語言片語描述。
 7. memory 目前先留空，short_term_memory 與 long_term_memory 都必須是空 array。
 8. 請生成與「台南市亞太棒球場球賽進出場尖峰人潮短期交通衝擊評估」相關的 agent。
 9. 每個 agent 要具有差異性，可以包含球賽觀眾、一般通勤者、附近居民、接送者、場館工作人員、接送親友者、周邊商家員工等，但不要新增欄位標示類型，只能透過 identity 與 traits 的自然語言內容表達。
 10. 請只輸出合法 JSON，不要輸出任何解釋、註解、markdown 或 JSON 以外的文字。
 11. identity 裡的 residential_location 欄位值請生成一個台灣台南市內的鄉鎮市區，格式例如:"安平區"。
+12. identity 裡的 name 欄位值請生成一個中文名稱，格式例如:"黃俊祺"。
+13. 請多次確認是否有生成正確、足夠且符合要求的數量的 agents。
 
 輸出必須完全符合以下結構：
 

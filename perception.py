@@ -34,7 +34,10 @@ def run_perception(gama_body, output: bool= False):
         #"format": "json",
         "think": "low",
         "options": {
-            "seed": 42 
+            "seed": 42 ,
+            "temperature": 0,
+            "top_k": 1,
+            "num_predict": 10000
         },
         "stream": False
     }

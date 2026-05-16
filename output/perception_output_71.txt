@@ -1,0 +1,1 @@
+{"response":"You have arrived at your destination. Would you like to stop the simulation?","next_action":"stop_simulation"}

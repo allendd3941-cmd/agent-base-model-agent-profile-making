@@ -1,0 +1,35 @@
+**Simulation snapshot – Cycle 17 (5‑minute step, 85 min elapsed)**  
+
+| Agent | Current town | Road (ID) | Active mode | Speed (km h⁻¹) | Route status | Distance to destination (m) | Nearby agents |
+|-------|--------------|-----------|-------------|----------------|--------------|-----------------------------|---------------|
+| **林志安** | 佳里區 | 8475 – Central Highway | *short‑distance* | 11.11 | moving | 0 m (arrived) | 0 |
+| **許怡君** | 安平區 | 8475 – Central Highway | *avoid‑congestion* | 11.11 | moving | 0 m (arrived) | 0 |
+| **黃柏宇** | 永康區 | 20675 – Zhongzheng South Road | *fast* | 11.11 | moving | 0 m (arrived) | 0 |
+| **楊欣怡** | 南區 | 39539 – Yong‑An Bridge / Yong‑An Road | *avoid‑congestion* | 11.11 | moving | 0 m (arrived) | 0 |
+| **楊宗翰** | 鹽水區 | 8475 – Central Highway | *fast* | 11.11 | moving | 0 m (arrived) | 0 |
+
+> **All five agents have reached the destination town “安南區” and are now idle.**  
+> The simulation is still running (max steps = 5000) but the agents have completed their trips.
+
+---
+
+### Traffic conditions
+
+| Road ID | Name | Type | Length (m) | Lanes | Capacity | Current flow | Congestion proxy |
+|---------|------|------|------------|-------|----------|--------------|------------------|
+| 8475 | Central Highway | primary | 708.06 | 2 | 2000 | 1 | 0.0005 |
+| 20675 | Zhongzheng South Road | primary | 270.07 | 2 | 2000 | 1 | 0.0005 |
+| 39539 | Yong‑An Bridge / Yong‑An Road | tertiary | 459.91 | 1 | 1000 | 2 | 0.002 |
+
+* **Active roads:** 3  
+* **Crowded roads:** 0  
+* **Average congestion proxy:** 0.001 (very low congestion)
+
+---
+
+### Summary
+
+* The simulation is in its 17th cycle (85 min elapsed).  
+* All five agents have successfully reached the destination town “安南區” and are now idle.  
+* Traffic on the three active roads remains light, with congestion proxies well below 1 %.  
+* No roads are currently crowded, and the overall traffic situation is calm.

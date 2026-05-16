@@ -1,0 +1,875 @@
+{
+  "rag_document_batch": {
+    "source_model": "TrafficABM_Tainan_LLM",
+    "cycle": "2",
+    "batch_type": "gama_traffic_abm_environment_and_agent_memory",
+    "document_count": "6",
+    "language": "zh-TW"
+  },
+  "documents": [
+    {
+      "document_id": "environment::TrafficABM_Tainan_LLM::cycle::2",
+      "document_type": "environment_snapshot",
+      "title": "GAMA 模擬環境狀況 - cycle 2",
+      "metadata": {
+        "model": "TrafficABM_Tainan_LLM",
+        "cycle": "2",
+        "step_minutes": "5",
+        "elapsed_minutes": "10",
+        "max_steps": "5000",
+        "agent_count": "5",
+        "destination_town": "安南區"
+      },
+      "summary_text": "用繁體中文整理此 cycle 的整體模擬時間、目的地、可用行政區、道路流量與壅塞狀況。摘要不得取代原始欄位。",
+      "content": {
+        "simulation": {
+          "cycle": 2,
+          "step_minutes": 5,
+          "elapsed_minutes": 10,
+          "max_steps": 5000,
+          "agent_count": 5
+        },
+        "spatial": {
+          "destination_town": "安南區",
+          "available_towns": [
+            "新營區",
+            "鹽水區",
+            "白河區",
+            "後壁區",
+            "麻豆區",
+            "下營區",
+            "六甲區",
+            "官田區",
+            "大內區",
+            "佳里區",
+            "學甲區",
+            "西港區",
+            "新化區",
+            "新市區",
+            "安定區",
+            "玉井區",
+            "楠西區",
+            "南化區",
+            "左鎮區",
+            "仁德區",
+            "歸仁區",
+            "關廟區",
+            "龍崎區",
+            "永康區",
+            "北區",
+            "北門區",
+            "安南區",
+            "南區",
+            "東區",
+            "安平區",
+            "中西區",
+            "善化區",
+            "山上區",
+            "柳營區",
+            "東山區",
+            "七股區",
+            "將軍區"
+          ],
+          "crs_note": "ROADLINK=TWD97 TM Taiwan meter; TOWN_MOI=GCS_TWD97[2020]."
+        },
+        "traffic": {
+          "active_road_count": 4,
+          "crowded_road_count": 0,
+          "average_congestion_proxy": 0.000875,
+          "roads_with_flow": [
+            {
+              "raw": {
+                "road_id": "280",
+                "NAME": "南門路",
+                "highway": "tertiary",
+                "highway_ty": "tertiary",
+                "length": 174.39432322,
+                "lanes": 1.0,
+                "capacity": 1000.0,
+                "speed_car": 11.11111111,
+                "speed_moto": 11.11111111,
+                "time_car": 15.85208134,
+                "time_moto": 15.85208134,
+                "time": 15.85208134,
+                "current_flow": 1,
+                "congestion_proxy": 0.001
+              },
+              "interpretation": "此道路為南門路，為三級道路，單車道，容量 1000，當前流量 1，壅塞 proxy 0.001，表示極低壅塞。"
+            },
+            {
+              "raw": {
+                "road_id": "5279",
+                "NAME": "安北路",
+                "highway": "tertiary",
+                "highway_ty": "tertiary",
+                "length": 123.09964254,
+                "lanes": 1.0,
+                "capacity": 1000.0,
+                "speed_car": 11.11111111,
+                "speed_moto": 11.11111111,
+                "time_car": 11.08662447,
+                "time_moto": 11.08662447,
+                "time": 11.08662447,
+                "current_flow": 1,
+                "congestion_proxy": 0.001
+              },
+              "interpretation": "安北路為三級道路，單車道，容量 1000，流量 1，壅塞 proxy 0.001，壅塞程度極低。"
+            },
+            {
+              "raw": {
+                "road_id": "18570",
+                "NAME": "中山北路",
+                "highway": "primary",
+                "highway_ty": "primary",
+                "length": 575.0062415,
+                "lanes": 2.0,
+                "capacity": 2000.0,
+                "speed_car": 13.88888889,
+                "speed_moto": 13.88888889,
+                "time_car": 41.38187403,
+                "time_moto": 41.38187403,
+                "time": 41.38187403,
+                "current_flow": 1,
+                "congestion_proxy": 0.0005
+              },
+              "interpretation": "中山北路為主要道路，雙車道，容量 2000，流量 1，壅塞 proxy 0.0005，壅塞程度極低。"
+            },
+            {
+              "raw": {
+                "road_id": "35172",
+                "NAME": "Unknown",
+                "highway": "tertiary",
+                "highway_ty": "tertiary",
+                "length": 994.10139203,
+                "lanes": 1.0,
+                "capacity": 1000.0,
+                "speed_car": 11.11111111,
+                "speed_moto": 11.11111111,
+                "time_car": 102.7507057,
+                "time_moto": 102.7507057,
+                "time": 102.7507057,
+                "current_flow": 1,
+                "congestion_proxy": 0.001
+              },
+              "interpretation": "此道路名稱未知，為三級道路，單車道，容量 1000，流量 1，壅塞 proxy 0.001，壅塞程度極低。"
+            }
+          ]
+        }
+      },
+      "keywords": [
+        "GAMA",
+        "ABM",
+        "traffic simulation",
+        "environment",
+        "cycle 2",
+        "安南區"
+      ]
+    },
+    {
+      "document_id": "agent::許怡君::cycle::2",
+      "document_type": "agent_travel_memory",
+      "title": "Agent 旅行記憶 - 許怡君 - cycle 2",
+      "metadata": {
+        "model": "TrafficABM_Tainan_LLM",
+        "cycle": "2",
+        "agent_name": "許怡君",
+        "residential_location": "安平區",
+        "current_town": "安平區",
+        "current_road_id": "5279",
+        "destination_town": "安南區",
+        "active_mode": "avoid_congestion",
+        "speed_kmh": 11.11111111,
+        "route_status": "moving",
+        "nearby_agent_count": 0
+      },
+      "summary_text": "用繁體中文整理此 agent 的目前位置、生成地、目的地、active mode、速度、路徑狀態、附近 agent 數，以及 travel_memory 呈現出的移動趨勢。",
+      "content": {
+        "agent name": "許怡君",
+        "current_state": {
+          "residential_location": "安平區",
+          "current_town": "安平區",
+          "current_road_id": "5279",
+          "destination_town": "安南區",
+          "active mode": "avoid_congestion",
+          "active_mode_label": "避開壅塞",
+          "speed_kmh": 11.11111111,
+          "route_status": "moving",
+          "nearby_agent_count": 0
+        },
+        "travel_memory": [
+          {
+            "raw": {
+              "cycle": 0,
+              "elapsed_minutes": 0,
+              "current_location": "{16432.768348019297,45884.4407517612,0.0}",
+              "current_town": "東區",
+              "current_road_id": "532",
+              "current_road_name": "裕農路",
+              "current_road_type": "tertiary",
+              "active_mode": {
+                "mode_name": "active_mode",
+                "mode_label": "預設模式",
+                "move_speed": 40.0,
+                "speed_car": 45.0,
+                "speed_moto": 35.0,
+                "congestion_tolerance": 0.5,
+                "recompute_when_crowded": true,
+                "road_type_preference": [
+                  "primary",
+                  "secondary",
+                  "tertiary",
+                  "residential"
+                ],
+                "route_randomness": 0.15,
+                "comfort_weight": 0.2,
+                "time_weight": 0.45,
+                "distance_weight": 0.25,
+                "capacity_weight": 0.1,
+                "custom_params": {}
+              },
+              "selected_action": "none",
+              "speed_used_kmh": 40.0,
+              "distance_moved_m": 0.0,
+              "distance_to_destination_m": 7986.61829212,
+              "nearby_agent_count": 0,
+              "api_request_status": "not_sent",
+              "api_response_summary": "",
+              "warning": ""
+            },
+            "interpretation": "此 cycle 中 agent 位於東區裕農路，未移動，距離目的地 7986.6 公尺，未發送 API，無警告。"
+          },
+          {
+            "raw": {
+              "cycle": 1,
+              "elapsed_minutes": 5,
+              "current_location": "{7920.744564339873,44699.66389469446,0.0}",
+              "current_town": "安平區",
+              "current_road_id": "5279",
+              "current_road_name": "安北路",
+              "current_road_type": "tertiary",
+              "active_mode": {
+                "mode_name": "avoid_congestion",
+                "mode_label": "避開壅塞",
+                "move_speed": 40.0,
+                "speed_car": 40.0,
+                "speed_moto": 35.0,
+                "congestion_tolerance": 0.2,
+                "recompute_when_crowded": true,
+                "road_type_preference": [
+                  "secondary",
+                  "tertiary",
+                  "residential"
+                ],
+                "route_randomness": 0.15,
+                "comfort_weight": 0.1,
+                "time_weight": 0.35,
+                "distance_weight": 0.15,
+                "capacity_weight": 0.4,
+                "custom_params": {}
+              },
+              "selected_action": "goto_destination",
+              "speed_used_kmh": 11.11111111,
+              "distance_moved_m": 912.02766892,
+              "distance_to_destination_m": 11052.41568542,
+              "nearby_agent_count": 0,
+              "api_request_status": "response_applied",
+              "api_response_summary": "",
+              "warning": ""
+            },
+            "interpretation": "此 cycle 中 agent 位於安平區安北路，已移動 912.0 公尺，距離目的地 11052.4 公尺，已應用 API，無警告。"
+          }
+        ]
+      },
+      "keywords": [
+        "GAMA",
+        "ABM",
+        "agent memory",
+        "許怡君",
+        "安平區",
+        "安南區",
+        "avoid_congestion",
+        "moving"
+      ]
+    },
+    {
+      "document_id": "agent::林志安::cycle::2",
+      "document_type": "agent_travel_memory",
+      "title": "Agent 旅行記憶 - 林志安 - cycle 2",
+      "metadata": {
+        "model": "TrafficABM_Tainan_LLM",
+        "cycle": "2",
+        "agent_name": "林志安",
+        "residential_location": "佳里區",
+        "current_town": "佳里區",
+        "current_road_id": "35172",
+        "destination_town": "安南區",
+        "active_mode": "short_distance",
+        "speed_kmh": 11.11111111,
+        "route_status": "moving",
+        "nearby_agent_count": 0
+      },
+      "summary_text": "用繁體中文整理此 agent 的目前位置、生成地、目的地、active mode、速度、路徑狀態、附近 agent 數，以及 travel_memory 呈現出的移動趨勢。",
+      "content": {
+        "agent name": "林志安",
+        "current_state": {
+          "residential_location": "佳里區",
+          "current_town": "佳里區",
+          "current_road_id": "35172",
+          "destination_town": "安南區",
+          "active mode": "short_distance",
+          "active_mode_label": "想走短一點",
+          "speed_kmh": 11.11111111,
+          "route_status": "moving",
+          "nearby_agent_count": 0
+        },
+        "travel_memory": [
+          {
+            "raw": {
+              "cycle": 0,
+              "elapsed_minutes": 0,
+              "current_location": "{16181.817810460368,45384.40027852034,0.0}",
+              "current_town": "東區",
+              "current_road_id": "39642",
+              "current_road_name": "凱旋路",
+              "current_road_type": "tertiary",
+              "active_mode": {
+                "mode_name": "active_mode",
+                "mode_label": "預設模式",
+                "move_speed": 40.0,
+                "speed_car": 45.0,
+                "speed_moto": 35.0,
+                "congestion_tolerance": 0.5,
+                "recompute_when_crowded": true,
+                "road_type_preference": [
+                  "primary",
+                  "secondary",
+                  "tertiary",
+                  "residential"
+                ],
+                "route_randomness": 0.15,
+                "comfort_weight": 0.2,
+                "time_weight": 0.45,
+                "distance_weight": 0.25,
+                "capacity_weight": 0.1,
+                "custom_params": {}
+              },
+              "selected_action": "none",
+              "speed_used_kmh": 40.0,
+              "distance_moved_m": 0.0,
+              "distance_to_destination_m": 7497.6994423,
+              "nearby_agent_count": 0,
+              "api_request_status": "not_sent",
+              "api_response_summary": "",
+              "warning": ""
+            },
+            "interpretation": "此 cycle 中 agent 位於東區凱旋路，未移動，距離目的地 7497.7 公尺，未發送 API，無警告。"
+          },
+          {
+            "raw": {
+              "cycle": 1,
+              "elapsed_minutes": 5,
+              "current_location": "{9047.648183172369,26417.277633930047,0.0}",
+              "current_town": "佳里區",
+              "current_road_id": "35172",
+              "current_road_name": "Unknown",
+              "current_road_type": "tertiary",
+              "active_mode": {
+                "mode_name": "short_distance",
+                "mode_label": "想走短一點",
+                "move_speed": 38.0,
+                "speed_car": 38.0,
+                "speed_moto": 32.0,
+                "congestion_tolerance": 0.45,
+                "recompute_when_crowded": true,
+                "road_type_preference": [
+                  "secondary",
+                  "tertiary",
+                  "residential"
+                ],
+                "route_randomness": 0.15,
+                "comfort_weight": 0.1,
+                "time_weight": 0.2,
+                "distance_weight": 0.6,
+                "capacity_weight": 0.1,
+                "custom_params": {}
+              },
+              "selected_action": "goto_destination",
+              "speed_used_kmh": 11.11111111,
+              "distance_moved_m": 924.41161714,
+              "distance_to_destination_m": 13762.92222138,
+              "nearby_agent_count": 0,
+              "api_request_status": "response_applied",
+              "api_response_summary": "",
+              "warning": ""
+            },
+            "interpretation": "此 cycle 中 agent 位於佳里區 Unknown，已移動 924.4 公尺，距離目的地 13762.9 公尺，已應用 API，無警告。"
+          }
+        ]
+      },
+      "keywords": [
+        "GAMA",
+        "ABM",
+        "agent memory",
+        "林志安",
+        "佳里區",
+        "安南區",
+        "short_distance",
+        "moving"
+      ]
+    },
+    {
+      "document_id": "agent::黃柏宇::cycle::2",
+      "document_type": "agent_travel_memory",
+      "title": "Agent 旅行記憶 - 黃柏宇 - cycle 2",
+      "metadata": {
+        "model": "TrafficABM_Tainan_LLM",
+        "cycle": "2",
+        "agent_name": "黃柏宇",
+        "residential_location": "永康區",
+        "current_town": "永康區",
+        "current_road_id": "18570",
+        "destination_town": "安南區",
+        "active_mode": "fast",
+        "speed_kmh": 11.11111111,
+        "route_status": "moving",
+        "nearby_agent_count": 0
+      },
+      "summary_text": "用繁體中文整理此 agent 的目前位置、生成地、目的地、active mode、速度、路徑狀態、附近 agent 數，以及 travel_memory 呈現出的移動趨勢。",
+      "content": {
+        "agent name": "黃柏宇",
+        "current_state": {
+          "residential_location": "永康區",
+          "current_town": "永康區",
+          "current_road_id": "18570",
+          "destination_town": "安南區",
+          "active mode": "fast",
+          "active_mode_label": "想要快一點",
+          "speed_kmh": 11.11111111,
+          "route_status": "moving",
+          "nearby_agent_count": 0
+        },
+        "travel_memory": [
+          {
+            "raw": {
+              "cycle": 0,
+              "elapsed_minutes": 0,
+              "current_location": "{14131.281349128285,45209.31886723051,0.0}",
+              "current_town": "中西區",
+              "current_road_id": "15710",
+              "current_road_name": "民族路二段",
+              "current_road_type": "tertiary",
+              "active_mode": {
+                "mode_name": "active_mode",
+                "mode_label": "預設模式",
+                "move_speed": 40.0,
+                "speed_car": 45.0,
+                "speed_moto": 35.0,
+                "congestion_tolerance": 0.5,
+                "recompute_when_crowded": true,
+                "road_type_preference": [
+                  "primary",
+                  "secondary",
+                  "tertiary",
+                  "residential"
+                ],
+                "route_randomness": 0.15,
+                "comfort_weight": 0.2,
+                "time_weight": 0.45,
+                "distance_weight": 0.25,
+                "capacity_weight": 0.1,
+                "custom_params": {}
+              },
+              "selected_action": "none",
+              "speed_used_kmh": 40.0,
+              "distance_moved_m": 0.0,
+              "distance_to_destination_m": 7725.65429513,
+              "nearby_agent_count": 0,
+              "api_request_status": "not_sent",
+              "api_response_summary": "",
+              "warning": ""
+            },
+            "interpretation": "此 cycle 中 agent 位於中西區民族路二段，未移動，距離目的地 7725.7 公尺，未發送 API，無警告。"
+          },
+          {
+            "raw": {
+              "cycle": 1,
+              "elapsed_minutes": 5,
+              "current_location": "{20328.277449427704,41348.808961031515,0.0}",
+              "current_town": "永康區",
+              "current_road_id": "18570",
+              "current_road_name": "中山北路",
+              "current_road_type": "primary",
+              "active_mode": {
+                "mode_name": "tolerate_congestion",
+                "mode_label": "繼續塞車也沒關係",
+                "move_speed": 35.0,
+                "speed_car": 35.0,
+                "speed_moto": 30.0,
+                "congestion_tolerance": 0.85,
+                "recompute_when_crowded": false,
+                "road_type_preference": [
+                  "primary",
+                  "secondary",
+                  "residential"
+                ],
+                "route_randomness": 0.15,
+                "comfort_weight": 0.4,
+                "time_weight": 0.25,
+                "distance_weight": 0.25,
+                "capacity_weight": 0.1,
+                "custom_params": {}
+              },
+              "selected_action": "goto_destination",
+              "speed_used_kmh": 11.11111111,
+              "distance_moved_m": 692.09335703,
+              "distance_to_destination_m": 5053.46445421,
+              "nearby_agent_count": 0,
+              "api_request_status": "response_applied",
+              "api_response_summary": "",
+              "warning": ""
+            },
+            "interpretation": "此 cycle 中 agent 位於永康區中山北路，已移動 692.1 公尺，距離目的地 5053.5 公尺，已應用 API，無警告。"
+          }
+        ]
+      },
+      "keywords": [
+        "GAMA",
+        "ABM",
+        "agent memory",
+        "黃柏宇",
+        "永康區",
+        "安南區",
+        "fast",
+        "moving"
+      ]
+    },
+    {
+      "document_id": "agent::楊宗翰::cycle::2",
+      "document_type": "agent_travel_memory",
+      "title": "Agent 旅行記憶 - 楊宗翰 - cycle 2",
+      "metadata": {
+        "model": "TrafficABM_Tainan_LLM",
+        "cycle": "2",
+        "agent_name": "楊宗翰",
+        "residential_location": "鹽水區",
+        "current_town": "鹽水區",
+        "current_road_id": "11828",
+        "destination_town": "安南區",
+        "active_mode": "fast",
+        "speed_kmh": 11.11111111,
+        "route_status": "moving",
+        "nearby_agent_count": 0
+      },
+      "summary_text": "用繁體中文整理此 agent 的目前位置、生成地、目的地、active mode、速度、路徑狀態、附近 agent 數，以及 travel_memory 呈現出的移動趨勢。",
+      "content": {
+        "agent name": "楊宗翰",
+        "current_state": {
+          "residential_location": "鹽水區",
+          "current_town": "鹽水區",
+          "current_road_id": "11828",
+          "destination_town": "安南區",
+          "active mode": "fast",
+          "active_mode_label": "想要快一點",
+          "speed_kmh": 11.11111111,
+          "route_status": "moving",
+          "nearby_agent_count": 0
+        },
+        "travel_memory": [
+          {
+            "raw": {
+              "cycle": 0,
+              "elapsed_minutes": 0,
+              "current_location": "{15834.655204365,45538.143759447485,0.0}",
+              "current_town": "東區",
+              "current_road_id": "17631",
+              "current_road_name": "怡東路",
+              "current_road_type": "tertiary",
+              "active_mode": {
+                "mode_name": "active_mode",
+                "mode_label": "預設模式",
+                "move_speed": 40.0,
+                "speed_car": 45.0,
+                "speed_moto": 35.0,
+                "congestion_tolerance": 0.5,
+                "recompute_when_crowded": true,
+                "road_type_preference": [
+                  "primary",
+                  "secondary",
+                  "tertiary",
+                  "residential"
+                ],
+                "route_randomness": 0.15,
+                "comfort_weight": 0.2,
+                "time_weight": 0.45,
+                "distance_weight": 0.25,
+                "capacity_weight": 0.1,
+                "custom_params": {}
+              },
+              "selected_action": "none",
+              "speed_used_kmh": 40.0,
+              "distance_moved_m": 0.0,
+              "distance_to_destination_m": 7679.52108444,
+              "nearby_agent_count": 0,
+              "api_request_status": "not_sent",
+              "api_response_summary": "",
+              "warning": ""
+            },
+            "interpretation": "此 cycle 中 agent 位於東區怡東路，未移動，距離目的地 7679.5 公尺，未發送 API，無警告。"
+          },
+          {
+            "raw": {
+              "cycle": 1,
+              "elapsed_minutes": 5,
+              "current_location": "{19911.90620890725,8919.97919677293,0.0}",
+              "current_town": "鹽水區",
+              "current_road_id": "11828",
+              "current_road_name": "武廟路",
+              "current_road_type": "tertiary",
+              "active_mode": {
+                "mode_name": "fast",
+                "mode_label": "想要快一點",
+                "move_speed": 55.0,
+                "speed_car": 55.0,
+                "speed_moto": 45.0,
+                "congestion_tolerance": 0.25,
+                "recompute_when_crowded": true,
+                "road_type_preference": [
+                  "primary",
+                  "secondary",
+                  "tertiary"
+                ],
+                "route_randomness": 0.15,
+                "comfort_weight": 0.05,
+                "time_weight": 0.7,
+                "distance_weight": 0.15,
+                "capacity_weight": 0.1,
+                "custom_params": {}
+              },
+              "selected_action": "goto_destination",
+              "speed_used_kmh": 11.11111111,
+              "distance_moved_m": 0.0,
+              "distance_to_destination_m": 29165.14493221,
+              "nearby_agent_count": 0,
+              "api_request_status": "response_applied",
+              "api_response_summary": "",
+              "warning": ""
+            },
+            "interpretation": "此 cycle 中 agent 位於鹽水區武廟路，未移動，距離目的地 29165.1 公尺，已應用 API，無警告。"
+          }
+        ]
+      },
+      "keywords": [
+        "GAMA",
+        "ABM",
+        "agent memory",
+        "楊宗翰",
+        "鹽水區",
+        "安南區",
+        "fast",
+        "moving"
+      ]
+    },
+    {
+      "document_id": "agent::楊欣怡::cycle::2",
+      "document_type": "agent_travel_memory",
+      "title": "Agent 旅行記憶 - 楊欣怡 - cycle 2",
+      "metadata": {
+        "model": "TrafficABM_Tainan_LLM",
+        "cycle": "2",
+        "agent_name": "楊欣怡",
+        "residential_location": "南區",
+        "current_town": "南區",
+        "current_road_id": "280",
+        "destination_town": "安南區",
+        "active_mode": "comfortable",
+        "speed_kmh": 11.11111111,
+        "route_status": "moving",
+        "nearby_agent_count": 0
+      },
+      "summary_text": "用繁體中文整理此 agent 的目前位置、生成地、目的地、active mode、速度、路徑狀態、附近 agent 數，以及 travel_memory 呈現出的移動趨勢。",
+      "content": {
+        "agent name": "楊欣怡",
+        "current_state": {
+          "residential_location": "南區",
+          "current_town": "南區",
+          "current_road_id": "280",
+          "destination_town": "安南區",
+          "active mode": "comfortable",
+          "active_mode_label": "穩定舒適",
+          "speed_kmh": 11.11111111,
+          "route_status": "moving",
+          "nearby_agent_count": 0
+        },
+        "travel_memory": [
+          {
+            "raw": {
+              "cycle": 0,
+              "elapsed_minutes": 0,
+              "current_location": "{14321.689461960344,44477.11253292527,0.0}",
+              "current_town": "東區",
+              "current_road_id": "2796",
+              "current_road_name": "北門路二段",
+              "current_road_type": "primary",
+              "active_mode": {
+                "mode_name": "active_mode",
+                "mode_label": "預設模式",
+                "move_speed": 40.0,
+                "speed_car": 45.0,
+                "speed_moto": 35.0,
+                "congestion_tolerance": 0.5,
+                "recompute_when_crowded": true,
+                "road_type_preference": [
+                  "primary",
+                  "secondary",
+                  "tertiary",
+                  "residential"
+                ],
+                "route_randomness": 0.15,
+                "comfort_weight": 0.2,
+                "time_weight": 0.45,
+                "distance_weight": 0.25,
+                "capacity_weight": 0.1,
+                "custom_params": {}
+              },
+              "selected_action": "none",
+              "speed_used_kmh": 40.0,
+              "distance_moved_m": 0.0,
+              "distance_to_destination_m": 6971.48578622,
+              "nearby_agent_count": 0,
+              "api_request_status": "not_sent",
+              "api_response_summary": "",
+              "warning": ""
+            },
+            "interpretation": "此 cycle 中 agent 位於東區北門路二段，未移動，距離目的地 6971.5 公尺，未發送 API，無警告。"
+          },
+          {
+            "raw": {
+              "cycle": 1,
+              "elapsed_minutes": 5,
+              "current_location": "{13353.942415543037,46727.18803991288,0.0}",
+              "current_town": "南區",
+              "current_road_id": "280",
+              "current_road_name": "南門路",
+              "current_road_type": "tertiary",
+              "active_mode": {
+                "mode_name": "comfortable",
+                "mode_label": "穩定舒適",
+                "move_speed": 32.0,
+                "speed_car": 32.0,
+                "speed_moto": 28.0,
+                "congestion_tolerance": 0.55,
+                "recompute_when_crowded": false,
+                "road_type_preference": [
+                  "primary",
+                  "secondary"
+                ],
+                "route_randomness": 0.15,
+                "comfort_weight": 0.45,
+                "time_weight": 0.2,
+                "distance_weight": 0.2,
+                "capacity_weight": 0.15,
+                "custom_params": {}
+              },
+              "selected_action": "goto_destination",
+              "speed_used_kmh": 11.11111111,
+              "distance_moved_m": 699.0267971,
+              "distance_to_destination_m": 9416.65128168,
+              "nearby_agent_count": 0,
+              "api_request_status": "response_applied",
+              "api_response_summary": "",
+              "warning": ""
+            },
+            "interpretation": "此 cycle 中 agent 位於南區南門路，已移動 699.0 公尺，距離目的地 9416.7 公尺，已應用 API，無警告。"
+          }
+        ]
+      },
+      "keywords": [
+        "GAMA",
+        "ABM",
+        "agent memory",
+        "楊欣怡",
+        "南區",
+        "安南區",
+        "comfortable",
+        "moving"
+      ]
+    }
+  ],
+  "coverage_check": {
+    "required_top_level_fields": [
+      "model",
+      "cycle",
+      "agents",
+      "environment"
+    ],
+    "required_agent_fields": [
+      "agent name",
+      "travel_memory",
+      "current_state"
+    ],
+    "required_travel_memory_fields": [
+      "cycle",
+      "elapsed_minutes",
+      "current_location",
+      "current_town",
+      "current_road_id",
+      "current_road_name",
+      "current_road_type",
+      "active_mode",
+      "selected_action",
+      "speed_used_kmh",
+      "distance_moved_m",
+      "distance_to_destination_m",
+      "nearby_agent_count",
+      "api_request_status",
+      "api_response_summary",
+      "warning"
+    ],
+    "required_current_state_fields": [
+      "residential_location",
+      "current_town",
+      "current_road_id",
+      "destination_town",
+      "active mode",
+      "speed_kmh",
+      "route_status",
+      "nearby_agent_count"
+    ],
+    "required_environment_simulation_fields": [
+      "cycle",
+      "step_minutes",
+      "elapsed_minutes",
+      "max_steps",
+      "agent_count"
+    ],
+    "required_environment_spatial_fields": [
+      "destination_town",
+      "available_towns",
+      "crs_note"
+    ],
+    "required_environment_traffic_fields": [
+      "active_road_count",
+      "crowded_road_count",
+      "average_congestion_proxy",
+      "roads_with_flow"
+    ],
+    "required_road_fields": [
+      "road_id",
+      "NAME",
+      "highway",
+      "highway_ty",
+      "length",
+      "lanes",
+      "capacity",
+      "speed_car",
+      "speed_moto",
+      "time_car",
+      "time_moto",
+      "time",
+      "current_flow",
+      "congestion_proxy"
+    ],
+    "missing_fields": [],
+    "notes": []
+  }
+}

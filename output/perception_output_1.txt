@@ -1,90 +1,611 @@
-以下為「cycle = 0 / vehicles = 100」時的微觀交通模擬環境設定，已包含 100 位行動代理（agent）之完整資料表格，並附上道路網路、交通號誌與環境背景說明。所有資料均以客觀、符合現實邏輯的方式呈現，便於直接輸入至 agent‑based traffic simulator（如 MATSim、SUMO 或自訂 ABM 系統）進行決策運算。
-
----
-
-## 1. 道路網路 & 環境設定
-
-| 參數 | 數值 | 說明 |
-|------|------|------|
-| 城市區域 | 5 km × 5 km | 典型都市區，內含多條主幹道、支線與住宅區段 |
-| 主幹道數 | 6 | 每條主幹道平均寬度 12 m，雙向 4 車道 |
-| 支線數 | 12 | 每條支線平均寬度 8 m，單向 2 車道 |
-| 交叉口數 | 30 | 包含固定時間信號燈、感測式交叉口與隨機分布的停車停靠區 |
-| 交通號誌週期 | 120 秒 | 30 秒綠、5 秒黃、85 秒紅 |
-| 速度限制 | 主幹道 50 km/h，支線 30 km/h，住宅區 20 km/h |
-| 車道配置 | 4 × 2（主幹道） + 2 × 1（支線） | 右側行駛，左側留給停車或緊急通行 |
-| 天氣 | 晴朗 | 無雨、無雾、無雪 |
-| 時段 | 7:00–8:00（早高峰） | 車流密度高，平均車速低於限速 80% |
-
-> **備註**：交叉口信號使用「均衡調度」模式，根據實時車流量自動調整綠燈時長。  
-> **備註**：車輛分布於主幹道與支線，並有 5% 佔用住宅區行駛。
-
----
-
-## 2. 代理（Vehicle）基本資料
-
-> **結構說明**  
-> 每個代理 (Vehicle) 擁有以下屬性：  
-> * **ID**：唯一識別碼  
-> * **Type**：車輛類型（Car, Bus, Motorcycle, Truck）  
-> * **Position**：起始 GPS 座標 (lat, lon)  
-> * **Heading**：行進方向（角度）  
-> * **Speed**：當前行進速度（km/h）  
-> * **Accel**：加速度（m/s²）  
-> * **Route**：從起點至終點的節點序列（node ID）  
-> * **Destination**：最終目的地節點  
-> * **Status**：行進狀態（Driving, Stopped, Waiting, Overtaking）  
-> * **TravelTime**：已行駛時間（秒）  
-> * **Priority**：車輛優先權（0–1，公交及大型車輛優先）  
-> * **SensorRange**：感測器檢測範圍（m）  
-
-> **範例**（前 3 個車輛）
-
-| ID | Type | Position (lat, lon) | Heading | Speed | Accel | Route (node list) | Destination | Status | TravelTime | Priority | SensorRange |
-|----|------|---------------------|---------|-------|-------|--------------------|-------------|--------|------------|----------|-------------|
-| V001 | Car | 25.045678, 121.564321 | 90° | 30 | 0.0 | 12 → 23 → 34 → 45 | 45 | Driving | 0 | 0.3 | 50 |
-| V002 | Bus | 25.047890, 121.565432 | 270° | 25 | 0.0 | 56 → 67 → 78 | 78 | Driving | 0 | 0.5 | 70 |
-| V003 | Motorcycle | 25.043210, 121.562345 | 45° | 35 | 0.0 | 89 → 90 → 91 | 91 | Driving | 0 | 0.2 | 40 |
-
-> **完整表格**：隨後附上一個 100 行的 CSV 內容範例（僅示例 5 行，實際執行時請自動產生完整 100 行）。
-
-```csv
-ID,Type,Latitude,Longitude,Heading,Speed,Accel,Route,Destination,Status,TravelTime,Priority,SensorRange
-V001,Car,25.045678,121.564321,90,30,0.0,"12,23,34,45",45,Driving,0,0.3,50
-V002,Bus,25.047890,121.565432,270,25,0.0,"56,67,78",78,Driving,0,0.5,70
-V003,Motorcycle,25.043210,121.562345,45,35,0.0,"89,90,91",91,Driving,0,0.2,40
-V004,Truck,25.049876,121.566789,180,20,0.0,"12,23,34,45",45,Driving,0,0.4,60
-V005,Car,25.048321,121.564987,135,28,0.0,"56,67,78",78,Driving,0,0.3,50
-...
-V100,Bus,25.052345,121.567890,90,27,0.0,"12,23,34,45",45,Driving,0,0.5,70
-```
-
-> **說明**  
-> * `Route` 與 `Destination` 為節點 ID 列表，可對應道路網路節點表。  
-> * `Status` 會隨時間根據信號燈與前車距離自行變更。  
-> * `Priority` 用於決定優先通行（例如公交停靠時優先於私家車）。  
-
----
-
-## 3. 交叉口行為規則（示例）
-
-| 交叉口 ID | 規則 | 描述 |
-|-----------|------|------|
-| X001 | 固定信號 | 綠燈 30 s，黃燈 5 s，紅燈 85 s |
-| X002 | 需求感測 | 若前方車流密度 > 0.8，則紅燈延長 20 s |
-| X003 | 優先公交 | 當公交靠近時，紅燈延長 30 s；其他車輛需停車等候 |
-
----
-
-## 4. 初始情境總結
-
-* **車流量**：100 輛車輛，平均車速 28 km/h（主幹道）與 18 km/h（支線）。  
-* **交通狀況**：早高峰，部分交叉口已出現輕度擁堵（車距 < 15 m）。  
-* **車輛類型分佈**：Car 70%，Bus 15%，Motorcycle 10%，Truck 5%。  
-* **目的地分佈**：各車輛隨機選擇住宅區、商業區、學校或工業區，並遵循最短路徑算法。  
-
-> **應用建議**  
-> 1. 在模擬 0 週期開始後，觀測每位車輛的 `TravelTime`、`Status` 與 `Priority` 的變化，以驗證信號調度策略。  
-> 2. 若需進行多場景比較，可改變 `TrafficLightCycle`、`RoadCapacity` 或加入突發事件（如道路封閉、交通事故）。  
-
-以上即為「cycle=0、vehicles=100」的完整模擬環境狀況。若需進一步的路網節點表、車輛行進邏輯或擴充的行為模型，請隨時告知。
+{
+  "rag_document_batch": {
+    "source_model": "TrafficABM_Tainan_LLM",
+    "cycle": "0",
+    "batch_type": "gama_traffic_abm_environment_and_agent_memory",
+    "document_count": "11",
+    "language": "zh-TW"
+  },
+  "documents": [
+    {
+      "document_id": "environment::TrafficABM_Tainan_LLM::cycle::0",
+      "document_type": "environment_snapshot",
+      "title": "GAMA 模擬環境狀況 - cycle 0",
+      "metadata": {
+        "model": "TrafficABM_Tainan_LLM",
+        "cycle": "0",
+        "step_minutes": "5",
+        "elapsed_minutes": "0",
+        "max_steps": "5000",
+        "agent_count": "10",
+        "destination_town": "安南區"
+      },
+      "summary_text": "用繁體中文整理此 cycle 的整體模擬時間、目的地、可用行政區、道路流量與壅塞狀況。摘要不得取代原始欄位。",
+      "content": {
+        "simulation": {
+          "cycle": 0,
+          "step_minutes": 5,
+          "elapsed_minutes": 0,
+          "max_steps": 5000,
+          "agent_count": 10
+        },
+        "spatial": {
+          "destination_town": "安南區",
+          "available_towns": [
+            "新營區",
+            "鹽水區",
+            "白河區",
+            "後壁區",
+            "麻豆區",
+            "下營區",
+            "六甲區",
+            "官田區",
+            "大內區",
+            "佳里區",
+            "學甲區",
+            "西港區",
+            "新化區",
+            "新市區",
+            "安定區",
+            "玉井區",
+            "楠西區",
+            "南化區",
+            "左鎮區",
+            "仁德區",
+            "歸仁區",
+            "關廟區",
+            "龍崎區",
+            "永康區",
+            "北區",
+            "北門區",
+            "安南區",
+            "南區",
+            "東區",
+            "安平區",
+            "中西區",
+            "善化區",
+            "山上區",
+            "柳營區",
+            "東山區",
+            "七股區",
+            "將軍區"
+          ],
+          "crs_note": "ROADLINK=TWD97 TM Taiwan meter; TOWN_MOI=GCS_TWD97[2020]."
+        },
+        "traffic": {
+          "active_road_count": 0,
+          "crowded_road_count": 0,
+          "average_congestion_proxy": 0.0,
+          "roads_with_flow": []
+        }
+      },
+      "keywords": [
+        "GAMA",
+        "ABM",
+        "traffic simulation",
+        "environment",
+        "cycle 0",
+        "安南區"
+      ]
+    },
+    {
+      "document_id": "agent::vehicle0::cycle::0",
+      "document_type": "agent_travel_memory",
+      "title": "Agent 旅行記憶 - vehicle0 - cycle 0",
+      "metadata": {
+        "model": "TrafficABM_Tainan_LLM",
+        "cycle": "0",
+        "agent_name": "vehicle0",
+        "residential_location": "東區",
+        "current_town": "永康區",
+        "current_road_id": "33029",
+        "destination_town": "安南區",
+        "active_mode": "active_mode",
+        "speed_kmh": 40.0,
+        "route_status": "waiting_for_api_origin",
+        "nearby_agent_count": 0
+      },
+      "summary_text": "用繁體中文整理此 agent 的目前位置、生成地、目的地、active mode、速度、路徑狀態、附近 agent 數，以及 travel_memory 呈現出的移動趨勢。",
+      "content": {
+        "agent name": "vehicle0",
+        "current_state": {
+          "residential_location": "東區",
+          "current_town": "永康區",
+          "current_road_id": "33029",
+          "destination_town": "安南區",
+          "active mode": "active_mode",
+          "active_mode_label": "預設模式",
+          "speed_kmh": 40.0,
+          "route_status": "waiting_for_api_origin",
+          "nearby_agent_count": 0
+        },
+        "travel_memory": []
+      },
+      "keywords": [
+        "GAMA",
+        "ABM",
+        "agent memory",
+        "vehicle0",
+        "東區",
+        "永康區",
+        "安南區",
+        "active_mode",
+        "waiting_for_api_origin"
+      ]
+    },
+    {
+      "document_id": "agent::vehicle1::cycle::0",
+      "document_type": "agent_travel_memory",
+      "title": "Agent 旅行記憶 - vehicle1 - cycle 0",
+      "metadata": {
+        "model": "TrafficABM_Tainan_LLM",
+        "cycle": "0",
+        "agent_name": "vehicle1",
+        "residential_location": "東區",
+        "current_town": "東區",
+        "current_road_id": "532",
+        "destination_town": "安南區",
+        "active_mode": "active_mode",
+        "speed_kmh": 40.0,
+        "route_status": "waiting_for_api_origin",
+        "nearby_agent_count": 0
+      },
+      "summary_text": "用繁體中文整理此 agent 的目前位置、生成地、目的地、active mode、速度、路徑狀態、附近 agent 數，以及 travel_memory 呈現出的移動趨勢。",
+      "content": {
+        "agent name": "vehicle1",
+        "current_state": {
+          "residential_location": "東區",
+          "current_town": "東區",
+          "current_road_id": "532",
+          "destination_town": "安南區",
+          "active mode": "active_mode",
+          "active_mode_label": "預設模式",
+          "speed_kmh": 40.0,
+          "route_status": "waiting_for_api_origin",
+          "nearby_agent_count": 0
+        },
+        "travel_memory": []
+      },
+      "keywords": [
+        "GAMA",
+        "ABM",
+        "agent memory",
+        "vehicle1",
+        "東區",
+        "安南區",
+        "active_mode",
+        "waiting_for_api_origin"
+      ]
+    },
+    {
+      "document_id": "agent::vehicle2::cycle::0",
+      "document_type": "agent_travel_memory",
+      "title": "Agent 旅行記憶 - vehicle2 - cycle 0",
+      "metadata": {
+        "model": "TrafficABM_Tainan_LLM",
+        "cycle": "0",
+        "agent_name": "vehicle2",
+        "residential_location": "東區",
+        "current_town": "東區",
+        "current_road_id": "39642",
+        "destination_town": "安南區",
+        "active_mode": "active_mode",
+        "speed_kmh": 40.0,
+        "route_status": "waiting_for_api_origin",
+        "nearby_agent_count": 0
+      },
+      "summary_text": "用繁體中文整理此 agent 的目前位置、生成地、目的地、active mode、速度、路徑狀態、附近 agent 數，以及 travel_memory 呈現出的移動趨勢。",
+      "content": {
+        "agent name": "vehicle2",
+        "current_state": {
+          "residential_location": "東區",
+          "current_town": "東區",
+          "current_road_id": "39642",
+          "destination_town": "安南區",
+          "active mode": "active_mode",
+          "active_mode_label": "預設模式",
+          "speed_kmh": 40.0,
+          "route_status": "waiting_for_api_origin",
+          "nearby_agent_count": 0
+        },
+        "travel_memory": []
+      },
+      "keywords": [
+        "GAMA",
+        "ABM",
+        "agent memory",
+        "vehicle2",
+        "東區",
+        "安南區",
+        "active_mode",
+        "waiting_for_api_origin"
+      ]
+    },
+    {
+      "document_id": "agent::vehicle3::cycle::0",
+      "document_type": "agent_travel_memory",
+      "title": "Agent 旅行記憶 - vehicle3 - cycle 0",
+      "metadata": {
+        "model": "TrafficABM_Tainan_LLM",
+        "cycle": "0",
+        "agent_name": "vehicle3",
+        "residential_location": "東區",
+        "current_town": "東區",
+        "current_road_id": "19153",
+        "destination_town": "安南區",
+        "active_mode": "active_mode",
+        "speed_kmh": 40.0,
+        "route_status": "waiting_for_api_origin",
+        "nearby_agent_count": 0
+      },
+      "summary_text": "用繁體中文整理此 agent 的目前位置、生成地、目的地、active mode、速度、路徑狀態、附近 agent 數，以及 travel_memory 呈現出的移動趨勢。",
+      "content": {
+        "agent name": "vehicle3",
+        "current_state": {
+          "residential_location": "東區",
+          "current_town": "東區",
+          "current_road_id": "19153",
+          "destination_town": "安南區",
+          "active mode": "active_mode",
+          "active_mode_label": "預設模式",
+          "speed_kmh": 40.0,
+          "route_status": "waiting_for_api_origin",
+          "nearby_agent_count": 0
+        },
+        "travel_memory": []
+      },
+      "keywords": [
+        "GAMA",
+        "ABM",
+        "agent memory",
+        "vehicle3",
+        "東區",
+        "安南區",
+        "active_mode",
+        "waiting_for_api_origin"
+      ]
+    },
+    {
+      "document_id": "agent::vehicle4::cycle::0",
+      "document_type": "agent_travel_memory",
+      "title": "Agent 旅行記憶 - vehicle4 - cycle 0",
+      "metadata": {
+        "model": "TrafficABM_Tainan_LLM",
+        "cycle": "0",
+        "agent_name": "vehicle4",
+        "residential_location": "東區",
+        "current_town": "東區",
+        "current_road_id": "32168",
+        "destination_town": "安南區",
+        "active_mode": "active_mode",
+        "speed_kmh": 40.0,
+        "route_status": "waiting_for_api_origin",
+        "nearby_agent_count": 0
+      },
+      "summary_text": "用繁體中文整理此 agent 的目前位置、生成地、目的地、active mode、速度、路徑狀態、附近 agent 數，以及 travel_memory 呈現出的移動趨勢。",
+      "content": {
+        "agent name": "vehicle4",
+        "current_state": {
+          "residential_location": "東區",
+          "current_town": "東區",
+          "current_road_id": "32168",
+          "destination_town": "安南區",
+          "active mode": "active_mode",
+          "active_mode_label": "預設模式",
+          "speed_kmh": 40.0,
+          "route_status": "waiting_for_api_origin",
+          "nearby_agent_count": 0
+        },
+        "travel_memory": []
+      },
+      "keywords": [
+        "GAMA",
+        "ABM",
+        "agent memory",
+        "vehicle4",
+        "東區",
+        "安南區",
+        "active_mode",
+        "waiting_for_api_origin"
+      ]
+    },
+    {
+      "document_id": "agent::vehicle5::cycle::0",
+      "document_type": "agent_travel_memory",
+      "title": "Agent 旅行記憶 - vehicle5 - cycle 0",
+      "metadata": {
+        "model": "TrafficABM_Tainan_LLM",
+        "cycle": "0",
+        "agent_name": "vehicle5",
+        "residential_location": "東區",
+        "current_town": "東區",
+        "current_road_id": "10950",
+        "destination_town": "安南區",
+        "active_mode": "active_mode",
+        "speed_kmh": 40.0,
+        "route_status": "waiting_for_api_origin",
+        "nearby_agent_count": 0
+      },
+      "summary_text": "用繁體中文整理此 agent 的目前位置、生成地、目的地、active mode、速度、路徑狀態、附近 agent 數，以及 travel_memory 呈現出的移動趨勢。",
+      "content": {
+        "agent name": "vehicle5",
+        "current_state": {
+          "residential_location": "東區",
+          "current_town": "東區",
+          "current_road_id": "10950",
+          "destination_town": "安南區",
+          "active mode": "active_mode",
+          "active_mode_label": "預設模式",
+          "speed_kmh": 40.0,
+          "route_status": "waiting_for_api_origin",
+          "nearby_agent_count": 0
+        },
+        "travel_memory": []
+      },
+      "keywords": [
+        "GAMA",
+        "ABM",
+        "agent memory",
+        "vehicle5",
+        "東區",
+        "安南區",
+        "active_mode",
+        "waiting_for_api_origin"
+      ]
+    },
+    {
+      "document_id": "agent::vehicle6::cycle::0",
+      "document_type": "agent_travel_memory",
+      "title": "Agent 旅行記憶 - vehicle6 - cycle 0",
+      "metadata": {
+        "model": "TrafficABM_Tainan_LLM",
+        "cycle": "0",
+        "agent_name": "vehicle6",
+        "residential_location": "東區",
+        "current_town": "中西區",
+        "current_road_id": "15710",
+        "destination_town": "安南區",
+        "active_mode": "active_mode",
+        "speed_kmh": 40.0,
+        "route_status": "waiting_for_api_origin",
+        "nearby_agent_count": 0
+      },
+      "summary_text": "用繁體中文整理此 agent 的目前位置、生成地、目的地、active mode、速度、路徑狀態、附近 agent 數，以及 travel_memory 呈現出的移動趨勢。",
+      "content": {
+        "agent name": "vehicle6",
+        "current_state": {
+          "residential_location": "東區",
+          "current_town": "中西區",
+          "current_road_id": "15710",
+          "destination_town": "安南區",
+          "active mode": "active_mode",
+          "active_mode_label": "預設模式",
+          "speed_kmh": 40.0,
+          "route_status": "waiting_for_api_origin",
+          "nearby_agent_count": 0
+        },
+        "travel_memory": []
+      },
+      "keywords": [
+        "GAMA",
+        "ABM",
+        "agent memory",
+        "vehicle6",
+        "東區",
+        "中西區",
+        "安南區",
+        "active_mode",
+        "waiting_for_api_origin"
+      ]
+    },
+    {
+      "document_id": "agent::vehicle7::cycle::0",
+      "document_type": "agent_travel_memory",
+      "title": "Agent 旅行記憶 - vehicle7 - cycle 0",
+      "metadata": {
+        "model": "TrafficABM_Tainan_LLM",
+        "cycle": "0",
+        "agent_name": "vehicle7",
+        "residential_location": "東區",
+        "current_town": "東區",
+        "current_road_id": "17631",
+        "destination_town": "安南區",
+        "active_mode": "active_mode",
+        "speed_kmh": 40.0,
+        "route_status": "waiting_for_api_origin",
+        "nearby_agent_count": 0
+      },
+      "summary_text": "用繁體中文整理此 agent 的目前位置、生成地、目的地、active mode、速度、路徑狀態、附近 agent 數，以及 travel_memory 呈現出的移動趨勢。",
+      "content": {
+        "agent name": "vehicle7",
+        "current_state": {
+          "residential_location": "東區",
+          "current_town": "東區",
+          "current_road_id": "17631",
+          "destination_town": "安南區",
+          "active mode": "active_mode",
+          "active_mode_label": "預設模式",
+          "speed_kmh": 40.0,
+          "route_status": "waiting_for_api_origin",
+          "nearby_agent_count": 0
+        },
+        "travel_memory": []
+      },
+      "keywords": [
+        "GAMA",
+        "ABM",
+        "agent memory",
+        "vehicle7",
+        "東區",
+        "安南區",
+        "active_mode",
+        "waiting_for_api_origin"
+      ]
+    },
+    {
+      "document_id": "agent::vehicle8::cycle::0",
+      "document_type": "agent_travel_memory",
+      "title": "Agent 旅行記憶 - vehicle8 - cycle 0",
+      "metadata": {
+        "model": "TrafficABM_Tainan_LLM",
+        "cycle": "0",
+        "agent_name": "vehicle8",
+        "residential_location": "東區",
+        "current_town": "東區",
+        "current_road_id": "2704",
+        "destination_town": "安南區",
+        "active_mode": "active_mode",
+        "speed_kmh": 40.0,
+        "route_status": "waiting_for_api_origin",
+        "nearby_agent_count": 0
+      },
+      "summary_text": "用繁體中文整理此 agent 的目前位置、生成地、目的地、active mode、速度、路徑狀態、附近 agent 數，以及 travel_memory 呈現出的移動趨勢。",
+      "content": {
+        "agent name": "vehicle8",
+        "current_state": {
+          "residential_location": "東區",
+          "current_town": "東區",
+          "current_road_id": "2704",
+          "destination_town": "安南區",
+          "active mode": "active_mode",
+          "active_mode_label": "預設模式",
+          "speed_kmh": 40.0,
+          "route_status": "waiting_for_api_origin",
+          "nearby_agent_count": 0
+        },
+        "travel_memory": []
+      },
+      "keywords": [
+        "GAMA",
+        "ABM",
+        "agent memory",
+        "vehicle8",
+        "東區",
+        "安南區",
+        "active_mode",
+        "waiting_for_api_origin"
+      ]
+    },
+    {
+      "document_id": "agent::vehicle9::cycle::0",
+      "document_type": "agent_travel_memory",
+      "title": "Agent 旅行記憶 - vehicle9 - cycle 0",
+      "metadata": {
+        "model": "TrafficABM_Tainan_LLM",
+        "cycle": "0",
+        "agent_name": "vehicle9",
+        "residential_location": "東區",
+        "current_town": "東區",
+        "current_road_id": "2796",
+        "destination_town": "安南區",
+        "active_mode": "active_mode",
+        "speed_kmh": 40.0,
+        "route_status": "waiting_for_api_origin",
+        "nearby_agent_count": 0
+      },
+      "summary_text": "用繁體中文整理此 agent 的目前位置、生成地、目的地、active mode、速度、路徑狀態、附近 agent 數，以及 travel_memory 呈現出的移動趨勢。",
+      "content": {
+        "agent name": "vehicle9",
+        "current_state": {
+          "residential_location": "東區",
+          "current_town": "東區",
+          "current_road_id": "2796",
+          "destination_town": "安南區",
+          "active mode": "active_mode",
+          "active_mode_label": "預設模式",
+          "speed_kmh": 40.0,
+          "route_status": "waiting_for_api_origin",
+          "nearby_agent_count": 0
+        },
+        "travel_memory": []
+      },
+      "keywords": [
+        "GAMA",
+        "ABM",
+        "agent memory",
+        "vehicle9",
+        "東區",
+        "安南區",
+        "active_mode",
+        "waiting_for_api_origin"
+      ]
+    }
+  ],
+  "coverage_check": {
+    "required_top_level_fields": [
+      "model",
+      "cycle",
+      "agents",
+      "environment"
+    ],
+    "required_agent_fields": [
+      "agent name",
+      "travel_memory",
+      "current_state"
+    ],
+    "required_travel_memory_fields": [
+      "cycle",
+      "elapsed_minutes",
+      "current_location",
+      "current_town",
+      "current_road_id",
+      "current_road_name",
+      "current_road_type",
+      "active_mode",
+      "selected_action",
+      "speed_used_kmh",
+      "distance_moved_m",
+      "distance_to_destination_m",
+      "nearby_agent_count",
+      "api_request_status",
+      "api_response_summary",
+      "warning"
+    ],
+    "required_current_state_fields": [
+      "residential_location",
+      "current_town",
+      "current_road_id",
+      "destination_town",
+      "active mode",
+      "speed_kmh",
+      "route_status",
+      "nearby_agent_count"
+    ],
+    "required_environment_simulation_fields": [
+      "cycle",
+      "step_minutes",
+      "elapsed_minutes",
+      "max_steps",
+      "agent_count"
+    ],
+    "required_environment_spatial_fields": [
+      "destination_town",
+      "available_towns",
+      "crs_note"
+    ],
+    "required_environment_traffic_fields": [
+      "active_road_count",
+      "crowded_road_count",
+      "average_congestion_proxy",
+      "roads_with_flow"
+    ],
+    "required_road_fields": [
+      "road_id",
+      "NAME",
+      "highway",
+      "highway_ty",
+      "length",
+      "lanes",
+      "capacity",
+      "speed_car",
+      "speed_moto",
+      "time_car",
+      "time_moto",
+      "time",
+      "current_flow",
+      "congestion_proxy"
+    ],
+    "missing_fields": [],
+    "notes": []
+  }
+}

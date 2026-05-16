@@ -1,0 +1,44 @@
+**Simulation snapshot – Cycle 13 (65 min elapsed)**  
+
+| Agent | Current town | Current road | Mode | Speed (km h⁻¹) | Route status | Nearby agents |
+|-------|--------------|--------------|------|----------------|--------------|---------------|
+| **林志安** | 北區 | 30634 (台江大道五段) | “avoid_congestion” | 13.9 | **moving** | 0 |
+| **黃柏宇** | 北區 | 33148 (臺南北外環) | “tolerate_congestion” | 19.4 | **moving** | 0 |
+| **楊欣怡** | 安平區 | 32019 (安明路三段) | “comfortable” | 13.9 | **moving** | 0 |
+| **許怡君** | 安平區 | 35098 (北安路二段) | “avoid_congestion” | 13.9 | **moving** | 0 |
+| **楊宗翰** | 安南區 | 11462 (怡安路一段) | “tolerate_congestion” | 13.9 | **arrived** | 0 |
+
+*All agents are still within the simulation (no agent has finished the trip).  
+Only **楊宗翰** has already reached the destination town (安南區).*
+
+---
+
+### Spatial context
+* **Destination town:** 安南區  
+* **Available towns:** 35 towns in the Tainan area (e.g., 新營區, 鹽水區, 白河區 …, 喇叭區, 喇叭區, 喇叭區).  
+* **CRS:** ROADLINK = TWD97 TM (Taiwan meter); TOWN_MOI = GCS_TWD97[2020].
+
+---
+
+### Traffic conditions
+| Road ID | Name | Type | Length (m) | Lanes | Capacity | Current flow | Congestion proxy |
+|---------|------|------|------------|-------|----------|--------------|------------------|
+| 11462 | 怡安路一段 | tertiary | 90.7 | 1 | 1 000 | 1 | 0.001 |
+| 30634 | 台江大道五段 | primary | 1 054 | 2 | 2 000 | 1 | 0.0005 |
+| 32019 | 安明路三段 | primary | 646 | 2 | 2 000 | 1 | 0.0005 |
+| 33148 | 臺南北外環道路 | trunk | 1 959 | 2 | 3 000 | 1 | 0.00033 |
+| 35098 | 北安路二段 | tertiary | 199 | 1 | 1 000 | 1 | 0.001 |
+
+* **Active roads:** 5 (all currently carrying one vehicle).  
+* **Crowded roads:** 0 – no road is over its capacity.  
+* **Average congestion proxy:** 0.00067 (≈ 0.07 % of capacity).  
+* **Speed limits:**  
+  * 11462 & 35098 – 11.1 km h⁻¹ (≈ 40 km h⁻¹ on the map, but reduced by traffic).  
+  * 30634 – 13.9 km h⁻¹.  
+  * 32019 – 13.9 km h⁻¹.  
+  * 33148 – 19.4 km h⁻¹ (trunk road).  
+
+---
+
+### Summary
+The simulation is in its 13th cycle (65 min elapsed). All five agents are still active; only **楊宗翰** has reached the destination. Traffic is light – no road is congested and the average congestion proxy is below 0.1 %. The agents are moving along the primary and tertiary roads listed above, with speeds ranging from 11 km h⁻¹ to 19 km h⁻¹ depending on the road type and chosen driving mode.

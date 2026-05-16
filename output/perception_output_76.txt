@@ -1,0 +1,18 @@
+**Agent Status**
+
+- **Location**: 安南區 (town)  
+- **Road**: 永安橋, 永安路 (road_id 39539)  
+- **Mode**: Comfortable (label: 穩定舒適)  
+- **Speed**: 11.11 km/h  
+- **Route**: Arrived at destination  
+- **Nearby agents**: 3  
+
+**Traffic Snapshot**
+
+| Road ID | Name | Type | Length (m) | Lanes | Capacity | Current Flow | Congestion Proxy |
+|---------|------|------|------------|-------|----------|--------------|------------------|
+| 9792 | 長和路一段 | tertiary | 397.90 | 1 | 1000 | 1 | 0.001 |
+| 39539 | 永安橋, 永安路 | tertiary | 459.91 | 1 | 1000 | 2 | 0.002 |
+| 40477 | 長和路一段 | tertiary | 248.47 | 1 | 1000 | 1 | 0.001 |
+
+Average congestion proxy across active roads: **0.00133** (very low). No roads are currently crowded.

@@ -1,0 +1,29 @@
+**Simulation status (cycle 26)**  
+
+| Item | Value |
+|------|-------|
+| **Simulation** | cycle 26 / step 5 min / elapsed 130 min / max steps 5000 / agents 5 |
+| **Spatial** | destination town: **安南區**<br>available towns: 39 (list shown in the environment) |
+| **Traffic** | active roads: 3<br>crowded roads: 0<br>average congestion proxy: **0.00133**<br>roads with flow: |
+| | • road 9792 – “長和路一段” – length 397.9 m – flow 1 – congestion 0.001 |
+| | • road 39539 – “永安橋, 永安路” – length 459.9 m – flow 2 – congestion 0.002 |
+| | • road 40477 – “長和路一段” – length 248.5 m – flow 1 – congestion 0.001 |
+
+**Agent states**
+
+All five agents have reached the destination town **安南區** and are in the *arrived* state.  
+Their current modes are:
+
+| Agent | Residential location | Current town | Current road | Active mode | Route status |
+|-------|----------------------|--------------|--------------|------------|--------------|
+| 林志安 | 佳里區 | 安南區 | 39539 | short_distance | arrived |
+| 黃柏宇 | 永康區 | 安南區 | 39539 | fast | arrived |
+| 許怡君 | 安平區 | 安南區 | 39539 | comfortable | arrived |
+| 楊欣怡 | 南區 | 安南區 | 39539 | comfortable | arrived |
+| 楊宗翰 | 鹽水區 | 安南區 | 39539 | comfortable | arrived |
+
+**Summary**
+
+- The simulation is running at cycle 26 (5‑minute steps).  
+- All agents have successfully arrived at the destination town **安南區**.  
+- Current traffic conditions are light (no crowded roads, very low congestion proxy).

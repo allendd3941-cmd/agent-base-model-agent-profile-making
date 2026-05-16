@@ -1,0 +1,21 @@
+**Simulation Summary (Cycle 65)**  
+
+| Agent | Current Town | Active Mode | Speed (km/h) | Route Status | Nearby Agents |
+|-------|--------------|------------|--------------|--------------|---------------|
+| **GY‑1** | 鹽水區 | “舒適” | 11.11 | Arrived | 3 |
+| **GY‑2** | 安南區 | “舒適” | 11.11 | Arrived | 3 |
+| **GY‑3** | 安南區 | “舒適” | 11.11 | Arrived | 3 |
+| **GY‑4** | 安南區 | “舒適” | 11.11 | Arrived | 3 |
+| **GY‑5** | 安南區 | “舒適” | 11.11 | Arrived | 3 |
+
+- **All five agents have reached the destination town “安南區”.**  
+- The simulation is now at **cycle 65** (elapsed time = 325 min).  
+- Traffic conditions are light: only three roads are active, with a very low average congestion proxy (~0.0013).  
+
+**Next Steps**
+
+1. **Continue the simulation** – the environment is set to run up to 5 000 steps.  
+2. **Analyze the results** – e.g., total travel time, congestion patterns, or compare different routing strategies.  
+3. **Adjust agent parameters** – if you’d like to test different driving modes or speeds.  
+
+Let me know what you’d like to do next!

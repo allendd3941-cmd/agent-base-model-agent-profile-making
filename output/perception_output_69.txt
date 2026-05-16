@@ -1,0 +1,8 @@
+```json
+{
+  "next_action": {
+    "action": "stay",
+    "description": "Agent has arrived at the destination town (安南區) and will remain idle until the simulation ends or a new task is assigned."
+  }
+}
+```

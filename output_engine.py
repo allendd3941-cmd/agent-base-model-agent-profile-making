@@ -1,5 +1,5 @@
 def output_process(response, output_path, file_name):
-    print(response)
+    print(response[:50])
 
     if not response:
         raise ValueError("Ollama response是空的")

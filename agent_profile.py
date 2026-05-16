@@ -33,7 +33,7 @@ def run_agent_profile(output: bool= False):
         #"format": AgentProfileSchema.model_json_schema(),
         #"think": "low",
         "options": {
-            "seed": 42 
+            "seed": 42
         },
         "stream": False
     }
