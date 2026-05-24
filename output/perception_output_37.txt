@@ -1,1 +1,0 @@
-{"action":{"move":"continue","road_id":"39539","speed_kmh":11.11111111},"reason":"The agent is still on the same road and has not yet reached the destination town. It should continue moving along road 39539 until the destination is reached."}

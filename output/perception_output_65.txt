@@ -1,9 +1,0 @@
-**Simulation status (cycle 64)**  
-- **Time**: 320 min elapsed (5‑min steps, 5000‑step horizon).  
-- **Agents**: 5 vehicles (all have reached the destination “安南區”).  
-- **Road network**: 3 active tertiary roads in use –  
-  * 9792 (長和路一段, 397.9 m, 1 lane, cap 1000, flow 1)  
-  * 39539 (永安橋, 永安路, 459.9 m, 1 lane, cap 1000, flow 2)  
-  * 40477 (長和路一段, 248.5 m, 1 lane, cap 1000, flow 1).  
-- **Congestion**: no crowded roads, average congestion proxy ≈ 0.0013.  
-- **All agents** are in the “arrived” state, with active mode “avoid_congestion” (avoid traffic jams).

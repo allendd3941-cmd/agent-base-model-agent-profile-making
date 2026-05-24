@@ -1,9 +1,0 @@
-```json
-[
-  {"name":"林志安","action":"arrived","parameters":{}},
-  {"name":"黃柏宇","action":"arrived","parameters":{}},
-  {"name":"許怡君","action":"arrived","parameters":{}},
-  {"name":"楊欣怡","action":"arrived","parameters":{}},
-  {"name":"楊宗翰","action":"arrived","parameters":{}}
-]
-```

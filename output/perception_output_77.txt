@@ -1,1 +1,0 @@
-{"action":"report_current_road","reason":"目前所在路段為永安橋, 永安路"}

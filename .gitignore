@@ -1,9 +1,27 @@
 #設定檔
 .env
+.env.*
+!.env.example
 
 #環境檔
 .venv
+venv/
 
 #快取檔
 __pycache__
 *.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+#本機輸出檔
+output/
+*.log
+
+#編輯器與系統檔
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

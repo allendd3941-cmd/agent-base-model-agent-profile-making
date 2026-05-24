@@ -27,8 +27,13 @@ class GamaRequest(BaseModel):
     model_config = ConfigDict(extra="allow")
 
     model: str
+    request_type: str | None = None
+    model_name: str | None = None
     cycle: int
-    agents: list[GamaAgent]
+    agents: list[GamaAgent] = Field(default_factory=list)
+    requested_agents: list[dict[str, Any]] = Field(default_factory=list)
+    agents_status: list[dict[str, Any]] = Field(default_factory=list)
+    roads_flow: list[dict[str, Any]] = Field(default_factory=list)
     environment: dict[str, Any] = Field(default_factory=dict)
 
 

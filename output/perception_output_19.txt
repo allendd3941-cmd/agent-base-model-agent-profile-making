@@ -1,7 +1,0 @@
-**Next simulation step**
-
-- **Cycle**: 19  
-- **Step minutes**: 5  
-- **Elapsed minutes**: 95  
-
-All agents have already arrived at their destination town **安南區**. No further movement is required. The simulation will continue to the next cycle (20) if needed.

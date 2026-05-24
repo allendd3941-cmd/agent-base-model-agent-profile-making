@@ -33,7 +33,7 @@ def RAG(user_prompt, data):
         print()
 
         retrieved_texts.append(
-            f"[資料 {rank} | 相似度 {similarities[idx]:.4f}]\n{data[idx]}"
+            f"[資料 {rank} | 相似度 {similarities[idx]:.4f}]\n{chunks[idx]}"
         )
 
     return "\n\n".join(retrieved_texts)

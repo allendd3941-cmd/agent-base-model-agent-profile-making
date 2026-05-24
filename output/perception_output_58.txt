@@ -1,4 +1,0 @@
-**Current Simulation Status**
-
-- **Simulation Cycle:** 57  
-- **Elapsed Time:** 285 minutes (5‑minute steps, 57 × 5 = 285)
