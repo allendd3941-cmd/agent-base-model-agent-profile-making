@@ -6,6 +6,8 @@ This document explains how data and generated outputs should be handled before p
 
 `GIS data/` contains spatial input data used by the GAMA traffic simulation.
 
+These files are not automatically covered by the repository MIT License. They should be treated as external data assets and remain subject to their original data source licenses.
+
 Before publishing, confirm and document:
 
 - Original data source.
@@ -19,6 +21,8 @@ Recommended README note:
 ```text
 The GIS files in `GIS data/` are used as spatial inputs for the GAMA traffic ABM model. Please verify the original data source and license terms before reuse.
 ```
+
+If the GIS files are from Taiwan government open data sources, document the source URL and attribution requirements, and reference the applicable Open Government Data License where appropriate.
 
 ## Generated Outputs
 
@@ -42,3 +46,10 @@ For portfolio review, curated examples should be small, readable, and representa
 - One step-update request.
 
 This keeps the GitHub repository focused on system design rather than raw experiment logs.
+
+## Repository License Boundary
+
+- Source code, documentation, prompts, and curated examples: MIT License.
+- GIS files: original data source license.
+- Local generated outputs under `output/`: not versioned.
+- Third-party dependencies: each package keeps its own license.

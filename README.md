@@ -2,20 +2,24 @@
 
 FastAPI-based LLM decision server for GAMA agent-based traffic simulation.
 
-本專案是一個提供 GAMA 交通 ABM 模擬模型呼叫的 LLM core server。GAMA 透過 HTTP request 傳送模擬狀態，Python FastAPI server 依序執行 agent profile、perception、decision making 與 lightweight RAG 流程，再將決策結果回傳給 GAMA 使用。
+## Overview
 
-## Project Overview
+`LLM_abm_model` is a local backend service that connects a GAMA agent-based traffic simulation with an LLM reasoning pipeline. GAMA sends simulation states to a FastAPI endpoint, and the Python server transforms those states into agent profiles, perception context, retrieved evidence, and decision-making prompts before returning an LLM-generated decision response.
 
-`LLM_abm_model` 的目標是把傳統 agent-based model 的模擬狀態，轉換成可供 LLM 推理的上下文，讓 agent 的移動決策能納入個體特徵、環境感知、交通狀態與歷史記憶。
+This project is designed as a research prototype and portfolio project that demonstrates the integration of:
 
-核心整合重點：
+- Agent-based traffic simulation with GAMA.
+- A FastAPI HTTP bridge for simulation-to-LLM communication.
+- Local LLM inference through an Ollama-compatible API.
+- Prompt engineering for agent profile, perception, and decision-making tasks.
+- Lightweight retrieval-augmented generation using TF-IDF and cosine similarity.
+- OD conversion utilities for turning structured or natural-language trip plans into CSV records.
 
-- GAMA 作為交通模擬與 agent-based modeling client。
-- FastAPI 作為 GAMA 與 Python LLM pipeline 之間的 HTTP bridge。
-- Ollama 作為本機 LLM inference backend。
-- Prompt engineering 管理 agent profile、perception 與 decision making。
-- TF-IDF cosine similarity 提供 lightweight RAG context retrieval。
-- OD converter 支援將自然語言或 JSON 行程轉換為 OD CSV。
+## Motivation
+
+Traditional agent-based models often rely on fixed rules or predefined behavior parameters. This project explores how local LLM reasoning can be introduced into a simulation loop so that agents can make context-aware decisions based on identity, travel memory, environmental perception, congestion signals, and scenario-specific prompts.
+
+The main goal is not to build a production traffic system, but to demonstrate a working architecture for combining GAMA, FastAPI, local LLM inference, and modular ABM decision logic.
 
 ## Architecture
 
@@ -33,14 +37,26 @@ flowchart TD
     J --> A
 ```
 
-### Request Flow
+## Request Flow
 
-1. GAMA sends simulation state to `POST /from-gama`.
+1. GAMA sends an initialization or step-update payload to `POST /from-gama`.
 2. FastAPI validates the request with Pydantic models.
-3. The server loads or generates the agent profile.
-4. The perception module combines prompt templates with the GAMA state.
+3. The server loads or generates agent profile data.
+4. The perception module combines prompt templates with the current GAMA state.
 5. The decision-making module retrieves relevant perception context through lightweight RAG.
-6. The server returns the LLM decision result to GAMA.
+6. The Ollama-compatible LLM endpoint generates a decision response.
+7. The server returns the decision result to GAMA.
+
+## Features
+
+- `POST /from-gama` endpoint for GAMA integration.
+- Request schema compatibility for `requested_agents`, `agents_status`, and legacy `agents` payloads.
+- Modular LLM pipeline with separate agent profile, perception, and decision-making stages.
+- Prompt files stored separately under `prompts/` for easier iteration.
+- Lightweight TF-IDF retrieval for selecting relevant perception context.
+- OD CSV conversion utility for downstream traffic analysis workflows.
+- Curated example payloads and sample outputs for GitHub portfolio review.
+- GitHub Actions syntax check for basic repository hygiene.
 
 ## Project Structure
 
@@ -69,20 +85,32 @@ LLM_abm_model/
 └─ output/                           # Local generated outputs, ignored by Git
 ```
 
-> Note: `gama_moudle/` is kept as-is to avoid breaking existing local paths. A future cleanup can rename it to `gama_module/` in a dedicated migration commit.
+`gama_moudle/` is intentionally kept with its current name to avoid breaking existing local GAMA paths. A future cleanup can rename it to `gama_module/` in a dedicated migration commit.
 
 ## Requirements
 
-- Python 3.12 was used in the local virtual environment during review.
-- Ollama running locally or on a reachable host.
+- Python 3.12 or later is recommended.
+- Ollama or an Ollama-compatible local LLM API.
 - GAMA Platform for running the ABM simulation.
 - Python dependencies listed in `requirements.txt`.
+
+## Installation
+
+Create and activate a virtual environment:
+
+```bash
+python -m venv .venv
+```
+
+On Windows PowerShell:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
 
 Install dependencies:
 
 ```bash
-python -m venv .venv
-.\.venv\Scripts\activate
 python -m pip install -r requirements.txt
 ```
 
@@ -96,9 +124,9 @@ OLLAMA_MODE=/api/generate
 OLLAMA_MODEL=gpt-oss:20b
 ```
 
-`.env` is intentionally ignored by Git and should not be uploaded.
+`.env` is intentionally ignored by Git and should not be committed.
 
-## How to Run
+## Running the Server
 
 Start the FastAPI server:
 
@@ -121,10 +149,10 @@ Receives simulation state from GAMA and returns the LLM decision result.
 Supported payload patterns:
 
 - Initialization payload with `requested_agents`.
-- Step update payload with `agents_status`.
+- Step-update payload with `agents_status`.
 - Compatibility payload with `agents`.
 
-Minimal example:
+Example step-update payload:
 
 ```json
 {
@@ -134,8 +162,8 @@ Minimal example:
   "agents_status": [
     {
       "agent_id": "vehicle_001",
-      "origin_town": "佳里區",
-      "destination_town": "安南區",
+      "origin_town": "Jiali District",
+      "destination_town": "Annan District",
       "memory": []
     }
   ],
@@ -147,36 +175,75 @@ More examples are available in `examples/`.
 
 ## GAMA Integration
 
-The GAMA modules under `gama_moudle/` define the HTTP client settings:
+The GAMA modules under `gama_moudle/` define the HTTP client settings used to call the Python server:
 
-- Host: `127.0.0.1`
-- Port: `8000`
-- Endpoint: `/from-gama`
-- Method: `POST`
+| Setting | Value |
+| --- | --- |
+| Host | `127.0.0.1` |
+| Port | `8000` |
+| Endpoint | `/from-gama` |
+| Method | `POST` |
 
-See `docs/GAMA_INTEGRATION.md` for the request lifecycle and payload notes.
+See `docs/GAMA_INTEGRATION.md` for the request lifecycle and payload compatibility notes.
 
-## Data and Outputs
+## Documentation
 
-- `GIS data/` contains the spatial data used by the GAMA traffic model. Keep source, coordinate system, and license information documented before publishing publicly.
-- `output/` contains generated LLM outputs and is ignored by Git to keep the repository clean.
-- `examples/sample_outputs/` contains selected sample outputs for portfolio review.
+- `docs/ARCHITECTURE.md`: System architecture and module responsibilities.
+- `docs/API.md`: API payload patterns and endpoint reference.
+- `docs/GAMA_INTEGRATION.md`: GAMA request lifecycle and integration notes.
+- `docs/DATA.md`: GIS data and output versioning policy.
+
+## Examples
+
+The `examples/` directory contains:
+
+- `gama_request_init.json`: Example initialization payload.
+- `gama_request_step.json`: Example step-update payload.
+- `sample_outputs/`: Selected outputs from local LLM runs for portfolio review.
+
+The full local `output/` directory is ignored by Git because it contains generated runtime artifacts.
+
+## Data and Output Policy
+
+- `GIS data/` contains spatial input data used by the GAMA traffic model. Before public reuse, verify the original data source, coordinate system, attribution requirements, and redistribution terms.
+- `output/` contains generated LLM outputs and is ignored by Git to keep the repository focused on source code and curated examples.
+- `examples/sample_outputs/` contains selected representative outputs for review.
+
+## Validation
+
+Basic local validation commands:
+
+```bash
+python -m compileall -q -x "(\.venv|__pycache__|output)" .
+```
+
+```bash
+python -c "from pathlib import Path; from server import GamaRequest; [GamaRequest.model_validate_json(Path(p).read_text(encoding='utf-8')) for p in ['examples/gama_request_init.json','examples/gama_request_step.json']]; print('GamaRequest examples validated')"
+```
+
+Full integration testing requires both GAMA and Ollama to be running.
 
 ## Limitations
 
 - The current LLM backend assumes an Ollama-compatible API.
-- LLM responses may vary depending on model, prompt, temperature, and local runtime.
-- The server is designed for local research and portfolio demonstration, not production deployment.
-- Further work is needed to enforce strict JSON response contracts for all LLM outputs.
+- LLM responses may vary depending on model, prompt, temperature, and runtime settings.
+- The current response contract is prompt-driven and should be strengthened with strict JSON validation in future work.
+- This repository is designed for local research and portfolio demonstration, not production deployment.
 
 ## Future Work
 
 - Add unit tests for `RAG.py`, `od_converter.py`, and request schema validation.
-- Add GitHub Actions for syntax check and lightweight tests.
-- Introduce structured JSON output validation for LLM responses.
+- Add stricter JSON schema validation for LLM responses.
+- Expand GitHub Actions from syntax checks to unit tests.
 - Package the project under `src/` after API contracts stabilize.
-- Rename `gama_moudle/` to `gama_module/` in a dedicated compatibility-safe commit.
+- Rename `gama_moudle/` to `gama_module/` in a compatibility-safe migration commit.
 
-## License and Citation
+## License
 
-Before publishing, confirm the license requirements for all GIS data and GAMA model assets. If this repository is used in an academic context, add the related project citation or thesis reference here.
+Unless otherwise noted, the source code, documentation, prompts, and curated examples in this repository are licensed under the MIT License. See `LICENSE` for details.
+
+GIS files under `GIS data/` are provided for simulation context and remain subject to their original data source licenses. Verify the original source, attribution requirements, and redistribution terms before reuse.
+
+## Citation
+
+If this repository is used in an academic context, add the related project citation, thesis reference, or research acknowledgement here.
