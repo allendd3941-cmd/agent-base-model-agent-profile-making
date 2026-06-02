@@ -1,90 +1,59 @@
 ## 核心要求
 
 1. 僅根據我提供的「回傳環境內容」整理，不得自行發明不存在的資料。
-2. 不得遺漏 payload 中任何欄位。
-3. 必須保留原始欄位名稱與原始值，包含有空格的欄位，例如 `agent name`、`active mode`。
-4. 每個 agent 必須各自形成一份 RAG document，並且要能用 `agent name` 對應。
-5. 整體環境狀況必須形成一份獨立 RAG document。
-6. 所有 `travel_memory` 必須完整保留，不能只摘要。
-7. 可以新增 `summary_text`、`interpretation`、`metadata`、`keywords` 等方便檢索的欄位，但不能取代原始資料。
-8. 輸出必須是合法 JSON，不要輸出 Markdown，不要加解釋文字，不要包 ```json。
-9. 若某欄位在 payload 中不存在，請在 `coverage_check.missing_fields` 中列出，不要自行補值。
-10. 若某欄位存在但值為空字串、null 或空陣列，仍要保留。
+2. 目前 GAMA 已只送出精簡 payload；請只整理下方列出的代表欄位，不要還原、推測或展開已刪減的 raw road、raw location、API 狀態等欄位。
+3. 每個 agent 必須各自形成一份 RAG document，並且要能用 `agent_id` 對應。
+4. 整體環境狀況必須形成一份獨立 RAG document。
+5. `memory` 只保留精簡旅行記憶欄位；不得要求完整原始 travel memory。
+6. 可以新增 `summary_text`、`interpretation`、`metadata`、`keywords` 等方便檢索的欄位，但不能取代精簡原始資料。
+7. 輸出必須是合法 JSON，不要輸出 Markdown，不要加解釋文字，不要包 ```json。
+8. 若某欄位在 payload 中不存在，請在 `coverage_check.missing_fields` 中列出，不要自行補值。
+9. 若某欄位存在但值為空字串、null 或空陣列，仍要保留。
 
 ## 必須理解的 payload 結構
 
 最外層欄位：
 - `model`: GAMA 模型名稱。
 - `cycle`: 目前模擬 cycle，也就是第幾個模擬 step。
-- `agents`: 所有 agent 清單。
-- `environment`: 當前整體環境狀況。
+- `environment`: 整體環境摘要。
+- `agents_status`: 所有 agent 的精簡狀態清單。
 
-`agents` 每個元素欄位：
-- `agent name`: agent 名稱，必須用於 document metadata 與 response 對應。
-- `travel_memory`: 該 agent 的旅行記憶清單。
-- `current_state`: 該 agent 當前狀態摘要。
-
-`travel_memory` 每筆欄位：
+`environment` 欄位：
 - `cycle`
 - `elapsed_minutes`
-- `current_location`
-- `current_town`
-- `current_road_id`
-- `current_road_name`
-- `current_road_type`
-- `active_mode`
-- `selected_action`
-- `speed_used_kmh`
-- `distance_moved_m`
-- `distance_to_destination_m`
-- `nearby_agent_count`
-- `api_request_status`
-- `api_response_summary`
-- `warning`
-
-`current_state` 欄位：
-- `residential_location`
-- `current_town`
-- `current_road_id`
-- `destination_town`
-- `active mode`
-- `speed_kmh`
-- `route_status`
-- `nearby_agent_count`
-
-`environment.simulation` 欄位：
-- `cycle`
-- `step_minutes`
-- `elapsed_minutes`
-- `max_steps`
 - `agent_count`
-
-`environment.spatial` 欄位：
 - `destination_town`
-- `available_towns`
-- `crs_note`
-
-`environment.traffic` 欄位：
 - `active_road_count`
 - `crowded_road_count`
 - `average_congestion_proxy`
-- `roads_with_flow`
 
-`roads_with_flow` 每條道路欄位：
-- `road_id`
-- `NAME`
-- `highway`
-- `highway_ty`
-- `length`
-- `lanes`
-- `capacity`
-- `speed_car`
-- `speed_moto`
-- `time_car`
-- `time_moto`
-- `time`
-- `current_flow`
+`agents_status` 每個元素欄位：
+- `agent_id`
+- `origin_town`
+- `destination_town`
+- `active_mode`
+- `environment`
+- `memory`
+
+`agent.environment` 欄位：
+- `current_town`
+- `current_road_id`
+- `route_status`
+- `nearby_agent_count`
 - `congestion_proxy`
+- `distance_to_destination_m`
+
+`memory` 每筆欄位：
+- `cycle`
+- `current_town`
+- `current_road_id`
+- `active_mode`
+- `route_status`
+- `nearby_agent_count`
+- `congestion_proxy`
+- `distance_to_destination_m`
+
+如果 payload 中仍出現 `roads_flow`、`road_schema`、`town_schema`、`available_towns` 或 `environment_variable_catalog`，不要逐筆展開；只有在有助於 metadata 或 coverage_check 時才引用。
 
 ## 固定輸出 JSON 格式
 
@@ -94,7 +63,7 @@
   "rag_document_batch": {
     "source_model": "<payload.model>",
     "cycle": "<payload.cycle>",
-    "batch_type": "gama_traffic_abm_environment_and_agent_memory",
+    "batch_type": "gama_traffic_abm_compact_environment_and_agent_memory",
     "document_count": "<documents 數量>",
     "language": "zh-TW"
   },
@@ -102,66 +71,77 @@
     {
       "document_id": "environment::<model>::cycle::<cycle>",
       "document_type": "environment_snapshot",
-      "title": "GAMA 模擬環境狀況 - cycle <cycle>",
+      "title": "GAMA 精簡環境摘要 - cycle <cycle>",
       "metadata": {
         "model": "<payload.model>",
         "cycle": "<payload.cycle>",
-        "step_minutes": "<environment.simulation.step_minutes>",
-        "elapsed_minutes": "<environment.simulation.elapsed_minutes>",
-        "max_steps": "<environment.simulation.max_steps>",
-        "agent_count": "<environment.simulation.agent_count>",
-        "destination_town": "<environment.spatial.destination_town>"
+        "elapsed_minutes": "<environment.elapsed_minutes>",
+        "agent_count": "<environment.agent_count>",
+        "destination_town": "<environment.destination_town>"
       },
-      "summary_text": "用繁體中文整理此 cycle 的整體模擬時間、目的地、可用行政區、道路流量與壅塞狀況。摘要不得取代原始欄位。",
+      "summary_text": "用繁體中文整理此 cycle 的整體時間、agent 數、目的地、活躍道路數、壅塞道路數與平均壅塞 proxy。",
       "content": {
-        "simulation": "<完整保留 environment.simulation>",
-        "spatial": "<完整保留 environment.spatial>",
-        "traffic": {
-          "active_road_count": "<environment.traffic.active_road_count>",
-          "crowded_road_count": "<environment.traffic.crowded_road_count>",
-          "average_congestion_proxy": "<environment.traffic.average_congestion_proxy>",
-          "roads_with_flow": [
-            {
-              "raw": "<完整保留單一道路所有原始欄位>",
-              "interpretation": "用繁體中文說明此道路目前流量、容量、壅塞 proxy 與道路類型的意義。"
-            }
-          ]
+        "environment": {
+          "cycle": "<environment.cycle>",
+          "elapsed_minutes": "<environment.elapsed_minutes>",
+          "agent_count": "<environment.agent_count>",
+          "destination_town": "<environment.destination_town>",
+          "active_road_count": "<environment.active_road_count>",
+          "crowded_road_count": "<environment.crowded_road_count>",
+          "average_congestion_proxy": "<environment.average_congestion_proxy>"
         }
       },
       "keywords": [
         "GAMA",
         "ABM",
-        "traffic simulation",
-        "environment",
+        "compact environment",
         "cycle <cycle>",
         "<destination_town>"
       ]
     },
     {
-      "document_id": "agent::<agent name>::cycle::<cycle>",
-      "document_type": "agent_travel_memory",
-      "title": "Agent 旅行記憶 - <agent name> - cycle <cycle>",
+      "document_id": "agent::<agent_id>::cycle::<cycle>",
+      "document_type": "agent_compact_memory",
+      "title": "Agent 精簡旅行記憶 - <agent_id> - cycle <cycle>",
       "metadata": {
         "model": "<payload.model>",
         "cycle": "<payload.cycle>",
-        "agent_name": "<agent.agent name>",
-        "residential_location": "<agent.current_state.residential_location>",
-        "current_town": "<agent.current_state.current_town>",
-        "current_road_id": "<agent.current_state.current_road_id>",
-        "destination_town": "<agent.current_state.destination_town>",
-        "active_mode": "<agent.current_state.active mode>",
-        "speed_kmh": "<agent.current_state.speed_kmh>",
-        "route_status": "<agent.current_state.route_status>",
-        "nearby_agent_count": "<agent.current_state.nearby_agent_count>"
+        "agent_id": "<agent.agent_id>",
+        "origin_town": "<agent.origin_town>",
+        "destination_town": "<agent.destination_town>",
+        "active_mode": "<agent.active_mode>",
+        "current_town": "<agent.environment.current_town>",
+        "current_road_id": "<agent.environment.current_road_id>",
+        "route_status": "<agent.environment.route_status>",
+        "nearby_agent_count": "<agent.environment.nearby_agent_count>",
+        "congestion_proxy": "<agent.environment.congestion_proxy>",
+        "distance_to_destination_m": "<agent.environment.distance_to_destination_m>"
       },
-      "summary_text": "用繁體中文整理此 agent 的目前位置、生成地、目的地、active mode、速度、路徑狀態、附近 agent 數，以及 travel_memory 呈現出的移動趨勢。",
+      "summary_text": "用繁體中文整理此 agent 的出發地、目的地、目前行政區、目前道路、active mode、路徑狀態、附近 agent 數、壅塞 proxy、距離目的地，以及 memory 呈現出的移動趨勢。",
       "content": {
-        "agent name": "<完整保留 agent.agent name>",
-        "current_state": "<完整保留 agent.current_state>",
-        "travel_memory": [
+        "agent_id": "<agent.agent_id>",
+        "origin_town": "<agent.origin_town>",
+        "destination_town": "<agent.destination_town>",
+        "active_mode": "<agent.active_mode>",
+        "current_state": {
+          "current_town": "<agent.environment.current_town>",
+          "current_road_id": "<agent.environment.current_road_id>",
+          "route_status": "<agent.environment.route_status>",
+          "nearby_agent_count": "<agent.environment.nearby_agent_count>",
+          "congestion_proxy": "<agent.environment.congestion_proxy>",
+          "distance_to_destination_m": "<agent.environment.distance_to_destination_m>"
+        },
+        "memory": [
           {
-            "raw": "<完整保留該筆 travel_memory 所有原始欄位>",
-            "interpretation": "用繁體中文說明該 cycle 中 agent 的位置、道路、速度、移動距離、距離目的地、局部擁擠程度、API 狀態與 warning。"
+            "cycle": "<memory.cycle>",
+            "current_town": "<memory.current_town>",
+            "current_road_id": "<memory.current_road_id>",
+            "active_mode": "<memory.active_mode>",
+            "route_status": "<memory.route_status>",
+            "nearby_agent_count": "<memory.nearby_agent_count>",
+            "congestion_proxy": "<memory.congestion_proxy>",
+            "distance_to_destination_m": "<memory.distance_to_destination_m>",
+            "interpretation": "用繁體中文說明該 cycle 中 agent 的位置、道路、移動狀態、附近 agent 數、壅塞程度與距離目的地。"
           }
         ]
       },
@@ -169,24 +149,21 @@
         "GAMA",
         "ABM",
         "agent memory",
-        "<agent name>",
-        "<residential_location>",
+        "<agent_id>",
+        "<origin_town>",
         "<current_town>",
         "<destination_town>",
-        "<active mode>",
+        "<active_mode>",
         "<route_status>"
       ]
     }
   ],
   "coverage_check": {
-    "required_top_level_fields": ["model", "cycle", "agents", "environment"],
-    "required_agent_fields": ["agent name", "travel_memory", "current_state"],
-    "required_travel_memory_fields": ["cycle", "elapsed_minutes", "current_location", "current_town", "current_road_id", "current_road_name", "current_road_type", "active_mode", "selected_action", "speed_used_kmh", "distance_moved_m", "distance_to_destination_m", "nearby_agent_count", "api_request_status", "api_response_summary", "warning"],
-    "required_current_state_fields": ["residential_location", "current_town", "current_road_id", "destination_town", "active mode", "speed_kmh", "route_status", "nearby_agent_count"],
-    "required_environment_simulation_fields": ["cycle", "step_minutes", "elapsed_minutes", "max_steps", "agent_count"],
-    "required_environment_spatial_fields": ["destination_town", "available_towns", "crs_note"],
-    "required_environment_traffic_fields": ["active_road_count", "crowded_road_count", "average_congestion_proxy", "roads_with_flow"],
-    "required_road_fields": ["road_id", "NAME", "highway", "highway_ty", "length", "lanes", "capacity", "speed_car", "speed_moto", "time_car", "time_moto", "time", "current_flow", "congestion_proxy"],
+    "required_top_level_fields": ["model", "cycle", "environment", "agents_status"],
+    "required_environment_fields": ["cycle", "elapsed_minutes", "agent_count", "destination_town", "active_road_count", "crowded_road_count", "average_congestion_proxy"],
+    "required_agent_fields": ["agent_id", "origin_town", "destination_town", "active_mode", "environment", "memory"],
+    "required_agent_environment_fields": ["current_town", "current_road_id", "route_status", "nearby_agent_count", "congestion_proxy", "distance_to_destination_m"],
+    "required_memory_fields": ["cycle", "current_town", "current_road_id", "active_mode", "route_status", "nearby_agent_count", "congestion_proxy", "distance_to_destination_m"],
     "missing_fields": [],
     "notes": []
   }
@@ -195,15 +172,13 @@
 ## 整理規則
 
 - `documents` 第一筆必須是整體 `environment_snapshot`。
-- 後續每一筆 document 對應一個 agent。
-- agent document 必須以 `agent name` 作為主要識別。
-- `summary_text` 要適合自然語言檢索，例如能被查詢「誰在東區」、「誰接近安南區」、「哪些道路壅塞」時命中。
-- `content.raw` 或等價位置必須完整保留原始欄位與原始值。
+- 後續每一筆 document 對應一個 `agents_status` agent。
+- agent document 必須以 `agent_id` 作為主要識別。
+- `summary_text` 要適合自然語言檢索，例如能被查詢「誰在東區」、「誰接近目的地」、「目前是否壅塞」時命中。
+- `content` 中只保留精簡欄位，不要輸出未列入 payload 的欄位。
 - `interpretation` 只能根據欄位意義解釋，不得新增 payload 沒有的事實。
-- 如果 `roads_with_flow` 為空，仍要輸出空陣列並在 `summary_text` 說明目前沒有道路流量資料。
-- 如果 `travel_memory` 為空，仍要輸出空陣列並在 `summary_text` 說明該 agent 尚無旅行記憶。
-- 如果某 agent 有 warning，必須在 summary_text 中提到。
-- 如果 `route_status` 是 `arrived`，必須在 summary_text 中說明該 agent 已抵達。
+- 如果 `memory` 為空，仍要輸出空陣列並在 `summary_text` 說明該 agent 尚無旅行記憶。
+- 如果 `route_status` 是 `arrived`，必須在 `summary_text` 中說明該 agent 已抵達。
 - 如果 `route_status` 是 `waiting_for_api_origin`，必須說明該 agent 尚未完成生成地套用。
 - 不要回傳 active mode 決策；本任務只負責整理 RAG 原始資料。
 

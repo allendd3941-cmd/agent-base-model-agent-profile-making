@@ -49,8 +49,6 @@ def receive_from_gama(gama_body: GamaRequest):
 
     perception = run_perception(gama_body, output=True)
     decision_making = run_decision_making(agent_profile, perception, output=True)
-    # action = convert_to_od_csv(source=decision_making, output_csv=OUTPUT_PATH / "final_od.csv")
-    # action_response = action[0] #出發點(o)、目的地(d)、出發時間
 
     return decision_making
 
